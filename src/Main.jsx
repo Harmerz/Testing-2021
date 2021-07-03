@@ -1,8 +1,18 @@
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+
+import { DummyPage, AgendaIndexPage } from "./pages";
+
 export default function Main() {
     return (
-        <div>
-            <h1>Hello, World!</h1>
-            <p>Now you're seeing a React-based page!</p>
-        </div>
+        <BrowserRouter>
+            <Switch>
+                {/* <Route path="/" exact component={null} /> */}
+
+                {/* Testing route for testing purposes only */}
+                <Route path="/agenda" component={AgendaIndexPage} />
+                
+                <Route component={DummyPage} />
+            </Switch>
+        </BrowserRouter>
     );
 }
