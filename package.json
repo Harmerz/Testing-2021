@@ -1,6 +1,6 @@
 {
   "name": "kesatria-2021-web-res",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "private": true,
   "dependencies": {
     "react": "^17.0.2",
@@ -10,7 +10,10 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build"
+    "build": "react-scripts build",
+    "deploy:draft": "netlify deploy",
+    "deploy:prod": "netlify deploy --prod",
+    "transplant": "node transplant-to-wp.mjs"
   },
   "browserslist": {
     "production": [
@@ -23,5 +26,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "jsdom": "^16.6.0",
+    "netlify-cli": "^4",
+    "puppeteer": "^10.1.0"
   }
 }

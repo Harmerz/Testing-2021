@@ -1,0 +1,44 @@
+# Deploy assets to Netlify and transplant components to the WordPress custom code field
+
+name: Deploy and Transplant
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  main-job:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Prepare source files from the repo
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js (with caching)
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+        cache: npm
+
+    - name: Prepare dependencies
+      run: npm ci
+
+    - name: Build files from source
+      run: npm run build
+
+    - name: Preview/draft deploy
+      if: github.event_name == 'pull_request'
+      run: npm run deploy:draft
+
+    - name: Production deploy & Transplant necessary parts to WP
+      if: |
+        github.event_name == 'push' &&
+        github.ref == 'refs/heads/main'
+      run: npm run deploy:prod && npm run transplant
+      env:
+        NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+        NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        WP_USERNAME: ${{ secrets.WP_DEPLOY_USERNAME }}
+        WP_PASSWORD: ${{ secrets.WP_DEPLOY_PASSWORD }}
