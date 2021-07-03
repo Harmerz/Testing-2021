@@ -33,17 +33,9 @@ scripts.forEach(scriptEl => {
     customCodePayloadData.push(scriptEl.outerHTML);
 });
 
-console.log(customCodePayloadData.join(''));
-
 // Do the deployment process
-const headlessBrowser = await puppeteer.launch({ headless: false });
+const headlessBrowser = await puppeteer.launch();
 const page = await headlessBrowser.newPage();
-
-// await page.setViewport({
-//     width: 1920,
-//     height: 1080,
-//     deviceScaleFactor: 1
-// });
 
 const targetUrl = (
     "https://ppsmb.ft.ugm.ac.id/wp-admin/admin.php" +
@@ -55,8 +47,6 @@ await page.goto(targetUrl, { waitUntil: "load" });
 await page.type("#user_login", process.env.WP_USERNAME, { delay: 300 });
 await page.type("#user_pass", process.env.WP_PASSWORD, { delay: 150 });
 
-// await page.screenshot({ path: "step-1-test.png" });
-
 // Click the "login" button, finally
 await Promise.all([
     page.click("#wp-submit"),
@@ -64,14 +54,12 @@ await Promise.all([
 ]);
 
 try {
-    // await page.screenshot({ path: "step-15-test.png" });
-    console.log(page.url());
     if (page.url() !== targetUrl) {
         throw new Error();
     }
 
     // Clear all the contents first
-    await page.click(".CodeMirror-line"); // Click inshtead of simply focusing
+    await page.click(".CodeMirror-line"); // Click instead of simply focusing
     await page.keyboard.down("Control");
     await page.keyboard.down("A");
     await page.keyboard.up("A");
@@ -91,14 +79,11 @@ try {
     await page.keyboard.up("Shift");
     await page.keyboard.press("Backspace");
 
-    // await page.screenshot({ path: "step-2-test.png" });
-
     await Promise.all([
         page.click("input[type=submit][name=update]"),
         page.waitForSelector("#optionsframework-options-saved")
     ]);
 
-    // await page.screenshot({ path: "step-3-test.png" });
 }
 catch (err) {
     throw err;
@@ -111,6 +96,5 @@ finally {
     });
     await page.waitForNavigation({ waitUntil: "load" });
 
-    // await page.screenshot({ path: "step-4final-test.png" });
     await headlessBrowser.close();
 }
