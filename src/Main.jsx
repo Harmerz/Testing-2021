@@ -9,7 +9,7 @@ export default function Main() {
                 {/* <Route path="/" exact component={null} /> */}
 
                 {/* Testing route for testing purposes only */}
-                <Route path="/agenda" component={AgendaIndexPage} />
+                <Route path="/agenda" exact component={AgendaIndexPage} />
                 
                 <Route component={DummyPage} />
             </Switch>
