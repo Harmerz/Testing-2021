@@ -1,6 +1,6 @@
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
-import { DummyPage, AgendaIndexPage } from './pages';
+import { DummyPage, AgendaIndexPage, WebcomicIndexPage } from './pages';
 
 export default function Main() {
   return (
@@ -10,6 +10,7 @@ export default function Main() {
 
         {/* Testing route for testing purposes only */}
         <Route path="/agenda" exact component={AgendaIndexPage} />
+        <Route path="/webcomic" exact component={WebcomicIndexPage} />
 
         <Route component={DummyPage} />
       </Switch>
