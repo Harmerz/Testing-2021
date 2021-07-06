@@ -14,10 +14,13 @@
   },
   "plugins": ["react", "prettier"],
   "rules": {
-    "prettier/prettier": "error",
+    "prettier/prettier": "warn",
     "arrow-body-style": "off",
     "react/prop-types": "off",
     "react/react-in-jsx-scope": "off",
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "eqeqeq": "error",
+    "import/prefer-default-export": "off",
+    "import/no-default-export": "error"
   }
 }
