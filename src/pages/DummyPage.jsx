@@ -1,4 +1,4 @@
-export default function DummyUnderConstructionsPage() {
+export function DummyUnderConstructionsPage() {
   return (
     <>
       <h1>PPSMB Kesatria 2021</h1>
