@@ -4,11 +4,7 @@ import { DummyUnderConstructionsPage as DummyPage } from "./pages/DummyPage";
 import { Agenda } from "./pages/agenda";
 import { ReactNode } from "react";
 
-interface RoutesDefinition {
-    [path: string]: RouteProps["component"]/* | Omit<RouteProps, "path">*/;
-}
-
-export const routes: RoutesDefinition = {
+export const routes = {
     // "/": DummyPage,
 
     // Agenda pages
@@ -27,7 +23,7 @@ export const routes: RoutesDefinition = {
 //     }
 // ]
 
-export const customRoutes: ReactNode[] = [
+export const customRoutes = [
     <Route exact path="/agenda" render={() => <Redirect to="/#agenda" />} />,
     <Route exact path="/" component={DummyPage} />
 ];
