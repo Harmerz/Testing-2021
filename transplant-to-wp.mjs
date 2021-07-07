@@ -1,15 +1,13 @@
 import { JSDOM } from "jsdom";
 import puppeteer from "puppeteer";
 
-// Check first for the required environment variables
 if (!process.env.WP_USERNAME || !process.env.WP_PASSWORD) {
     throw new ReferenceError();
 }
 
-// The URL of the "resources" origin (probably gonna be hosted on netlify)
 const resBaseUrl = "//kesatria2021-resources.netlify.app";
+const targetBaseUrl = "https://ppsmb.ft.ugm.ac.id";
 
-// Top-level `await`, available starting from Node.js 14.8
 const sourceDom = await JSDOM.fromFile("build/index.html");
 
 const { head: sourceHead, body: sourceBody } = sourceDom.window.document;
@@ -33,21 +31,20 @@ scripts.forEach(scriptEl => {
     customCodePayloadData.push(scriptEl.outerHTML);
 });
 
-// Do the deployment process
-const headlessBrowser = await puppeteer.launch();
-const page = await headlessBrowser.newPage();
+const headlessBrowser = await puppeteer.launch({ headless: false });
 
-const targetUrl = (
-    "https://ppsmb.ft.ugm.ac.id/wp-admin/admin.php" +
-    "?page=of-advanced-menu&tab=custom-javascript-tab"
-);
+// Modify browser permissions so that copying works
+await headlessBrowser
+    .defaultBrowserContext()
+    .overridePermissions(targetBaseUrl, ["clipboard-read", "clipboard-write"]);
+
+const page = await headlessBrowser.newPage();
+const targetUrl = `${targetBaseUrl}/wp-admin/admin.php?page=of-advanced-menu&tab=custom-javascript-tab`;
 await page.goto(targetUrl, { waitUntil: "load" });
 
-// Forcibly put delays to avoid recaptcha prompting
 await page.type("#user_login", process.env.WP_USERNAME, { delay: 300 });
 await page.type("#user_pass", process.env.WP_PASSWORD, { delay: 150 });
 
-// Click the "login" button, finally
 await Promise.all([
     page.click("#wp-submit"),
     page.waitForNavigation({ waitUntil: "load" })
@@ -58,12 +55,22 @@ try {
         throw new Error();
     }
 
-    // Clear all the contents first
-    await page.click(".CodeMirror-line"); // Click instead of simply focusing
+    await page.bringToFront();
+
+    await page.click(".CodeMirror-line");
     await page.keyboard.down("Control");
     await page.keyboard.down("A");
     await page.keyboard.up("A");
     await page.keyboard.up("Control");
+
+    const previousContent = await page.evaluate(() => {
+        document.execCommand("copy"); // Probably DEPRECATED
+        return navigator.clipboard.readText();
+    });
+    console.log("Previous field value was:");
+    console.log(previousContent);
+
+    // Delete the existing content first
     await page.keyboard.press("Backspace");
 
     // Adjust the full string to match the autocompletion behavior of CodeMirror
@@ -89,7 +96,6 @@ catch (err) {
     throw err;
 }
 finally {
-    // Finally, log out from everything
     // We need to click the hidden logout button that only appears on parent menu hover
     await page.evaluate(() => {
         document.getElementById("wp-admin-bar-logout").querySelector("a.ab-item").click();
