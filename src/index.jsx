@@ -9,7 +9,7 @@ import * as pages from './pages/_listing';
 function Main() {
     // FIXME
     useEffect(() => {
-        document.title = "Coming Soon — PPSMB Kesatria 2021";
+        document.title = 'Coming Soon — PPSMB Kesatria 2021';
     }, []);
 
     return (
