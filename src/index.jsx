@@ -1,14 +1,10 @@
+import { useEffect } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import ReactDOM from 'react-dom';
 
 import './main.css';
 
-// import {
-//     DummyUnderConstructionsPage,
-//     Agenda
-// } from './pages/_listing';
 import * as pages from './pages/_listing';
-import { useEffect } from 'react';
 
 function Main() {
     // FIXME
@@ -18,7 +14,6 @@ function Main() {
 
     return (
         <BrowserRouter>
-            {/* prettier-ignore */}
             <Switch>
                 {/* eslint-disable */}
                 <Route exact path='/agenda-testing' component={pages.Agenda} />
