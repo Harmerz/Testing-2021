@@ -8,8 +8,14 @@ import './main.css';
 //     Agenda
 // } from './pages/_listing';
 import * as pages from './pages/_listing';
+import { useEffect } from 'react';
 
 function Main() {
+    // FIXME
+    useEffect(() => {
+        document.title = "Coming Soon — PPSMB Kesatria 2021";
+    }, []);
+    
     return (
         <BrowserRouter>
             {/* prettier-ignore */}
