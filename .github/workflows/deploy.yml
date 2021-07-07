@@ -1,6 +1,6 @@
 # Deploy assets to Netlify and transplant components to the WordPress custom code field
 
-name: Deploy and Transplant
+name: Deployment
 
 on:
   push:
