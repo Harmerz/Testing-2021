@@ -4,9 +4,9 @@ name: Deploy and Transplant
 
 on:
   push:
-    branches: [main]
+    branches: [dev, prod]
   pull_request:
-    branches: [main]
+    branches: [dev, prod]
 
 jobs:
   main-job:
@@ -28,17 +28,16 @@ jobs:
     - name: Build files from source
       run: npm run build
 
-    - name: Preview/draft deploy
-      if: github.event_name == 'pull_request'
-      run: npm run deploy:draft
-
-    - name: Production deploy & Transplant necessary parts to WP
-      if: |
-        github.event_name == 'push' &&
-        github.ref == 'refs/heads/main'
+    - id: prod-deploy
+      name: Production deploy & Transplant necessary parts to WP
+      if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/prod' }}
       run: npm run deploy:prod && npm run transplant
       env:
         NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
         NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
         WP_USERNAME: ${{ secrets.WP_DEPLOY_USERNAME }}
         WP_PASSWORD: ${{ secrets.WP_DEPLOY_PASSWORD }}
+
+    - name: Preview/draft deploy (click to see the deploy URL)
+      if: ${{ steps.prod-deploy.outcome == 'skipped' }}
+      run: npm run deploy:draft
