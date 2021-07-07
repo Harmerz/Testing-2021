@@ -30,7 +30,7 @@ const headlessBrowser = await puppeteer.launch();
 // Modify browser permissions so that copying works
 await headlessBrowser
     .defaultBrowserContext()
-    .overridePermissions(targetBaseUrl, ['clipboard-read', 'clipboard-write']);
+    .overridePermissions(webBaseUrl, ['clipboard-read', 'clipboard-write']);
 
 const page = await headlessBrowser.newPage();
 
@@ -97,3 +97,4 @@ finally {
     await page.waitForNavigation({ waitUntil: 'load' });
     await headlessBrowser.close();
 }
+//#endregion
