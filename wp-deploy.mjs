@@ -5,8 +5,9 @@ import puppeteer from 'puppeteer';
 const sourceDom = await JSDOM.fromFile('build/index.html');
 const { head: sourceHead, body: sourceBody } = sourceDom.window.document;
 
-const styles = sourceHead.querySelectorAll('link[rel=stylesheet][href]');
-const scripts = sourceBody.querySelectorAll('script');
+// Convert type to plain array
+const [...styles] = sourceHead.querySelectorAll('link[rel=stylesheet]');
+const [...scripts] = sourceBody.querySelectorAll('script');
 
 const payloadData = [
     ...styles.map((el) => el.outerHTML),
