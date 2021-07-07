@@ -15,14 +15,14 @@ function Main() {
     useEffect(() => {
         document.title = "Coming Soon — PPSMB Kesatria 2021";
     }, []);
-    
+
     return (
         <BrowserRouter>
             {/* prettier-ignore */}
             <Switch>
                 {/* eslint-disable */}
-                <Route exact path='/agenda' component={pages.Agenda} />
-                <Route                      component={pages.ComingSoon} />
+                <Route exact path='/agenda-testing' component={pages.Agenda} />
+                <Route                              component={pages.ComingSoon} />
                 {/* eslint-enable */}
             </Switch>
         </BrowserRouter>
