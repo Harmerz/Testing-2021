@@ -97,3 +97,4 @@ finally {
     await page.waitForNavigation({ waitUntil: 'load' });
     await headlessBrowser.close();
 }
+//#endregion
