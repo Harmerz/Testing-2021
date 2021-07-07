@@ -31,7 +31,7 @@ scripts.forEach(scriptEl => {
     customCodePayloadData.push(scriptEl.outerHTML);
 });
 
-const headlessBrowser = await puppeteer.launch({ headless: false });
+const headlessBrowser = await puppeteer.launch();
 
 // Modify browser permissions so that copying works
 await headlessBrowser
