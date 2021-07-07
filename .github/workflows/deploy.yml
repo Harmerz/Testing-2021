@@ -1,12 +1,12 @@
 # Deploy assets to Netlify and transplant components to the WordPress custom code field
 
-name: Deploy and Transplant
+name: Deployment
 
 on:
   push:
-    branches: [main]
+    branches: [dev, prod]
   pull_request:
-    branches: [main]
+    branches: [dev, prod]
 
 jobs:
   main-job:
@@ -16,7 +16,7 @@ jobs:
     - name: Prepare source files from the repo
       uses: actions/checkout@v2
 
-    - name: Set up Node.js (with caching)
+    - name: Set up Node.js
       uses: actions/setup-node@v2
       with:
         node-version: '14'
@@ -28,17 +28,19 @@ jobs:
     - name: Build files from source
       run: npm run build
 
-    - name: Preview/draft deploy
-      if: github.event_name == 'pull_request'
-      run: npm run deploy:draft
-
-    - name: Production deploy & Transplant necessary parts to WP
-      if: |
-        github.event_name == 'push' &&
-        github.ref == 'refs/heads/main'
+    - id: prod-deploy
+      name: Production deploy & Transplant necessary parts to WP
+      if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/prod' }}
       run: npm run deploy:prod && npm run transplant
       env:
         NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
         NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
         WP_USERNAME: ${{ secrets.WP_DEPLOY_USERNAME }}
         WP_PASSWORD: ${{ secrets.WP_DEPLOY_PASSWORD }}
+
+    - name: Preview/draft deploy [Click to see deploy URL]
+      if: ${{ steps.prod-deploy.outcome == 'skipped' }}
+      run: npm run deploy:draft
+      env:
+        NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+        NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
