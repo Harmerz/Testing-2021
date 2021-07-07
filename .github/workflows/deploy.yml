@@ -27,13 +27,15 @@ jobs:
 
     - name: Build files from source
       run: npm run build
+      env:
+        INLINE_RUNTIME_CHUNK: 'false' # Disable inlined scripts on resulting build
+        PUBLIC_URL: //kesatria-2021-resources.netlify.app
 
     - id: prod-deploy
       name: Production deploy & Transplant necessary parts to WP
       if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/prod' }}
-      run: npm run deploy:prod && npm run transplant
+      run: npm run deploy:wp
       env:
-        INLINE_RUNTIME_CHUNK: 'false'
         NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
         NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
         WP_USERNAME: ${{ secrets.WP_DEPLOY_USERNAME }}
