@@ -9,7 +9,7 @@ export default function Comic({ openedPage, imageCount }) {
     Array(imageCount),
     (_, index) => index + 1
   ).map((i) => (
-    <div className="w-screen p-6">
+    <div className="w-screen p-12">
       <img
         src={`${baseImageUrl}${i}`}
         alt={`webcomic page ${i}`}
