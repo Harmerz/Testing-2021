@@ -40,6 +40,3 @@ export default function Timer({ openedPage, passedPage, setPassedPage }) {
     </div>
   );
 }
-
-// duration: 15seconds
-// edit tailwind.config.js for enable transition-width and custom transition-duration
