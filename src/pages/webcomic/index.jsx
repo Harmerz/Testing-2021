@@ -2,6 +2,7 @@ import { useState } from 'react';
 import NavigationButton from './NavigationButton';
 import Comic from './Comic';
 import Timer from './Timer';
+import PortraitWarning from './PortraitWarning';
 
 export default function Webcomic() {
   const [openedPage, setOpenedPage] = useState(0); // begin from 0
@@ -29,6 +30,7 @@ export default function Webcomic() {
         passedPage={passedPage}
         setPassedPage={setPassedPage}
       />
+      <PortraitWarning />
     </div>
   );
 }
