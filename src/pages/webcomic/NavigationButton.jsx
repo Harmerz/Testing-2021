@@ -4,13 +4,16 @@ export default function NavigationButton({
   openedPage,
   setOpenedPage,
   imageCount: N,
+  passedPage,
 }) {
   const positionClass = prev ? 'left-0' : 'right-0';
 
   const disabledClass =
-    (prev && openedPage > 0) || (next && openedPage < N - 1)
-      ? 'bg-blue-600'
-      : 'bg-blue-200';
+    (prev && openedPage <= 0) ||
+    (next && openedPage >= N - 1) ||
+    openedPage > passedPage
+      ? 'bg-blue-200 pointer-events-none'
+      : 'bg-blue-600 pointer-events-auto';
 
   const clickHandler = (e) => {
     e.preventDefault();
