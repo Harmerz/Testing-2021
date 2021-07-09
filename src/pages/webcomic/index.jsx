@@ -6,7 +6,7 @@ import Timer from './Timer';
 export default function Webcomic() {
   const [openedPage, setOpenedPage] = useState(0); // begin from 0
   const [passedPage, setPassedPage] = useState(-1);
-  const imageCount = 10;
+  const imageCount = 10; // 0 to 9
 
   return (
     <div className="flex relative">

@@ -7,38 +7,27 @@ function needTimer(openedPage, passedPage) {
 }
 
 export default function Timer({ openedPage, passedPage, setPassedPage }) {
-  const [width, setWidth] = useState(0);
+  const [percentage, setPercentage] = useState(0);
 
-  const widthClass = width === 0 ? 'w-0' : 'w-screen';
-  const durationClass =
-    width === 0 && !needTimer(openedPage, passedPage)
-      ? 'duration-75'
-      : 'duration-5000';
+  const timeoutTime = 10; // (ms)
+  const timerTime = 15000; // (ms)
 
+  let timeout;
   useEffect(() => {
-    setWidth(needTimer(openedPage, passedPage));
-    setTimeout(() => {
-      setWidth(1);
-    }, 75);
+    timeout = setTimeout(() => {
+      setPercentage(percentage + (100 * timeoutTime) / timerTime);
+    }, timeoutTime);
 
-    let timerTimeout;
-    if (passedPage < openedPage) {
-      timerTimeout = setTimeout(() => {
-        setPassedPage(openedPage);
-      }, 5000);
-    }
-
-    return () => {
-      setWidth(needTimer(openedPage, passedPage));
-      clearTimeout(timerTimeout);
-    };
-  }, [openedPage]);
+    if (percentage >= 100) clearTimeout(timeout);
+    return () => clearTimeout(timeout);
+  }, [percentage]);
 
   return (
     <div
-      className={`${widthClass} ${durationClass} transition-width ease-linear h-4 bg-yellow-500 z-20 fixed top-0 left-0`}
+      style={{ width: `${percentage}vw` }}
+      className="h-4 bg-yellow-500 z-20 fixed top-0 left-0"
     >
-      width timer {width}
+      width: {percentage}%
     </div>
   );
 }
