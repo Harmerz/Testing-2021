@@ -2,8 +2,8 @@
 import { useState, useEffect } from 'react';
 
 function needTimer(openedPage, passedPage) {
-  if (openedPage <= passedPage) return 1;
-  return 0;
+  if (openedPage - passedPage === 1) return true;
+  return false;
 }
 
 export default function Timer({ openedPage, passedPage, setPassedPage }) {
@@ -13,11 +13,22 @@ export default function Timer({ openedPage, passedPage, setPassedPage }) {
   const timerTime = 15000; // (ms)
 
   useEffect(() => {
+    if (!needTimer(openedPage, passedPage)) {
+      setPercentage(100);
+    } else {
+      setPercentage(0);
+    }
+  }, [openedPage]);
+
+  useEffect(() => {
     const timeout = setTimeout(() => {
       setPercentage(percentage + (100 * timeoutTime) / timerTime);
     }, timeoutTime);
 
-    if (percentage >= 100) clearTimeout(timeout);
+    if (percentage >= 100) {
+      clearTimeout(timeout);
+      if (needTimer(openedPage, passedPage)) setPassedPage(openedPage);
+    }
     return () => clearTimeout(timeout);
   }, [percentage]);
 
