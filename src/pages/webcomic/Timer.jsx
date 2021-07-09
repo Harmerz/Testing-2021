@@ -12,9 +12,8 @@ export default function Timer({ openedPage, passedPage, setPassedPage }) {
   const timeoutTime = 10; // (ms)
   const timerTime = 15000; // (ms)
 
-  let timeout;
   useEffect(() => {
-    timeout = setTimeout(() => {
+    const timeout = setTimeout(() => {
       setPercentage(percentage + (100 * timeoutTime) / timerTime);
     }, timeoutTime);
 
