@@ -16,6 +16,8 @@
   "rules": {
     "prettier/prettier": "error",
     "arrow-body-style": "off",
+    "no-unused-vars": "warn",
+    "no-console": "warn",
     "react/prop-types": "off",
     "react/react-in-jsx-scope": "off",
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]

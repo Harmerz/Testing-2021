@@ -1,15 +1,39 @@
-export default function Comic({ openedPage, imageCount }) {
+import { useState, useRef, useLayoutEffect } from 'react';
+
+export default function Comic({ imageCount, openedPage }) {
+  const [containerSize, setContainerSize] = useState({
+    width: 0,
+    height: 0,
+  });
+  const containerRef = useRef(null);
+
+  const updateContainerSize = () => {
+    setContainerSize({
+      width: containerRef.current.offsetWidth,
+      height: containerRef.current.offsetHeight,
+    });
+  };
+
+  useLayoutEffect(() => {
+    if (containerRef.current) {
+      updateContainerSize();
+      window.addEventListener('resize', updateContainerSize);
+    }
+    return () => window.removeEventListener('resize', updateContainerSize);
+  }, [containerRef]);
+
   const baseImageUrl = 'https://ik.imagekit.io/lutfiandri/webcomic-kesatria/';
-  const extraStyles = {
-    width: `${100 * imageCount}vw`,
-    '--tw-translate-x': `-${100 * openedPage}vw`,
+  const wrapperStyles = {
+    width: `${containerSize.width * imageCount}px`,
+    height: `${containerSize.height}px`,
+    '--tw-translate-x': `-${containerSize.width * openedPage}px`,
   };
 
   const imagesComponent = Array.from(
     Array(imageCount),
     (_, index) => index + 1
   ).map((i) => (
-    <div className="w-screen p-12" key={i}>
+    <div className="w-screen" key={i}>
       <img
         src={`${baseImageUrl}${i}`}
         alt={`webcomic page ${i}`}
@@ -19,10 +43,10 @@ export default function Comic({ openedPage, imageCount }) {
   ));
 
   return (
-    <div className="w-screen h-screen overflow-hidden">
+    <div ref={containerRef} className="w-full h-full relative overflow-hidden">
       <div
-        style={extraStyles}
-        className="h-screen flex flex-row flex-nowrap transition duration-200 bg-red-500 transform"
+        style={wrapperStyles}
+        className="h-full flex flex-row flex-nowrap transition duration-200 transform absolute"
       >
         {imagesComponent}
       </div>

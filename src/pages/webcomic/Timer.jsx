@@ -1,42 +1,27 @@
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 
-function needTimer(openedPage, passedPage) {
-  if (openedPage - passedPage === 1) return true;
-  return false;
-}
-
-export default function Timer({ openedPage, passedPage, setPassedPage }) {
-  const [percentage, setPercentage] = useState(0);
-
+export default function Timer({ openedPage, progresses, setProgresses }) {
   const timeoutTime = 10; // (ms)
   const timerTime = 15000; // (ms)
 
   useEffect(() => {
-    if (!needTimer(openedPage, passedPage)) {
-      setPercentage(100);
-    } else {
-      setPercentage(0);
-    }
-  }, [openedPage]);
-
-  useEffect(() => {
     const timeout = setTimeout(() => {
-      setPercentage(percentage + (100 * timeoutTime) / timerTime);
+      setProgresses({
+        ...progresses,
+        [openedPage]: progresses[openedPage] + (100 * timeoutTime) / timerTime,
+      });
     }, timeoutTime);
 
-    if (percentage >= 100) {
+    if (progresses[openedPage] >= 100) {
       clearTimeout(timeout);
-      if (needTimer(openedPage, passedPage)) setPassedPage(openedPage);
     }
     return () => clearTimeout(timeout);
-  }, [percentage]);
+  }, [progresses[openedPage]]);
 
   return (
     <div
-      style={{ width: `${percentage}vw` }}
-      className="h-4 bg-yellow-500 z-20 fixed top-0 left-0"
-    >
-      width: {percentage}%
-    </div>
+      style={{ width: `${progresses[openedPage]}%` }}
+      className="h-1 bg-brand-dark"
+    />
   );
 }

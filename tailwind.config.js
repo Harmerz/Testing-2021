@@ -6,10 +6,18 @@ module.exports = {
       screens: {
         portrait: { raw: '(orientation: portrait)' },
       },
+      colors: {
+        brand: {
+          dark: '#0C181D',
+          light: '#FFFFFF',
+        },
+      },
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      dropShadow: ['hover'],
+    },
   },
   plugins: [],
 };
