@@ -25,6 +25,6 @@ function Main() {
 }
 
 // TEMPORARY
-if (!window.location.pathname.startsWith('/agenda/hari-') {
+if (!window.location.pathname.startsWith('/agenda/hari-')) {
     ReactDOM.render(<Main />, document.getElementById('content'));
 }
