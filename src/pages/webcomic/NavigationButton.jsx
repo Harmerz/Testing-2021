@@ -34,7 +34,7 @@ export default function NavigationButton({
       disabled={isDisabled}
       onClick={clickHandler}
       style={{ color: isDisabled ? '#777777' : '#0C181D' }}
-      className={`cursor-pointer w-8 md:w-10 lg:w-16 ${disabledClass} transform-none lg:transform duration-200 hover:-translate-y-1 filter-none lg:filter hover:drop-shadow-lg`}
+      className={`cursor-pointer w-8 md:w-10 lg:w-16 ${disabledClass} transform duration-200 hover:-translate-y-1 filter hover:drop-shadow-lg`}
     >
       {next && (
         <svg

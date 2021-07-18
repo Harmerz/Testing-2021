@@ -20,7 +20,7 @@ export default function Webcomic() {
         alt="background"
         className="w-full h-full object-cover object-right-bottom fixed"
       />
-      <div className="px-12 py-8 h-full flex flex-col object-container z-20">
+      <div className="px-4 md:px-8 lg:px-12 py-4 lg:py-8 h-full flex flex-col object-container z-20">
         <div className="text-center mb-2 hidden lg:block">
           <h1 className="font-medium text-4xl">WEBCOMIC: MENTAL HEALTH</h1>
         </div>
