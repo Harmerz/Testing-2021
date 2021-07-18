@@ -24,4 +24,7 @@ function Main() {
     );
 }
 
-ReactDOM.render(<Main />, document.getElementById('content'));
+// TEMPORARY
+if (!window.location.pathname.startsWith('/agenda/hari-')) {
+    ReactDOM.render(<Main />, document.getElementById('content'));
+}
