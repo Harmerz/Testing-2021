@@ -1,0 +1,2 @@
+# Allow client-side routing to work (when directly accessed via URL)
+/* /index.html 200
