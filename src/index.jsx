@@ -17,7 +17,7 @@ function Main() {
             <Switch>
                 {/* eslint-disable */}
                 <Route exact path='/agenda-testing' component={pages.Agenda} />
-                <Route exact path='/' component={pages.ComingSoon} />
+                <Route exact path='/webcomic'       component={pages.WebcomicIndexPage} />
                 <Route
                     path='/jalan-teknik'
                     exact
@@ -32,6 +32,7 @@ function Main() {
                     path='/jalan-teknik/:path/360'
                     component={pages.ThreeSixty}
                 />
+                <Route component={pages.ComingSoon} />
                 {/* eslint-enable */}
             </Switch>
         </BrowserRouter>
