@@ -1,0 +1,16 @@
+.backdrop {
+    background-image: url('../../assets/coming-soon-page/background.png');
+    position: relative;
+}
+
+.backdrop::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: url('../../assets/coming-soon-page/ornamen\ tugu.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+}

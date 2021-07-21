@@ -6,7 +6,7 @@ import Presence from './Presence';
 import PortraitWarning from './PortraitWarning';
 import PresenceNavigationButton from './PresenceNavigationButton';
 
-export default function Webcomic() {
+export function WebcomicIndexPage() {
   const [imageCount] = useState(10); // 0 to 9
   const [openedPage, setOpenedPage] = useState(0); // begin from 0
   const [progresses, setProgresses] = useState(
