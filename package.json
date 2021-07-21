@@ -1,49 +1,47 @@
 {
-  "name": "kesatria-2021-web-res",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@craco/craco": "^6.2.0",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-router-dom": "^5.2.0",
-    "react-scripts": "4.0.3"
-  },
-  "scripts": {
-    "start": "craco start",
-    "build": "craco build",
-    "deploy:draft": "netlify deploy",
-    "deploy:wp": "netlify deploy --prod && node wp-deploy.mjs",
-    "lint": "eslint --ext .js --ext .jsx src/",
-    "lint:fix": "eslint --fix --ext .js --ext .jsx src/"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
+    "name": "kesatria-2021-web-res",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+        "@craco/craco": "^6.2.0",
+        "@react-leaflet/core": "^1.0.2",
+        "leaflet": "^1.7.1",
+        "leaflet-fullscreen": "^1.0.2",
+        "pannellum-react": "^1.2.4",
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2",
+        "react-leaflet": "^3.1.0",
+        "react-router-dom": "^5.2.0",
+        "react-scripts": "4.0.3"
+    },
+    "scripts": {
+        "start": "craco start",
+        "build": "craco build",
+        "deploy:draft": "netlify deploy",
+        "deploy:wp": "netlify deploy --prod && node wp-deploy.mjs",
+        "lint": "eslint --ext .js --ext .jsx src/",
+        "lint:fix": "eslint --fix --ext .js --ext .jsx src/"
+    },
+    "browserslist": [
+        ">0.2%",
+        "not dead",
+        "not op_mini all"
     ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "devDependencies": {
-    "autoprefixer": "^9.8.6",
-    "eslint": "^7.30.0",
-    "eslint-config-airbnb": "^18.2.1",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-import": "^2.23.4",
-    "eslint-plugin-jsx-a11y": "^6.4.1",
-    "eslint-plugin-prettier": "^3.4.0",
-    "eslint-plugin-react": "^7.24.0",
-    "eslint-plugin-react-hooks": "^4.2.0",
-    "jsdom": "^16.6.0",
-    "netlify-cli": "^4",
-    "postcss": "^7.0.36",
-    "prettier": "^2.3.2",
-    "puppeteer": "^10.1.0",
-    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.4"
-  }
+    "devDependencies": {
+        "autoprefixer": "^9.8.6",
+        "eslint": "^7.30.0",
+        "eslint-config-airbnb": "^18.2.1",
+        "eslint-config-prettier": "^8.3.0",
+        "eslint-plugin-import": "^2.23.4",
+        "eslint-plugin-jsx-a11y": "^6.4.1",
+        "eslint-plugin-prettier": "^3.4.0",
+        "eslint-plugin-react": "^7.24.0",
+        "eslint-plugin-react-hooks": "^4.2.0",
+        "jsdom": "^16.6.0",
+        "netlify-cli": "^4",
+        "postcss": "^7.0.36",
+        "prettier": "^2.3.2",
+        "puppeteer": "^10.1.0",
+        "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.4"
+    }
 }

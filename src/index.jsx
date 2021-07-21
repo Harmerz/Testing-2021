@@ -17,7 +17,21 @@ function Main() {
             <Switch>
                 {/* eslint-disable */}
                 <Route exact path='/agenda-testing' component={pages.Agenda} />
-                <Route                              component={pages.ComingSoon} />
+                <Route exact path='/' component={pages.ComingSoon} />
+                <Route
+                    path='/jalan-teknik'
+                    exact
+                    component={pages.JalanTeknik}
+                />
+                <Route
+                    path='/jalan-teknik/:path'
+                    exact
+                    component={pages.ItemJalanTeknik}
+                />
+                <Route
+                    path='/jalan-teknik/:path/360'
+                    component={pages.ThreeSixty}
+                />
                 {/* eslint-enable */}
             </Switch>
         </BrowserRouter>
