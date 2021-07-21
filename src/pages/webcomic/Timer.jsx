@@ -1,27 +1,28 @@
 import { useEffect } from 'react';
 
-export default function Timer({ openedPage, progresses, setProgresses }) {
-  const timeoutTime = 10; // (ms)
-  const timerTime = 15000; // (ms)
+export function Timer({ openedPage, progresses, setProgresses }) {
+    const timeoutTime = 10; // (ms)
+    const timerTime = 15000; // (ms)
 
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      setProgresses({
-        ...progresses,
-        [openedPage]: progresses[openedPage] + (100 * timeoutTime) / timerTime,
-      });
-    }, timeoutTime);
+    useEffect(() => {
+        const timeout = setTimeout(() => {
+            setProgresses({
+                ...progresses,
+                [openedPage]:
+                    progresses[openedPage] + (100 * timeoutTime) / timerTime,
+            });
+        }, timeoutTime);
 
-    if (progresses[openedPage] >= 100) {
-      clearTimeout(timeout);
-    }
-    return () => clearTimeout(timeout);
-  }, [progresses[openedPage]]);
+        if (progresses[openedPage] >= 100) {
+            clearTimeout(timeout);
+        }
+        return () => clearTimeout(timeout);
+    }, [progresses[openedPage]]);
 
-  return (
-    <div
-      style={{ width: `${progresses[openedPage]}%` }}
-      className="h-1 bg-brand-dark"
-    />
-  );
+    return (
+        <div
+            style={{ width: `${progresses[openedPage]}%` }}
+            className='h-1 bg-brand-dark'
+        />
+    );
 }
