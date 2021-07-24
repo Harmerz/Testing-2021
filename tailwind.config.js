@@ -26,4 +26,8 @@ module.exports = {
       strategy: 'class',
     }),
   ],
+  // corePlugins: {
+  //   preflight: false
+  // }
+  important: '#content'
 };

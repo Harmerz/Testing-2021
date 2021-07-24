@@ -2,7 +2,8 @@ import { useEffect } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import ReactDOM from 'react-dom';
 
-import './main.css';
+import './styles/base.scss';
+import './styles/main.css';
 
 import * as pages from './pages/_listing';
 
