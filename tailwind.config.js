@@ -1,11 +1,33 @@
+const forms = require('@tailwindcss/forms');
+
 module.exports = {
   purge: ['./src/**/*.{js,jsx,ts,tsx}'],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      screens: {
+        portrait: { raw: '(orientation: portrait)' },
+      },
+      colors: {
+        brand: {
+          dark: '#0C181D',
+          light: '#FFFFFF',
+        },
+      },
+    },
   },
   variants: {
-    extend: {},
+    extend: {
+      dropShadow: ['hover'],
+    },
   },
-  plugins: [],
+  plugins: [
+    forms({
+      strategy: 'class',
+    }),
+  ],
+  // corePlugins: {
+  //   preflight: false
+  // }
+  important: '#content'
 };
