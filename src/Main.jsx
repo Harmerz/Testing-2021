@@ -10,8 +10,9 @@ export function Main() {
         <BrowserRouter>
             <Switch>
                 {/* eslint-disable */}
-                <Route exact path='/agenda-testing' component={pages.Agenda} />
-                <Route exact path='/webcomic'       component={pages.WebcomicIndexPage} />
+                <Route exact path='/' component={pages.HomePage} />
+                <Route path='/agenda-testing' component={pages.Agenda} />
+                <Route path='/webcomic'       component={pages.WebcomicIndexPage} />
                 <Route
                     path='/jalan-teknik'
                     exact
@@ -26,7 +27,6 @@ export function Main() {
                     path='/jalan-teknik/:path/360'
                     component={pages.ThreeSixty}
                 />
-                <Route component={pages.ComingSoon} />
                 {/* eslint-enable */}
             </Switch>
         </BrowserRouter>
