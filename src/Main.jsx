@@ -1,18 +1,11 @@
-import { useEffect } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import ReactDOM from 'react-dom';
 
 import './styles/base.scss';
 import './styles/main.css';
 
 import * as pages from './pages/_listing';
 
-function Main() {
-    // FIXME
-    useEffect(() => {
-        document.title = 'Coming Soon — PPSMB Kesatria 2021';
-    }, []);
-
+export function Main() {
     return (
         <BrowserRouter>
             <Switch>
@@ -38,9 +31,4 @@ function Main() {
             </Switch>
         </BrowserRouter>
     );
-}
-
-// TEMPORARY
-if (!window.location.pathname.startsWith('/agenda/hari-')) {
-    ReactDOM.render(<Main />, document.getElementById('content'));
 }
