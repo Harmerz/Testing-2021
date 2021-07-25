@@ -11,10 +11,12 @@ import * as pages from './pages/_listing';
 export function Main() {
     return (
         <BrowserRouter>
-            <div className='flex flex-col min-h-screen'> {/* Act as the <body> element */}
+            {/* Act as the <body> element */}
+            <div className='flex flex-col min-h-screen'>
                 <Header className='flex-shrink-0' />
 
-                <div className='flex-grow'> {/* Act as the <main> element */}
+                {/* Act as the <main> element */}
+                <div className='flex-grow'>
                     <Switch>
                         {/* eslint-disable */}
                         <Route exact path='/' component={pages.HomePage} />
@@ -37,7 +39,6 @@ export function Main() {
                         {/* eslint-enable */}
                     </Switch>
                 </div>
-
                 <Footer className='flex-shrink-0' />
             </div>
         </BrowserRouter>
