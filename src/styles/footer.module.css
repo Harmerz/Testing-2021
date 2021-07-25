@@ -1,0 +1,13 @@
+.footerContainer {
+    --valley-starting-point: 45%;
+    --valley-depth: 1rem;
+
+    clip-path: polygon(
+        0 0,
+        var(--valley-starting-point) 0,
+        calc(var(--valley-starting-point) + 1rem) var(--valley-depth),
+        100% var(--valley-depth),
+        100% 100%,
+        0 100%
+    );
+}
