@@ -3,11 +3,16 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import './styles/base.scss';
 import './styles/main.css';
 
+import { Header } from './components/Header';
+import { Footer } from './components/Footer';
+
 import * as pages from './pages/_listing';
 
 export function Main() {
     return (
         <BrowserRouter>
+            <Header />
+
             <Switch>
                 {/* eslint-disable */}
                 <Route exact path='/' component={pages.HomePage} />
@@ -29,6 +34,8 @@ export function Main() {
                 />
                 {/* eslint-enable */}
             </Switch>
+
+            <Footer />
         </BrowserRouter>
     );
 }

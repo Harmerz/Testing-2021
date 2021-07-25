@@ -9,6 +9,9 @@ module.exports = {
                 portrait: {
                     raw: '(orientation: portrait)'
                 }
+            },
+            zIndex: {
+                '-1': '-1'
             }
         },
         colors: {
@@ -34,7 +37,8 @@ module.exports = {
     },
     variants: {
         extend: {
-            dropShadow: ['hover']
+            dropShadow: ['hover'],
+            backgroundOpacity: ['active']
         }
     },
     plugins: [
