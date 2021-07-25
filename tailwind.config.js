@@ -25,6 +25,11 @@ module.exports = {
                 red: '#DC3647',
                 blue: '#348AC5'
             }
+        },
+        fontFamily: {
+            'display': ['Mont', 'system-ui', 'sans-serif'],
+            'display-sm': ['Mont Book', 'system-ui', 'sans-serif'],
+            'body': ['Lato', 'sans-serif']
         }
     },
     variants: {
