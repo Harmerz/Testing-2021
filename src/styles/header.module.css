@@ -1,0 +1,44 @@
+.headerContainer {
+    filter: drop-shadow(0 0.5rem 0 rgba(0 0 0 / 0.25));
+    --diagonal-offset: 4rem;
+}
+
+.mainLogoContainer {
+    /* --offset-length: 2rem; */
+    clip-path: polygon(
+        0 0,
+        100% 0,
+        calc(100% - var(--diagonal-offset)) 100%,
+        0 100%
+    );
+    /* padding-right: 2rem; */
+    margin-right: calc(-1 * var(--diagonal-offset));
+    padding-right: var(--diagonal-offset) !important; /* The `important` is highly temporary! */
+}
+
+.navContainer {
+    padding-left: var(--diagonal-offset);
+}
+
+/* .mainLogoContainer::before {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: -1;
+    background-color: yellowgreen;
+    height: 100%;
+    width: 5rem;
+    top: 0;
+    left: calc(100% - 2.5rem);
+    transform: skewX(-20deg);
+} */
+
+.mobileIcon {
+    animation: mobileIconAppearAnim 0.25s;
+}
+@keyframes mobileIconAppearAnim {
+    from {
+        opacity: 0;
+        transform: translateY(20%);
+    }
+}

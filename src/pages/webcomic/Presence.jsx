@@ -68,7 +68,7 @@ export function Presence() {
                 <div className='grid place-items-center mt-8'>
                     <button
                         type='submit'
-                        className='bg-brand-dark text-brand-light font-medium rounded-lg px-12 py-3 transform duration-150 hover:-translate-y-1 hover:shadow-lg'
+                        className='bg-black text-white font-medium rounded-lg px-12 py-3 transform duration-150 hover:-translate-y-1 hover:shadow-lg'
                     >
                         SUBMIT
                     </button>
