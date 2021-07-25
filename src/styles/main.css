@@ -2,6 +2,45 @@
     input::-webkit-calendar-picker-indicator {
         display: none !important;
     }
+
+    @font-face {
+        font-family: 'Mont Book';
+        font-style: normal;
+        src: url('../assets/fonts/Mont-Book.ttf') format('truetype');
+    }
+    @font-face {
+        font-family: 'Mont Book';
+        font-style: italic;
+        src: url('../assets/fonts/Mont-BookItalic.ttf') format('truetype');
+    }
+    @font-face {
+        font-family: 'Mont';
+        font-style: normal;
+        font-weight: bold;
+        src: url('../assets/fonts/Mont-Bold.ttf') format('truetype');
+    }
+    @font-face {
+        font-family: 'Mont';
+        font-style: italic;
+        font-weight: bold;
+        src: url('../assets/fonts/Mont-BoldItalic.ttf') format('truetype');
+    }
+    @font-face {
+        font-family: 'Mont';
+        font-style: normal;
+        font-weight: 600;
+        src: url('../assets/fonts/Mont-SemiBold.ttf') format('truetype');
+    }
+    @font-face {
+        font-family: 'Mont';
+        font-style: italic;
+        font-weight: 600;
+        src: url('../assets/fonts/Mont-SemiBoldItalic.ttf') format('truetype');
+    }
+
+    html {
+        font-size: 87.5%;
+    }
 }
 
 @layer components {
@@ -18,7 +57,7 @@
     }
     
     .customized-form {
-        @apply w-full rounded-md border-brand-dark focus:outline-none focus:border-transparent focus:ring-brand-dark focus:ring-2 transform duration-150 mt-1 focus:-translate-y-1 focus:shadow-md;
+        @apply w-full rounded-md border-black focus:outline-none focus:border-transparent focus:ring-black focus:ring-2 transform duration-150 mt-1 focus:-translate-y-1 focus:shadow-md;
     }
 }
 
@@ -28,3 +67,8 @@
     width: 90vw;
     height: 80vh;
 }
+
+/* For debugging purposes only */
+/* * {
+    outline: 1px solid rgb(0 255 0 / 0.25);
+} */
