@@ -18,13 +18,13 @@ function NavLink({ to, mobileMenuSetter, children }) {
     );
 }
 
-export function Header() {
+export function Header({ className }) {
     const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
 
     const MobileIcon = isMobileMenuOpen ? RetractUpIcon : HamburgerIcon;
 
     return (
-        <header className={`${styles.headerContainer} sticky w-full flex items-start`}>
+        <header className={`${styles.headerContainer} sticky w-full flex items-start${className ? ` ${className}` : ''}`}>
             <div className={`${styles.mainLogoContainer} bg-white flex-shrink-0 px-4 py-2 pr-8 text-6xl`}>p kes 2021</div>
             <div className={`${styles.navContainer} bg-black flex-grow text-white uppercase font-display-sm font-semibold text-sm`}> {/* mb-2 */}
                 <nav className={`fixed w-full left-0 top-0 md:static bg-black md:bg-transparent flex flex-col md:flex-row md:h-full justify-center text-center py-8 pt-24 md:p-0 -z-1 ${!isMobileMenuOpen ? 'transform -translate-y-full' : ''} transition-transform duration-300 md:transform-none md:transition-none`}>
