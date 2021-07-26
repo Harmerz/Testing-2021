@@ -1,3 +1,4 @@
+import { StrictMode } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import './styles/base.scss';
@@ -8,7 +9,7 @@ import { Footer } from './components/Footer';
 
 import * as pages from './pages/_listing';
 
-export function Main() {
+function Main() {
     return (
         <BrowserRouter>
             {/* Act as the <body> element */}
@@ -44,3 +45,9 @@ export function Main() {
         </BrowserRouter>
     );
 }
+
+export const renderedComponent = (
+    <StrictMode>
+        <Main />
+    </StrictMode>
+);
