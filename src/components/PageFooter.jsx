@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import styles from '../styles/footer.module.css';
+import styles from '../styles/PageFooter.module.css';
 
 import { ReactComponent as FooterLogo } from '../assets/images/main-footer-logo.svg';
 
