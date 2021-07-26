@@ -1,7 +1,15 @@
 .headerContainer {
-    filter: drop-shadow(0 0.5rem 0 rgba(0 0 0 / 0.25));
+    --drop-shadow-y-length: 0.5rem;
+    filter: drop-shadow(0 var(--drop-shadow-y-length) 0 rgba(0 0 0 / 0.25));
+    margin-bottom: var(--drop-shadow-y-length);
+
     --diagonal-offset: 4rem;
 }
+/*
+TODO: Handle cases where the main page requires 100% ("immersive") width
+Some ideas: Use something like useFullWidth/useImmersive/useFullScreen (JS hook)?
+For the moment, we can "cheat" by appling a negative margin in the main page div instead (or, alternatively, a negative margin within the header element
+*/
 
 .mainLogoContainer {
     /* --offset-length: 2rem; */
