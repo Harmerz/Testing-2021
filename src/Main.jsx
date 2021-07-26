@@ -20,8 +20,8 @@ function Main() {
                 <div className='flex-grow'>
                     <Switch>
                         {/* eslint-disable */}
-                        <Route exact path='/' component={pages.HomePage} />
-                        <Route path='/agenda-testing' component={pages.Agenda} />
+                        <Route path='/' component={pages.HomePage} />
+                        {/* <Route path='/agenda-testing' component={pages.Agenda} />
                         <Route path='/webcomic'       component={pages.WebcomicIndexPage} />
                         <Route
                             path='/jalan-teknik'
@@ -36,7 +36,7 @@ function Main() {
                         <Route
                             path='/jalan-teknik/:path/360'
                             component={pages.ThreeSixty}
-                        />
+                        /> */}
                         {/* eslint-enable */}
                     </Switch>
                 </div>

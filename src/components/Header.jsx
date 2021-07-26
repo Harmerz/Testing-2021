@@ -61,7 +61,7 @@ export function Header({ className }) {
                     <NavLink mobileMenuSetter={setMobileMenuOpen} to='/'>
                         Beranda
                     </NavLink>
-                    <NavLink
+                    {/* <NavLink
                         mobileMenuSetter={setMobileMenuOpen}
                         to='/jalan-jalan-teknik'
                     >
@@ -81,7 +81,7 @@ export function Header({ className }) {
                         to='/dokumentasi'
                     >
                         Dokumentasi
-                    </NavLink>
+                    </NavLink> */}
                 </nav>
                 <button
                     type='button'
