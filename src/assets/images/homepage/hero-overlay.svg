@@ -3,10 +3,11 @@
 <!-- Creator: CorelDRAW 2020 (64-Bit) -->
 <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="373.333mm" height="210mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
 viewBox="0 0 37333.3 21000"
- xmlnsXlink="http://www.w3.org/1999/xlink"
- xmlnsXodm="http://www.corel.com/coreldraw/odm/2003">
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ xmlns:xodm="http://www.corel.com/coreldraw/odm/2003">
  <defs>
   <style type="text/css">
+   <![CDATA[
     .fil22 {fill:none}
     .fil2 {fill:#FEFEFE}
     .fil11 {fill:#7789A4}
@@ -38,6 +39,7 @@ viewBox="0 0 37333.3 21000"
     .fil0 {fill:#0D181D;fill-opacity:0.501961}
     .fil29 {fill:white;fill-rule:nonzero;fill-opacity:0.501961}
     .fil27 {fill:white;fill-rule:nonzero;fill-opacity:0.650980}
+   ]]>
   </style>
    <clipPath id="id0">
     <path d="M-2.37 7.13l37333.34 0 0 21000 -21567.47 0 -655.21 -656.26 -15110.66 0 0 -20343.74z"/>
