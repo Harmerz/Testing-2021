@@ -17,7 +17,7 @@ function SocialItem({
 }) {
     return (
         <a
-            href={targetBaseUrl + !noSuffix ? children : ''}
+            href={targetBaseUrl + (!noSuffix ? children : '')}
             className='flex items-center font-display-sm group my-2 max-w-max'
         >
             <div className='bg-white text-black w-4 h-4 p-0.5 rounded-full'>
