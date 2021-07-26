@@ -92,7 +92,7 @@
     right: 0 !important;
     margin: theme('margin.4') !important;
     border-radius: theme('borderRadius.2xl') !important;
-    min-width: none !important;
+    min-width: 0 !important;
     box-shadow: 0 0 1rem theme('colors.accent.blue') !important;
 }
 #branda-cookie-notice .button {
