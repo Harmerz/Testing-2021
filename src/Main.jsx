@@ -1,3 +1,4 @@
+import { StrictMode } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import './styles/base.scss';
@@ -8,7 +9,7 @@ import { Footer } from './components/Footer';
 
 import * as pages from './pages/_listing';
 
-export function Main() {
+function Main() {
     return (
         <BrowserRouter>
             {/* Act as the <body> element */}
@@ -19,8 +20,8 @@ export function Main() {
                 <div className='flex-grow'>
                     <Switch>
                         {/* eslint-disable */}
-                        <Route exact path='/' component={pages.HomePage} />
-                        <Route path='/agenda-testing' component={pages.Agenda} />
+                        <Route path='/' component={pages.HomePage} />
+                        {/* <Route path='/agenda-testing' component={pages.Agenda} />
                         <Route path='/webcomic'       component={pages.WebcomicIndexPage} />
                         <Route
                             path='/jalan-teknik'
@@ -35,7 +36,7 @@ export function Main() {
                         <Route
                             path='/jalan-teknik/:path/360'
                             component={pages.ThreeSixty}
-                        />
+                        /> */}
                         {/* eslint-enable */}
                     </Switch>
                 </div>
@@ -44,3 +45,9 @@ export function Main() {
         </BrowserRouter>
     );
 }
+
+export const renderedComponent = (
+    <StrictMode>
+        <Main />
+    </StrictMode>
+);

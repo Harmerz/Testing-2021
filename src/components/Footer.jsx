@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom';
 import styles from '../styles/footer.module.css';
 
+import { ReactComponent as FooterLogo } from '../assets/images/main-footer-logo.svg';
+
 import { ReactComponent as TwitterIcon } from '../assets/icons/socials/twitter.svg';
 import { ReactComponent as InstagramIcon } from '../assets/icons/socials/instagram.svg';
 import { ReactComponent as TiktokIcon } from '../assets/icons/socials/tiktok.svg';
@@ -28,7 +30,9 @@ export function Footer({ className }) {
         <footer
             className={`${styles.footerContainer} bg-black text-white flex flex-col md:flex-row font-display-sm p-8 ${className}`}
         >
-            <div className='flex flex-row w-auto md:w-2/5'>
+            {/* TODO: Group the latter text-containing parts (with <div>s) instead of the current approach, to allow similar/uniform left-aligning in mobile viewports */}
+            <div className='flex flex-row items-center w-auto md:w-2/5 mb-8 md:mb-0'>
+                <FooterLogo className='block fill-current text-white h-28 mr-4' />
                 <div className='text-xs'>
                     <p className='font-display font-bold uppercase text-xl mb-4'>
                         PPSMB Kesatria 2021
