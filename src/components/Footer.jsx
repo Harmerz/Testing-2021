@@ -81,7 +81,7 @@ export function Footer({ className }) {
                 <SocialItem
                     icon={YoutubeIcon}
                     targetBaseUrl='https://www.youtube.com/channel/UCmv4fLH2lves3QtOS4V33PQ'
-                    noSuffix={true}
+                    noSuffix
                 >
                     PPSMB KESATRIA
                 </SocialItem>
