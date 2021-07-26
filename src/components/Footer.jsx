@@ -9,10 +9,10 @@ import { ReactComponent as TiktokIcon } from '../assets/icons/socials/tiktok.svg
 import { ReactComponent as LineIcon } from '../assets/icons/socials/line.svg';
 import { ReactComponent as YoutubeIcon } from '../assets/icons/socials/youtube.svg';
 
-function SocialItem({ icon: IconComponent, targetBaseUrl, children }) {
+function SocialItem({ icon: IconComponent, targetBaseUrl, noSuffix, children }) {
     return (
         <a
-            href={targetBaseUrl + children}
+            href={targetBaseUrl + !noSuffix ? children : ''}
             className='flex items-center font-display-sm group my-2 max-w-max'
         >
             <div className='bg-white text-black w-4 h-4 p-0.5 rounded-full'>
@@ -62,25 +62,26 @@ export function Footer({ className }) {
                 </SocialItem>
                 <SocialItem
                     icon={TiktokIcon}
-                    targetBaseUrl='https://twitter.com/'
+                    targetBaseUrl='https://tiktok.com/@'
                 >
                     ppsmb_kesatria
                 </SocialItem>
                 <SocialItem
                     icon={LineIcon}
-                    targetBaseUrl='https://twitter.com/'
+                    targetBaseUrl='https://line.me/ti/p/'
                 >
-                    NR82565A
+                    NRB2565A
                 </SocialItem>
                 <SocialItem
                     icon={InstagramIcon}
-                    targetBaseUrl='https://twitter.com/'
+                    targetBaseUrl='https://instagram.com/'
                 >
                     ppsmb_kesatria
                 </SocialItem>
                 <SocialItem
                     icon={YoutubeIcon}
-                    targetBaseUrl='https://twitter.com/'
+                    targetBaseUrl='https://www.youtube.com/channel/UCmv4fLH2lves3QtOS4V33PQ'
+                    noSuffix={true}
                 >
                     PPSMB KESATRIA
                 </SocialItem>
