@@ -3,6 +3,8 @@ import { NavLink as NavLinkStock } from 'react-router-dom';
 
 import styles from '../styles/header.module.css';
 
+import { ReactComponent as HeaderLogo } from '../assets/images/main-header-logo.svg';
+// import {} from '../assets/images/main-footer-logo.svg';
 import { ReactComponent as HamburgerIcon } from '../assets/icons/list.svg';
 import { ReactComponent as RetractUpIcon } from '../assets/icons/chevron-up.svg';
 
@@ -34,9 +36,17 @@ export function Header({ className }) {
             }`}
         >
             <div
-                className={`${styles.mainLogoContainer} bg-white flex-shrink-0 px-4 py-2 pr-8 text-6xl`}
+                className={`${styles.mainLogoContainer} bg-white flex-shrink-0 pl-6 pb-2 pt-1 pr-8 flex items-end uppercase font-display`}
             >
-                p kes 2021
+                <HeaderLogo className='block h-14 w-auto mr-2' />
+                <div>
+                    <span className='block text-sm leading-none font-semibold'>
+                        PPSMB Kesatria
+                    </span>
+                    <span className='block text-2xl leading-none font-bold mt-1'>
+                        2021
+                    </span>
+                </div>
             </div>
             <div
                 className={`${styles.navContainer} bg-black flex-grow text-white uppercase font-display-sm font-semibold text-sm`}
@@ -81,7 +91,7 @@ export function Header({ className }) {
                     }}
                 >
                     <MobileIcon
-                        className={`${styles.mobileIcon} block h-8 w-auto`}
+                        className={`${styles.mobileIcon} block h-6 w-auto`}
                     />
                 </button>
             </div>
