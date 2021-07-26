@@ -9,7 +9,12 @@ import { ReactComponent as TiktokIcon } from '../assets/icons/socials/tiktok.svg
 import { ReactComponent as LineIcon } from '../assets/icons/socials/line.svg';
 import { ReactComponent as YoutubeIcon } from '../assets/icons/socials/youtube.svg';
 
-function SocialItem({ icon: IconComponent, targetBaseUrl, noSuffix, children }) {
+function SocialItem({
+    icon: IconComponent,
+    targetBaseUrl,
+    noSuffix,
+    children,
+}) {
     return (
         <a
             href={targetBaseUrl + !noSuffix ? children : ''}
