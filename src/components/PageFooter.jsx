@@ -30,7 +30,7 @@ function SocialItem({
     );
 }
 
-export function Footer({ className }) {
+export function PageFooter({ className }) {
     return (
         <footer
             className={`${styles.footerContainer} bg-black text-white flex flex-col md:flex-row font-display-sm p-8 ${className}`}

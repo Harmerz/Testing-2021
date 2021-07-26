@@ -4,8 +4,8 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import './styles/base.scss';
 import './styles/main.css';
 
-import { Header } from './components/Header';
-import { Footer } from './components/Footer';
+import { PageHeader } from './components/PageHeader';
+import { PageFooter } from './components/PageFooter';
 
 import * as pages from './pages/_listing';
 
@@ -14,7 +14,7 @@ function Main() {
         <BrowserRouter>
             {/* Act as the <body> element */}
             <div className='flex flex-col min-h-screen'>
-                <Header className='flex-shrink-0' />
+                <PageHeader className='flex-shrink-0' />
 
                 {/* Act as the <main> element */}
                 <div className='flex-grow'>
@@ -40,7 +40,7 @@ function Main() {
                         {/* eslint-enable */}
                     </Switch>
                 </div>
-                <Footer className='flex-shrink-0' />
+                <PageFooter className='flex-shrink-0' />
             </div>
         </BrowserRouter>
     );

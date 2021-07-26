@@ -22,7 +22,7 @@ function NavLink({ to, mobileMenuSetter, children }) {
     );
 }
 
-export function Header({ className }) {
+export function PageHeader({ className }) {
     const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
 
     const MobileIcon = isMobileMenuOpen ? RetractUpIcon : HamburgerIcon;
