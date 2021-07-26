@@ -72,11 +72,23 @@
 
 /* Customize the WP cookies notice */
 #branda-cookie-notice {
-    @apply bg-black text-white font-body left-0 right-0 m-4 rounded-2xl;
-    box-shadow: 0 0 1rem theme('colors.accent.blue');
+    background-color: theme('colors.black') !important;
+    color: theme('colors.white') !important;
+    font-family: theme('fontFamily.body') !important;
+    left: 0 !important;
+    right: 0 !important;
+    margin: theme('margin.4') !important;
+    border-radius: theme('borderRadius.2xl') !important;
+    min-width: none !important;
+    box-shadow: 0 0 1rem theme('colors.accent.blue') !important;
 }
 #branda-cookie-notice .button {
-    @apply bg-none bg-accent-yellow rounded-none border-none font-display-sm uppercase;
+    background: none !important;
+    background-color: theme('colors.accent.yellow') !important;
+    border: none !important;
+    border-radius: 0 !important;
+    font-family: theme('fontFamily.display-sm') !important;
+    text-transform: uppercase !important;
 }
 
 /* For debugging purposes only */
