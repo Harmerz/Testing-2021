@@ -31,7 +31,7 @@ export function Header({ className }) {
         <header
             className={`${
                 styles.headerContainer
-            } sticky w-full flex items-start${
+            } sticky top-0 w-full flex items-start${
                 className ? ` ${className}` : ''
             }`}
         >
