@@ -39,7 +39,7 @@ export function Header({ className }) {
                 className={`${styles.mainLogoContainer} bg-white flex-shrink-0 pl-6 pb-2 pt-1 pr-8 flex items-end uppercase font-display`}
             >
                 <HeaderLogo className='block h-14 w-auto mr-2' />
-                <div>
+                <div className='text-black'>
                     <span className='block text-sm leading-none font-semibold'>
                         PPSMB Kesatria
                     </span>
