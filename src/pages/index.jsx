@@ -21,7 +21,7 @@ export function HomePage() {
                 className={`${styles.descriptionSection} bg-black text-white flex flex-col md:flex-row justify-between items-center md:items-start px-16 py-24 -mt-8`}
             >
                 <div className='max-w-prose mb-16 md:mr-8'>
-                    <h1 className='font-display text-3xl mb-6 font-bold'>
+                    <h1 className='font-display text-3xl mb-6 font-bold text-white'>
                         Apa itu PPSMB Kesatria?
                     </h1>
                     <p className='font-display-sm'>
