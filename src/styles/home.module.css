@@ -1,3 +1,7 @@
+.heroImg {
+    background-image: url('../assets/images/homepage/hero-bg.png');
+}
+
 .descriptionSection {
     --valley-offset: 70%;
     --valley-width: 1rem;
@@ -17,6 +21,11 @@
     
 @screen md {
     .descriptionSection {
-        --valley-offset: 30%;
+        --valley-offset: 42%;
     }
 }
+
+/* .stagelightContainer {
+    background-image: url('../assets/images/homepage/logo-stagelight-bg.svg');
+    background-size: contain;
+} */
