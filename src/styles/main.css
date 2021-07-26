@@ -99,8 +99,9 @@
     background: none !important;
     background-color: theme('colors.accent.yellow') !important;
     border: none !important;
-    border-radius: 0 !important;
-    font-family: theme('fontFamily.display-sm') !important;
+    border-radius: theme('borderRadius.DEFAULT') !important;
+    font-family: theme('fontFamily.display') !important;
+    font-weight: 600;
     text-transform: uppercase !important;
 }
 
