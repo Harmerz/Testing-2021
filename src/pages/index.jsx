@@ -11,27 +11,47 @@ export function HomePage() {
     return (
         <>
             <section className='-mt-20'>
-                <img src={heroOverlay} alt='Fakultas Teknik UGM' className={`${styles.heroImg} block bg-cover bg-no-repeat min-h-screen min-w-full object-cover bg-center object-center`} />
+                <img
+                    src={heroOverlay}
+                    alt='Fakultas Teknik UGM'
+                    className={`${styles.heroImg} block bg-cover bg-no-repeat min-h-screen min-w-full object-cover bg-center object-center`}
+                />
             </section>
-            <section className={`${styles.descriptionSection} bg-black text-white flex flex-col md:flex-row justify-between items-center md:items-start px-16 py-24 -mt-8`}>
+            <section
+                className={`${styles.descriptionSection} bg-black text-white flex flex-col md:flex-row justify-between items-center md:items-start px-16 py-24 -mt-8`}
+            >
                 <div className='max-w-prose mb-16 md:mr-8'>
-                    <h1 className='font-display text-3xl mb-6 font-bold'>Apa itu PPSMB Kesatria?</h1>
+                    <h1 className='font-display text-3xl mb-6 font-bold'>
+                        Apa itu PPSMB Kesatria?
+                    </h1>
                     <p className='font-display-sm'>
-                        Pelatihan Pembelajar Sukses bagi Mahasiswa Baru (PPSMB) Kesatria
-                        merupakan masa orientasi mahasiswa baru di Fakultas Teknik UGM. PPSMB
-                        Kesatria bertujuan untuk memperkenalkan lingkungan Fakultas Teknik,
-                        serta menanamkan nilai-nilai kemanusiaan khususnya di bidang keteknikan.
-                        PPSMB Kesatria akan dilaksanakan selama 2 hari pada tanggal 4 dan 5 Juli.
+                        Pelatihan Pembelajar Sukses bagi Mahasiswa Baru (PPSMB)
+                        Kesatria merupakan masa orientasi mahasiswa baru di
+                        Fakultas Teknik UGM. PPSMB Kesatria bertujuan untuk
+                        memperkenalkan lingkungan Fakultas Teknik, serta
+                        menanamkan nilai-nilai kemanusiaan khususnya di bidang
+                        keteknikan. PPSMB Kesatria akan dilaksanakan selama 2
+                        hari pada tanggal 4 dan 5 Juli.
                     </p>
                 </div>
                 <div className='relative flex-shrink-0 md:self-end -mb-24'>
-                    <img src={stagelightBg} alt='Logo PPSMB Kesatria 2021' className='max-h-72' />
+                    <img
+                        src={stagelightBg}
+                        alt='Logo PPSMB Kesatria 2021'
+                        className='max-h-72'
+                    />
                     {/* ALTERNATIVE: Set the gif as the background-image instead and adjust its positionings from there */}
-                    <img src={stagelightLogo} alt='Logo PPSMB Kesatria 2021' className='absolute bottom-16 left-0 right-0 m-auto w-1/2 -z-1' />
+                    <img
+                        src={stagelightLogo}
+                        alt='Logo PPSMB Kesatria 2021'
+                        className='absolute bottom-16 left-0 right-0 m-auto w-1/2 -z-1'
+                    />
                 </div>
             </section>
             <section className='mt-24 mb-48 px-8 text-center'>
-                <h1 className='text-4xl font-display font-bold mb-4'>Penugasan</h1>
+                <h1 className='text-4xl font-display font-bold mb-4'>
+                    Penugasan
+                </h1>
                 <p className='text-2xl font-display font-light'>Coming soon.</p>
             </section>
         </>
