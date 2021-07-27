@@ -75,7 +75,7 @@ export function PageFooter({ className }) {
                     icon={LineIcon}
                     targetBaseUrl='https://line.me/ti/p/'
                 >
-                    NRB2565A
+                    @NRB2565A
                 </SocialItem>
                 <SocialItem
                     icon={InstagramIcon}
