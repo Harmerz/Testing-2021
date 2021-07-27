@@ -6,6 +6,7 @@ import styles from '../styles/home.module.css';
 import heroOverlay from '../assets/images/homepage/hero-overlay.svg';
 import stagelightBg from '../assets/images/homepage/logo-stagelight-bg.svg';
 import stagelightLogo from '../assets/images/homepage/logo-stagelight-fg.gif';
+import { PenugasanSectionTemp } from '../components/PenugasanPage/PenugasanSectionTemp';
 
 export function HomePage() {
     return (
@@ -48,12 +49,7 @@ export function HomePage() {
                     />
                 </div>
             </section>
-            <section className='mt-24 mb-48 px-8 text-center'>
-                <h1 className='text-4xl font-display font-bold mb-4'>
-                    Penugasan
-                </h1>
-                <p className='text-2xl font-display font-light'>Coming soon.</p>
-            </section>
+            <PenugasanSectionTemp />
         </>
     );
 }
