@@ -1,9 +1,18 @@
 .headerContainer {
-    --drop-shadow-y-length: 0.5rem;
+    --drop-shadow-offset: 0.5rem;
+    --drop-shadow-y-length: var(--drop-shadow-offset);
     filter: drop-shadow(0 var(--drop-shadow-y-length) 0 rgba(0 0 0 / 0.25));
-    margin-bottom: var(--drop-shadow-y-length);
+    margin-bottom: var(--drop-shadow-offset);
 
     --diagonal-offset: 4rem;
+}
+@screen md {
+    .headerContainer {
+        @apply transition duration-300;
+    }
+    .headerContainer:hover {
+        --drop-shadow-y-length: 1rem;
+    }
 }
 /*
 TODO: Handle cases where the main page requires 100% ("immersive") width
