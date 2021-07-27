@@ -8,17 +8,25 @@ import { ReactComponent as HeaderLogo } from '../assets/images/main-header-logo.
 import { ReactComponent as HamburgerIcon } from '../assets/icons/list.svg';
 import { ReactComponent as RetractUpIcon } from '../assets/icons/chevron-up.svg';
 
-function NavLink({ to, mobileMenuSetter, children }) {
+function NavLink({ to, mobileMenuSetter, externalLink, children }) {
+    const LinkComponent = externalLink ? 'a' : NavLinkStock;
+
+    // const targetObj = {
+    //     [externalLink ? 'href' : 'to']: to
+    // };
+
     return (
-        <NavLinkStock
-            to={to}
+        <LinkComponent
+            {...{
+                [externalLink ? 'href' : 'to']: to,
+            }}
             className='block p-4 hover:bg-white hover:bg-opacity-10 active:bg-opacity-20 transition-colors'
             onClick={() => {
                 mobileMenuSetter(false);
             }}
         >
             {children}
-        </NavLinkStock>
+        </LinkComponent>
     );
 }
 
@@ -60,6 +68,13 @@ export function PageHeader({ className }) {
                 >
                     <NavLink mobileMenuSetter={setMobileMenuOpen} to='/'>
                         Beranda
+                    </NavLink>
+                    <NavLink
+                        mobileMenuSetter={setMobileMenuOpen}
+                        to='/#penugasan'
+                        externalLink
+                    >
+                        Penugasan
                     </NavLink>
                     {/* <NavLink
                         mobileMenuSetter={setMobileMenuOpen}

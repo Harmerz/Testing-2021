@@ -2,7 +2,7 @@ import styles from '../../styles/penugasan-temp.module.css';
 
 export function PenugasanSectionTemp() {
     return (
-        <section className='mt-24 mb-48 px-8 text-center'>
+        <section className='mt-24 mb-48 px-8 text-center' id='penugasan'>
             <h1 className='text-4xl font-display font-bold mb-8'>Penugasan</h1>
             <iframe
                 src='https://drive.google.com/file/d/1canFad3kwDTDxoo2FdayU39Hww2W5_k0/preview'
