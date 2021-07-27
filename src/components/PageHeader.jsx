@@ -18,7 +18,7 @@ function NavLink({ to, mobileMenuSetter, externalLink, children }) {
     return (
         <LinkComponent
             {...{
-                [externalLink ? 'href' : 'to']: to
+                [externalLink ? 'href' : 'to']: to,
             }}
             className='block p-4 hover:bg-white hover:bg-opacity-10 active:bg-opacity-20 transition-colors'
             onClick={() => {
