@@ -80,11 +80,9 @@
     }
 }
 
-.leaflet-container {
-    display: flex;
-    margin: 0;
-    width: 90vw;
-    height: 80vh;
+/* A temporary solution to make sticky header work (FIXME?) */
+#page {
+    overflow: initial !important;
 }
 
 /* Customize the WP cookies notice */
@@ -107,6 +105,13 @@
     font-family: theme('fontFamily.display') !important;
     font-weight: 600;
     text-transform: uppercase !important;
+}
+
+.leaflet-container {
+    display: flex;
+    margin: 0;
+    width: 90vw;
+    height: 80vh;
 }
 
 /* For debugging purposes only */
