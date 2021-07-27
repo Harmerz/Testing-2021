@@ -32,7 +32,7 @@ export function HomePage() {
                         memperkenalkan lingkungan Fakultas Teknik, serta
                         menanamkan nilai-nilai kemanusiaan khususnya di bidang
                         keteknikan. PPSMB Kesatria akan dilaksanakan selama 2
-                        hari pada tanggal 4 dan 5 Juli.
+                        hari pada tanggal 4 dan 5 Agustus 2021.
                     </p>
                 </div>
                 <div className='relative flex-shrink-0 md:self-end -mb-24'>
