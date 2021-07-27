@@ -73,7 +73,7 @@ export function PageFooter({ className }) {
                 </SocialItem>
                 <SocialItem
                     icon={LineIcon}
-                    targetBaseUrl='https://line.me/ti/p/'
+                    targetBaseUrl='https://line.me/R/ti/p/'
                 >
                     @NRB2565A
                 </SocialItem>
