@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { NavLink as NavLinkStock } from 'react-router-dom';
 
-import styles from '../styles/header.module.css';
+import styles from '../styles/PageHeader.module.css';
 
 import { ReactComponent as HeaderLogo } from '../assets/images/main-header-logo.svg';
 // import {} from '../assets/images/main-footer-logo.svg';
@@ -22,7 +22,7 @@ function NavLink({ to, mobileMenuSetter, children }) {
     );
 }
 
-export function Header({ className }) {
+export function PageHeader({ className }) {
     const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
 
     const MobileIcon = isMobileMenuOpen ? RetractUpIcon : HamburgerIcon;

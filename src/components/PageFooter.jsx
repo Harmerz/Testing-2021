@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import styles from '../styles/footer.module.css';
+import styles from '../styles/PageFooter.module.css';
 
 import { ReactComponent as FooterLogo } from '../assets/images/main-footer-logo.svg';
 
@@ -30,7 +30,7 @@ function SocialItem({
     );
 }
 
-export function Footer({ className }) {
+export function PageFooter({ className }) {
     return (
         <footer
             className={`${styles.footerContainer} bg-black text-white flex flex-col md:flex-row font-display-sm p-8 ${className}`}
