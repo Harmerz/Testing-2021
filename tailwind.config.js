@@ -38,7 +38,9 @@ module.exports = {
     variants: {
         extend: {
             dropShadow: ['hover'],
-            backgroundOpacity: ['active']
+            backgroundOpacity: ['active'],
+            filter: ['hover', 'active'],
+            brightness: ['hover', 'active']
         }
     },
     plugins: [

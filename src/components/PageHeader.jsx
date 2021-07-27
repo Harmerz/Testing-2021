@@ -39,15 +39,16 @@ export function PageHeader({ className }) {
         <header
             className={`${
                 styles.headerContainer
-            } sticky top-0 w-full flex items-start${
+            } sticky top-0 w-full flex items-start z-50${
                 className ? ` ${className}` : ''
             }`}
         >
-            <div
-                className={`${styles.mainLogoContainer} bg-white flex-shrink-0 pl-6 pb-2 pt-1 pr-8 flex items-end uppercase font-display`}
+            <NavLinkStock
+                to='/'
+                className={`${styles.mainLogoContainer} bg-white flex-shrink-0 pl-6 pb-2 pt-1 pr-8 flex items-end uppercase font-display group`}
             >
                 <HeaderLogo className='block h-14 w-auto mr-2' />
-                <div className='text-black'>
+                <div className='text-black group-hover:text-accent-blue transition-colors'>
                     <span className='block text-sm leading-none font-semibold'>
                         PPSMB Kesatria
                     </span>
@@ -55,7 +56,7 @@ export function PageHeader({ className }) {
                         2021
                     </span>
                 </div>
-            </div>
+            </NavLinkStock>
             <div
                 className={`${styles.navContainer} bg-black flex-grow text-white uppercase font-display-sm font-semibold text-sm`}
             >
