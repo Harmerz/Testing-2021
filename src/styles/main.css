@@ -95,11 +95,11 @@
     margin: theme('margin.4') !important;
     border-radius: theme('borderRadius.2xl') !important;
     min-width: 0 !important;
-    box-shadow: 0 0 1rem theme('colors.accent.blue') !important;
+    box-shadow: 0 0 1rem theme('colors.accent.blue.DEFAULT') !important;
 }
 #branda-cookie-notice .button {
     background: none !important;
-    background-color: theme('colors.accent.yellow') !important;
+    background-color: theme('colors.accent.yellow.dark') !important;
     border: none !important;
     border-radius: theme('borderRadius.DEFAULT') !important;
     font-family: theme('fontFamily.display') !important;

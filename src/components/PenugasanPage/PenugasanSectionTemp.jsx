@@ -16,7 +16,7 @@ export function PenugasanSectionTemp() {
             />
             <a
                 href='https://drive.google.com/u/0/uc?id=1canFad3kwDTDxoo2FdayU39Hww2W5_k0&export=download'
-                className='px-8 py-3 bg-accent-yellow text-white font-display-sm flex items-center mt-8 mx-auto w-max leading-none hover:filter hover:brightness-105 transition'
+                className='px-8 py-3 bg-accent-yellow-dark text-white font-display-sm flex items-center mt-8 mx-auto w-max leading-none hover:filter hover:brightness-105 transition'
             >
                 <DownloadIcon className='block mr-2' />
                 Unduh
