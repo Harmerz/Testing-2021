@@ -15,9 +15,9 @@
     }
 }
 /*
-TODO: Handle cases where the main page requires 100% ("immersive") width
-Some ideas: Use something like useFullWidth/useImmersive/useFullScreen (JS hook)?
-For the moment, we can "cheat" by appling a negative margin in the main page div instead (or, alternatively, a negative margin within the header element
+TODO: Handle cases where the main page requires 100% ("immersive") height
+Some ideas: Use something like useFullHeight/useImmersive/useFullScreen (JS hook)?
+For the moment, we can "cheat" by appling a negative margin in the main page div instead (or, alternatively, a negative margin within the header element)
 */
 
 .mainLogoContainer {

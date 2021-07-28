@@ -16,8 +16,8 @@
         calc(100% - var(--valley-offset)) 100%,
         calc(100% - calc(var(--valley-offset) + var(--valley-width))) calc(100% - var(--valley-depth)),
         0 calc(100% - var(--valley-depth))
-        )
-    }
+    )
+}
     
 @screen md {
     .descriptionSection {

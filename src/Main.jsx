@@ -21,6 +21,7 @@ function Main() {
                     <Switch>
                         {/* eslint-disable */}
                         <Route path='/' component={pages.HomePage} />
+                        {/* <Route path= */}
                         {/* <Route path='/agenda-testing' component={pages.Agenda} />
                         <Route path='/webcomic'       component={pages.WebcomicIndexPage} />
                         <Route
