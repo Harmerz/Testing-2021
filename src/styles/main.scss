@@ -1,5 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @layer base {
     @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+    #content {
+        @import '~tailwindcss/dist/base.min';
+    }
 
     input::-webkit-calendar-picker-indicator {
         display: none !important;
@@ -63,6 +71,10 @@
 }
 
 @layer components {
+    #content .bordered-card {
+        @apply rounded-lg border-2 px-4 py-2;
+    }
+
     .webcomic * {
         -moz-user-select: -moz-none;
         -khtml-user-select: none;
@@ -116,5 +128,5 @@
 
 /* For debugging purposes only */
 * {
-    /* outline: 1px solid rgb(0 255 0 / 0.25); */
+    // outline: 1px solid rgba(255, 0, 0, 0.25);
 }

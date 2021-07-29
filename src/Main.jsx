@@ -1,8 +1,11 @@
 import { StrictMode } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
-import './styles/base.scss';
-import './styles/main.css';
+// This didn't work due to the ordering clash with the supposed tailwind (at rules / layers) ordering
+// import './styles/base.scss';
+// import './styles/main.css';
+
+import './styles/main.scss';
 
 import { PageHeader } from './components/PageHeader';
 import { PageFooter } from './components/PageFooter';
