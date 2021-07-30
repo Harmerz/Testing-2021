@@ -47,7 +47,9 @@ module.exports = {
             dropShadow: ['hover'],
             backgroundOpacity: ['active'],
             filter: ['hover', 'active'],
-            brightness: ['hover', 'active']
+            brightness: ['hover', 'active'],
+            transform: ['group-hover'],
+            translate: ['group-hover']
         }
     },
     plugins: [
