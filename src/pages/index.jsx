@@ -6,6 +6,8 @@ import styles from '../styles/home.module.css';
 import heroOverlay from '../assets/images/homepage/hero-overlay.svg';
 import stagelightBg from '../assets/images/homepage/logo-stagelight-bg.svg';
 import stagelightLogo from '../assets/images/homepage/logo-stagelight-fg.gif';
+
+import { ReactComponent as GoIcon } from '../assets/icons/go.svg';
 import { PenugasanSectionTemp } from '../components/PenugasanPage/PenugasanSectionTemp';
 
 export function HomePage() {
@@ -34,6 +36,17 @@ export function HomePage() {
                         keteknikan. PPSMB Kesatria akan dilaksanakan selama 2
                         hari pada tanggal 4 dan 5 Agustus 2021.
                     </p>
+                    <a
+                        href='https://s.id/GuidebookPesertaKesatria2021'
+                        target='_blank'
+                        rel='noreferrer'
+                        className='flex items-center bg-accent-yellow-dark text-white hover:bg-white hover:text-accent-yellow-dark transition-colors max-w-max py-2 px-4 group mt-8'
+                    >
+                        <span className='block font-display font-semibold'>
+                            Lihat <i>Guide Book</i>
+                        </span>
+                        <GoIcon className='block fill-current h-5 w-auto ml-4 group-hover:transform group-hover:translate-x-0.5 transition-transform duration-300' />
+                    </a>
                 </div>
                 <div className='relative flex-shrink-0 md:self-end -mb-24'>
                     <img

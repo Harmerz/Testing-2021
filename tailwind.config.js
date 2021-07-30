@@ -24,9 +24,16 @@ module.exports = {
                 darker: '#D9D8D3'
             },
             accent: {
-                yellow: '#F4A606',
+                yellow: {
+                    dark: '#F4A606',
+                    DEFAULT: '#FFDE51',
+                    light: '#FFEFA9'
+                },
                 red: '#DC3647',
-                blue: '#348AC5'
+                blue: {
+                    dark: '#1B323B',
+                    DEFAULT: '#348AC5'
+                }
             }
         },
         fontFamily: {
@@ -40,7 +47,9 @@ module.exports = {
             dropShadow: ['hover'],
             backgroundOpacity: ['active'],
             filter: ['hover', 'active'],
-            brightness: ['hover', 'active']
+            brightness: ['hover', 'active'],
+            transform: ['group-hover'],
+            translate: ['group-hover']
         }
     },
     plugins: [

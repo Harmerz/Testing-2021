@@ -1,0 +1,23 @@
+:global(#content) {
+    .tabContainer {
+        box-shadow: inset 0 0 0 0.15rem theme('colors.gray.lighter');
+        @apply rounded-lg flex;
+    }
+
+    .tabContainer a {
+        @apply block py-2.5 px-4 font-display font-bold rounded-lg leading-none uppercase;
+        
+        &:hover {
+            @apply bg-gray-darker z-10;
+        }
+
+        &:active {
+            @apply filter brightness-90;
+        }
+
+        &:global(.active) {
+            @apply bg-accent-blue text-white;
+            box-shadow: 0 0 0 0.2rem theme('colors.white');
+        }
+    }
+}
