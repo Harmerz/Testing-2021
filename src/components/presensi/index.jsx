@@ -14,6 +14,7 @@ export function Presensi({ title, collection }) {
     const submitHandler = (e) => {
         e.preventDefault();
         const data = {
+            created_at: new Date(),
             name: formRef.current['name'].value,
             nim: formRef.current['nim'].value,
             noAbsen: formRef.current['no-absen'].value,
