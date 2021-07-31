@@ -5,9 +5,9 @@
 @layer base {
     @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
-    #content {
-        @import '~tailwindcss/dist/base.min';
-    }
+    // #content {
+    //     @import '~tailwindcss/dist/base.min';
+    // }
 
     input::-webkit-calendar-picker-indicator {
         display: none !important;
@@ -128,5 +128,5 @@
 
 /* For debugging purposes only */
 * {
-    outline: 1px solid rgba(255 0 0 / 0.25);
+    // outline: 1px solid rgba(255 0 0 / 0.25);
 }
