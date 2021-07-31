@@ -6,6 +6,7 @@
     "@craco/craco": "^6.2.0",
     "@react-leaflet/core": "^1.0.2",
     "@tailwindcss/forms": "^0.3.3",
+    "firebase": "^8.7.1",
     "leaflet": "^1.7.1",
     "leaflet-fullscreen": "^1.0.2",
     "node-sass": "^6.0.1",
@@ -14,7 +15,8 @@
     "react-dom": "^17.0.2",
     "react-leaflet": "^3.1.0",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "4.0.3"
+    "react-scripts": "4.0.3",
+    "sweetalert2": "^11.0.19"
   },
   "scripts": {
     "start": "craco start",
@@ -24,18 +26,11 @@
     "lint": "eslint --ext .js --ext .jsx src/",
     "lint:fix": "eslint --fix --ext .js --ext .jsx src/"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not op_mini all"
+  ],
   "devDependencies": {
     "autoprefixer": "^9.8.6",
     "eslint": "^7.30.0",

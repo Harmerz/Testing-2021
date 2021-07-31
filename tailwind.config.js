@@ -7,12 +7,12 @@ module.exports = {
         extend: {
             screens: {
                 portrait: {
-                    raw: '(orientation: portrait)'
-                }
+                    raw: '(orientation: portrait)',
+                },
             },
             zIndex: {
-                '-1': '-1'
-            }
+                '-1': '-1',
+            },
         },
         colors: {
             transparent: 'transparent',
@@ -21,26 +21,26 @@ module.exports = {
             white: '#FFFFFF',
             gray: {
                 lighter: '#F1F1F1',
-                darker: '#D9D8D3'
+                darker: '#D9D8D3',
             },
             accent: {
                 yellow: {
                     dark: '#F4A606',
                     DEFAULT: '#FFDE51',
-                    light: '#FFEFA9'
+                    light: '#FFEFA9',
                 },
                 red: '#DC3647',
                 blue: {
                     dark: '#1B323B',
-                    DEFAULT: '#348AC5'
-                }
-            }
+                    DEFAULT: '#348AC5',
+                },
+            },
         },
         fontFamily: {
-            'display': ['Mont', 'system-ui', 'sans-serif'],
+            display: ['Mont', 'system-ui', 'sans-serif'],
             'display-sm': ['Mont Book', 'system-ui', 'sans-serif'],
-            'body': ['Lato', 'sans-serif']
-        }
+            body: ['Lato', 'sans-serif'],
+        },
     },
     variants: {
         extend: {
@@ -49,14 +49,12 @@ module.exports = {
             filter: ['hover', 'active'],
             brightness: ['hover', 'active'],
             transform: ['group-hover'],
-            translate: ['group-hover']
-        }
+            translate: ['group-hover'],
+        },
     },
-    plugins: [
-        forms({ strategy: 'class' })
-    ],
+    plugins: [forms({ strategy: 'class' })],
     // corePlugins: {
     //     preflight: false
     // },
-    important: '#content'
+    important: '#content',
 };
