@@ -1,0 +1,31 @@
+.heroImg {
+    background-image: url('../assets/images/homepage/hero-bg.jpg');
+}
+
+.descriptionSection {
+    --valley-offset: 70%;
+    --valley-width: 1rem;
+    --valley-depth: var(--valley-width);
+    
+    clip-path: polygon(
+        0 0,
+        var(--valley-offset) 0,
+        calc(var(--valley-offset) + var(--valley-width)) var(--valley-depth),
+        100% var(--valley-depth),
+        100% 100%,
+        calc(100% - var(--valley-offset)) 100%,
+        calc(100% - calc(var(--valley-offset) + var(--valley-width))) calc(100% - var(--valley-depth)),
+        0 calc(100% - var(--valley-depth))
+    )
+}
+    
+@screen md {
+    .descriptionSection {
+        --valley-offset: 42%;
+    }
+}
+
+/* .stagelightContainer {
+    background-image: url('../assets/images/homepage/logo-stagelight-bg.svg');
+    background-size: contain;
+} */

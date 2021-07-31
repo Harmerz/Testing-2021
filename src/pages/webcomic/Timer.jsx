@@ -22,7 +22,7 @@ export function Timer({ openedPage, progresses, setProgresses }) {
     return (
         <div
             style={{ width: `${progresses[openedPage]}%` }}
-            className='h-1 bg-brand-dark'
+            className='h-1 bg-black'
         />
     );
 }

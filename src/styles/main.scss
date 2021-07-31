@@ -1,0 +1,132 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+    #content {
+        @import '~tailwindcss/dist/base.min';
+    }
+
+    input::-webkit-calendar-picker-indicator {
+        display: none !important;
+    }
+
+    @font-face {
+        font-family: 'Mont Book';
+        font-style: normal;
+        src: url('../assets/fonts/Mont-Book.ttf') format('truetype');
+    }
+    @font-face {
+        font-family: 'Mont Book';
+        font-style: italic;
+        src: url('../assets/fonts/Mont-BookItalic.ttf') format('truetype');
+    }
+
+    @font-face {
+        font-family: 'Mont';
+        font-style: normal;
+        font-weight: 300;
+        src: url('../assets/fonts/Mont-Light.ttf') format('truetype');
+    }
+    @font-face {
+        font-family: 'Mont';
+        font-style: italic;
+        font-weight: 300;
+        src: url('../assets/fonts/Mont-LightItalic.ttf') format('truetype');
+    }
+    @font-face {
+        font-family: 'Mont';
+        font-style: normal;
+        font-weight: 600;
+        src: url('../assets/fonts/Mont-SemiBold.ttf') format('truetype');
+    }
+    @font-face {
+        font-family: 'Mont';
+        font-style: italic;
+        font-weight: 600;
+        src: url('../assets/fonts/Mont-SemiBoldItalic.ttf') format('truetype');
+    }
+    @font-face {
+        font-family: 'Mont';
+        font-style: normal;
+        font-weight: 700;
+        src: url('../assets/fonts/Mont-Bold.ttf') format('truetype');
+    }
+    @font-face {
+        font-family: 'Mont';
+        font-style: italic;
+        font-weight: 700;
+        src: url('../assets/fonts/Mont-BoldItalic.ttf') format('truetype');
+    }
+
+    html {
+        font-size: 87.5%;
+    }
+
+    body {
+        scroll-behavior: smooth;
+    }
+}
+
+@layer components {
+    #content .bordered-card {
+        @apply rounded-lg border-2 px-4 py-2;
+    }
+
+    .webcomic * {
+        -moz-user-select: -moz-none;
+        -khtml-user-select: none;
+        -webkit-user-select: none;
+        -o-user-select: none;
+        user-select: none;
+    }
+    
+    .webcomic .object-container * {
+        z-index: 20;
+    }
+    
+    .customized-form {
+        @apply w-full rounded-md border-black focus:outline-none focus:border-transparent focus:ring-black focus:ring-2 transform duration-150 mt-1 focus:-translate-y-1 focus:shadow-md;
+    }
+}
+
+/* A temporary solution to make sticky header work (FIXME?) */
+#page {
+    overflow: initial !important;
+}
+
+/* Customize the WP cookies notice */
+#branda-cookie-notice {
+    background-color: theme('colors.black') !important;
+    color: theme('colors.white') !important;
+    font-family: theme('fontFamily.body') !important;
+    left: 0 !important;
+    right: 0 !important;
+    margin: theme('margin.4') !important;
+    border-radius: theme('borderRadius.2xl') !important;
+    min-width: 0 !important;
+    box-shadow: 0 0 1rem theme('colors.accent.blue.DEFAULT') !important;
+}
+#branda-cookie-notice .button {
+    background: none !important;
+    background-color: theme('colors.accent.yellow.dark') !important;
+    border: none !important;
+    border-radius: theme('borderRadius.DEFAULT') !important;
+    font-family: theme('fontFamily.display') !important;
+    font-weight: 600;
+    text-transform: uppercase !important;
+}
+
+.leaflet-container {
+    display: flex;
+    margin: 0;
+    width: 90vw;
+    height: 80vh;
+}
+
+/* For debugging purposes only */
+* {
+    // outline: 1px solid rgba(255, 0, 0, 0.25);
+}

@@ -2,7 +2,7 @@ export function PortraitWarning() {
     return (
         <>
             <div className='hidden portrait:flex w-screen h-screen bg-gray-500 opacity-75 top-0 left-0 fixed z-40' />
-            <div className='hidden portrait:flex flex-col justify-center items-center rounded-lg shadow-lg fixed bg-white p-6 w-4/5 sm:w-3/5 space-y-4 transform -translate-x-2/4 -translate-y-2/4 top-1/2 left-1/2 z-50 text-brand-dark'>
+            <div className='hidden portrait:flex flex-col justify-center items-center rounded-lg shadow-lg fixed bg-white p-6 w-4/5 sm:w-3/5 space-y-4 transform -translate-x-2/4 -translate-y-2/4 top-1/2 left-1/2 z-50 text-black'>
                 <svg
                     xmlns='http://www.w3.org/2000/svg'
                     className='h-16 w-16'
