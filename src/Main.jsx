@@ -12,18 +12,31 @@ import { PageFooter } from './components/PageFooter';
 
 import * as pages from './pages/_listing';
 
+// function RedirectRoute({ path, exact, target }) {
+//     return (
+//         <Route exact={exact} path={path}>
+//             <Redirect to={target} />
+//         </Route>
+//     );
+// }
+
 function Main() {
     return (
         <BrowserRouter>
-            {/* Act as the <body> element */}
             <div className='flex flex-col min-h-screen'>
                 <PageHeader className='flex-shrink-0' />
 
-                {/* Act as the <main> element */}
-                <div className='flex-grow'>
+                <div className='flex-grow flex flex-col'>
                     <Switch>
-                        {/* eslint-disable */}
-                        <Route path='/' component={pages.HomePage} />
+                        <Route exact path='/' component={pages.Home} />
+
+                        {/* <Route path='/agenda/:hari' component={pages.Agenda} /> */}
+                        {/* <RedirectRoute path='/agenda' target='/agenda/hari-1' /> */}
+                        {/* <Redirect from='/agenda' to='/agenda/hari-1' /> */}
+                        {/* <Route path='/agenda' component={pages.Agenda} /> */}
+
+                        {/* The 404 page */}
+                        <Route component={pages.NotFound} />
                         {/* <Route path= */}
                         {/* <Route path='/agenda-testing' component={pages.Agenda} />
                         <Route path='/webcomic'       component={pages.WebcomicIndexPage} />
@@ -41,7 +54,6 @@ function Main() {
                             path='/jalan-teknik/:path/360'
                             component={pages.ThreeSixty}
                         /> */}
-                        {/* eslint-enable */}
                     </Switch>
                 </div>
                 <PageFooter className='flex-shrink-0' />
