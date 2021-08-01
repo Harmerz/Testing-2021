@@ -35,6 +35,18 @@ function Main() {
                         {/* <Redirect from='/agenda' to='/agenda/hari-1' /> */}
                         {/* <Route path='/agenda' component={pages.Agenda} /> */}
 
+                        <Route path='/temp-ytvid-embed-test'>
+                            <iframe
+                                width='560'
+                                height='315'
+                                src='https://www.youtube.com/embed/tFJ9myVginQ'
+                                title='YouTube video player'
+                                frameBorder='0'
+                                allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+                                allowFullScreen
+                            />
+                        </Route>
+
                         {/* The 404 page */}
                         <Route component={pages.NotFound} />
                         {/* <Route path= */}
