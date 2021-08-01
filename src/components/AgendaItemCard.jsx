@@ -5,11 +5,17 @@ import { ReactComponent as GoIcon } from '../assets/icons/go.svg';
 export function AgendaItemCard({ time, title, excerpt, slug, inactive }) {
     const { url } = useRouteMatch();
 
+    const wrapperClassNames = 'mb-4';
+
     const cardDisplay = (
-        <article className='flex bordered-card items-center border-accent-blue-dark shadow-md group-hover:shadow-lg transition px-8 py-4 group-hover:bg-accent-blue group-hover:bg-opacity-10 duration-500 rounded-xl'>
+        <article
+            className={`flex bordered-card items-center border-accent-blue-dark shadow-md group-hover:shadow-lg transition px-8 py-4 group-hover:bg-accent-blue group-hover:bg-opacity-10 duration-500 rounded-xl ${
+                inactive ? wrapperClassNames : ''
+            }`}
+            {...(inactive ? { title: 'Materi belum ada atau belum dibuka' } : {})}
+        >
             <div className='flex flex-col md:flex-row items-start md:items-center mr-auto'>
-                <p className='px-2 py-0.5 bg-accent-blue-dark text-white font-display font-bold leading-none mb-2 md:mb-0 md:mr-8 text-sm md:text-base'>
-                    {/* {time.start}&ndash;{time.end} */}
+                <p className='px-2 py-0.5 bg-accent-blue-dark text-white font-display font-bold leading-none mb-2 md:mb-0 md:mr-8 text-sm md:text-base flex-shrink-0'>
                     {time.replace('-', '\u2013')}{' '}
                     <span className='text-xs'>WIB</span>
                 </p>
@@ -33,7 +39,7 @@ export function AgendaItemCard({ time, title, excerpt, slug, inactive }) {
     return (
         <Link
             to={`${url}/${slug}`}
-            className='block group mb-4 active:transform active:translate-y-0.5 transition-transform'
+            className={`block group active:transform active:translate-y-0.5 transition-transform ${wrapperClassNames}`}
         >
             {cardDisplay}
         </Link>

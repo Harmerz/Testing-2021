@@ -47,8 +47,6 @@ export function Agenda() {
                     <TabbedNav className='mb-8'>
                         <DayLink day={1}>Hari 1</DayLink>
                         <DayLink day={2}>Hari 2</DayLink>
-                        <DayLink day={3}>Hari 3</DayLink>
-                        <DayLink day={4}>Hari 4</DayLink>
                     </TabbedNav>
                     <Switch>
                         {/* <Route path={`${path}/hari-1`}>
