@@ -36,15 +36,28 @@ function Main() {
                         {/* <Route path='/agenda' component={pages.Agenda} /> */}
 
                         <Route path='/temp-ytvid-embed-test'>
-                            <iframe
-                                width='560'
-                                height='315'
-                                src='https://www.youtube.com/embed/tFJ9myVginQ'
-                                title='YouTube video player'
-                                frameBorder='0'
-                                allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
-                                allowFullScreen
-                            />
+                            <div className='p-8'>
+                                <h1>Test embedding a single video</h1>
+                                <iframe
+                                    width='560'
+                                    height='315'
+                                    src='https://www.youtube.com/embed/tFJ9myVginQ'
+                                    title='YouTube video player'
+                                    frameBorder='0'
+                                    allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+                                    allowFullScreen
+                                />
+                                <h1>Test embedding a playlist of videos</h1>
+                                <iframe
+                                    width='560'
+                                    height='315'
+                                    src='https://www.youtube.com/embed/videoseries?list=PL5CCC3DC3FBFC1231'
+                                    title='YouTube video player'
+                                    frameBorder='0'
+                                    allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+                                    allowFullScreen
+                                />
+                            </div>
                         </Route>
 
                         {/* The 404 page */}
