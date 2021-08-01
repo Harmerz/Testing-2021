@@ -1,0 +1,26 @@
+{
+    "hari-1": [
+        {
+            "judul": "Kekerasan Seksual",
+            "deskripsi": "Lorem Ipsum Dolor Sit Amet",
+            "slug": "ppks",
+            "waktu": "07.00-09.00"
+        },
+        {
+            "judul": "Abc Defgh",
+            "deskripsi": "Lorem Ibsum Dolor Sit Ameth",
+            "slug": "hello-world",
+            "waktu": "07.00-09.00",
+            "inactive": true
+        }
+    ],
+
+    "hari-2": [
+        {
+            "judul": "Peran Fakultas Teknik dalam Pembangunan",
+            "deskripsi": "Lroermm Ibsumo",
+            "slug": "peran-teknik-dalam-pembangunan",
+            "waktu": "07.00-09.00"
+        }
+    ]
+}
