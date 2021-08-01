@@ -1,11 +1,11 @@
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { GenericPage, PageTitle } from '../../components/GenericPage';
 import { NotFound } from '../404';
-import { ReactComponent as GoIcon } from '../../assets/icons/go.svg';
+// import { ReactComponent as GoIcon } from '../../assets/icons/go.svg';
 
-import styles from '../../styles/agenda-details-page.module.css';
+// import styles from '../../styles/agenda-details-page.module.css';
 
-import agendaIndex from '../../resources/daftar-agenda.json';
+// import agendaIndex from '../../resources/daftar-agenda.json';
 
 // function PageNavigationButton({ targetSlug, children: text, reverseIcon }) {
 //     return (
@@ -32,7 +32,6 @@ function Page({ title, children }) {
                 </PageNavigationButton>
             </div> */}
         </GenericPage>
-
     );
 }
 
@@ -40,13 +39,9 @@ export function AgendaDetails() {
     const { hariNum, slug } = useParams();
     try {
         // eslint-disable-next-line import/no-dynamic-require, global-require
-        const page =  require(`./hari-${hariNum}/${slug}`);
+        const page = require(`./hari-${hariNum}/${slug}`);
 
-        return (
-            <Page title={page.title}>
-                {page.content}
-            </Page>
-        );
+        return <Page title={page.title}>{page.content}</Page>;
     } catch (err) {
         if (err.code === 'MODULE_NOT_FOUND') {
             return <NotFound />;

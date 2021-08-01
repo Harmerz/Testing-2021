@@ -9,7 +9,9 @@ export function GenericPage({ customComponent, className, children }) {
 
 export function PageTitle({ className, children }) {
     return (
-        <h1 className={`text-center font-display text-4xl font-bold mb-4 ${className}`}>
+        <h1
+            className={`text-center font-display text-4xl font-bold mb-4 ${className}`}
+        >
             {children}
         </h1>
     );

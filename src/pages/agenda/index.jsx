@@ -4,12 +4,10 @@ import {
     Route,
     useRouteMatch,
     Redirect,
-    Link,
 } from 'react-router-dom';
-import { ItemExcerpt, ItemTitle } from '../../components/listing-item';
 import { NotFound } from '../404'; // Because '../_listing' causes a circular dependency issue
 
-import { ReactComponent as GoIcon } from '../../assets/icons/go.svg';
+// import { ReactComponent as GoIcon } from '../../assets/icons/go.svg';
 import { TabbedNav } from '../../components/TabbedNav';
 import { AgendaDetails } from './page';
 
@@ -45,9 +43,7 @@ export function Agenda() {
             <Route>
                 {/* TODO: Use a common "Page" element instead to uniformify the padding and stuff */}
                 <GenericPage className='flex flex-col items-center'>
-                    <PageTitle>
-                        Agenda
-                    </PageTitle>
+                    <PageTitle>Agenda</PageTitle>
                     <TabbedNav className='mb-8'>
                         <DayLink day={1}>Hari 1</DayLink>
                         <DayLink day={2}>Hari 2</DayLink>
@@ -70,7 +66,8 @@ export function Agenda() {
                                     key={hari}
                                     className='w-full max-w-screen-lg'
                                     style={{
-                                        animation: 'test-appear-up-anim 0.5s cubic-bezier(0, 1, 1, 1)'
+                                        animation:
+                                            'test-appear-up-anim 0.5s cubic-bezier(0, 1, 1, 1)',
                                     }}
                                 >
                                     {agendaData[hari].map((item) => (
