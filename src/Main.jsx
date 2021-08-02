@@ -23,7 +23,8 @@ function Main() {
                 <div className='flex-grow'>
                     <Switch>
                         {/* eslint-disable */}
-                        <Route path='/' component={pages.HomePage} />
+                        {/*<Route path='/' component={pages.HomePage} />*/}
+                        <Route path='/dokumentasi' component={pages.Dokumentasi} />
                         {/* <Route path= */}
                         {/* <Route path='/agenda-testing' component={pages.Agenda} />
                         <Route path='/webcomic'       component={pages.WebcomicIndexPage} />
