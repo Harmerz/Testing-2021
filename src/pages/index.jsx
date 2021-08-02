@@ -10,7 +10,7 @@ import stagelightLogo from '../assets/images/homepage/logo-stagelight-fg.gif';
 import { ReactComponent as GoIcon } from '../assets/icons/go.svg';
 import { PenugasanSectionTemp } from '../components/PenugasanPage/PenugasanSectionTemp';
 
-export function HomePage() {
+export function Home() {
     return (
         <>
             <section className='-mt-20'>
