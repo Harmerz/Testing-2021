@@ -117,9 +117,8 @@
         {
             "judul"     : "Pameran Karya",
             "deskripsi" : "Pengenalan tim-tim kebanggaan Fakultas Teknik UGM",
-            "slug"      : "",
-            "waktu"     : "08.55–09.45",
-            "inactive"  : true
+            "slug"      : "pameran-karya",
+            "waktu"     : "08.55–09.45"
         },
         {
             "judul"     : "Karya Aplikatif",
