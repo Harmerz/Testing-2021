@@ -52,7 +52,7 @@ export function PageHeader({ className }) {
                 </div>
             </NavLinkStock>
             <div
-                className={`${styles.navContainer} bg-black flex-grow text-white uppercase font-display-sm font-semibold text-sm`}
+                className={`${styles.navContainer} bg-black flex-grow text-white uppercase font-display font-semilight font-semibold text-sm`}
             >
                 {' '}
                 {/* mb-2 */}

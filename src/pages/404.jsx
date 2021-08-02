@@ -4,7 +4,7 @@ export function NotFound() {
             <h1 className='text-8xl font-display font-bold text-accent-yellow-dark mb-2'>
                 404
             </h1>
-            <p className='text-lg font-display-sm'>Halaman tidak ditemukan.</p>
+            <p className='text-lg font-display font-semilight'>Halaman tidak ditemukan.</p>
         </div>
     );
 }

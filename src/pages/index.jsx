@@ -27,7 +27,7 @@ export function Home() {
                     <h1 className='font-display text-3xl mb-6 font-bold text-white'>
                         Apa itu PPSMB Kesatria?
                     </h1>
-                    <p className='font-display-sm'>
+                    <p className='font-display font-semilight'>
                         Pelatihan Pembelajar Sukses bagi Mahasiswa Baru (PPSMB)
                         Kesatria merupakan masa orientasi mahasiswa baru di
                         Fakultas Teknik UGM. PPSMB Kesatria bertujuan untuk

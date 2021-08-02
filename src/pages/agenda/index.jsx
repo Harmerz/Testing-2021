@@ -21,7 +21,7 @@ function DayLink({ day, children }) {
     return (
         <NavLink
             to={`${url}/hari-${day}`}
-            /* className='py-2 px-4 font-display-sm rounded-lg transition-colors duration-100'/* activeClassName='bg-accent-yellow-dark hover:bg-accent-yellow-dark' */
+            /* className='py-2 px-4 font-display font-semilight rounded-lg transition-colors duration-100'/* activeClassName='bg-accent-yellow-dark hover:bg-accent-yellow-dark' */
         >
             {children}
         </NavLink>
