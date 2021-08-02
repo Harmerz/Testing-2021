@@ -25,7 +25,7 @@ export function AgendaItemCard({ time, title, excerpt, slug, inactive }) {
                 </p>
                 <div>
                     <p className='font-display font-bold text-xl'>{title}</p>
-                    <p className='font-display-sm text-sm'>{excerpt}</p>
+                    <p className='font-display font-semilight text-sm'>{excerpt}</p>
                 </div>
             </div>
             {!inactive && (

@@ -8,5 +8,7 @@
     "editor.quickSuggestions": {
         "strings": true
     },
-    "editor.tabSize": 4
+    "editor.tabSize": 4,
+    "tailwindCSS.rootFontSize": 14,
+    "tailwindCSS.experimental.classRegex": ["cnJoin\\(.*\\)", "'|\"(.+)'|\""]
 }

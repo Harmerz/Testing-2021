@@ -1,182 +1,173 @@
 {
     "hari-1": [
         {
-            "judul": "Opening Seremonial",
-            "deskripsi": "Pembukaan kegiatan PPSMB Kesatria 2021",
-            "slug": "opening-seremonial",
-            "waktu": "07.00–08.00",
-            "inactive": true
+            "judul"     : "Opening Seremonial",
+            "deskripsi" : "Pembukaan kegiatan PPSMB Kesatria 2021",
+            "slug"      : "opening-seremonial",
+            "waktu"     : "07.00–08.00",
+            "inactive"  : true
         },
         {
-            "judul": "Kepemanduan 1",
-            "deskripsi": "Merupakan sesi perkenalan dan penyampaian materi",
-            "slug": "",
-            "waktu": "08.00–09.00",
-            "inactive": true
+            "judul"     : "Kepemanduan 1",
+            "deskripsi" : "Merupakan sesi perkenalan dan penyampaian materi",
+            "slug"      : "",
+            "waktu"     : "08.00–09.00",
+            "inactive"  : true
         },
         {
-            "judul": "Jalan-Jalan Teknik",
-            "deskripsi": "Kesatria Muda menjelajahi lingkungan Fakultas Teknik secara virtual",
-            "slug": "",
-            "waktu": "09.00–09.30",
-            "inactive": true
+            "judul"     : "Jalan-Jalan Teknik",
+            "deskripsi" : "Kesatria Muda menjelajahi lingkungan Fakultas Teknik secara virtual",
+            "slug"      : "",
+            "waktu"     : "09.00–09.30",
+            "inactive"  : true
         },
         {
-            "judul": "Profil Teknik",
-            "deskripsi": "Penyampaian materi secara asinkron berkaitan dengan sejarah, fasilitas, visi dan misi, serta deskripsi singkat untuk masing-masing departemen",
-            "slug": "",
-            "waktu": "09.30–10.15",
-            "inactive": true
+            "judul"     : "Profil Teknik",
+            "deskripsi" : "Penyampaian materi secara asinkron berkaitan dengan sejarah, fasilitas, visi dan misi, serta deskripsi singkat untuk masing-masing departemen",
+            "slug"      : "",
+            "waktu"     : "09.30–10.15",
+            "inactive"  : true
         },
         {
-            "judul": "Jelajah Lembaga",
-            "deskripsi": "Pengenalan BSO yang ada di Fakultas Teknik",
-            "slug": "bso",
-            "waktu": "10.15–11.05"
+            "judul"     : "Jelajah Lembaga",
+            "deskripsi" : "Pengenalan BSO yang ada di Fakultas Teknik",
+            "slug"      : "bso",
+            "waktu"     : "10.15–11.05"
         },
         {
-            "judul": "Materi Etika dan Integritas",
-            "deskripsi": "Penyampaian materi etika dan integritas",
-            "slug": "",
-            "waktu": "11.05–11.15",
-            "inactive": true
+            "judul"     : "Materi Etika dan Integritas",
+            "deskripsi" : "Penyampaian materi etika dan integritas",
+            "slug"      : "",
+            "waktu"     : "11.05–11.15",
+            "inactive"  : true
         },
         {
-            "judul": "Materi Kekerasan Seksual",
-            "deskripsi": "Penyampaian materi tentang pentingnya pencegahan dan penanganan kekerasan seksual",
-            "slug": "",
-            "waktu": "11.15–11.25",
-            "inactive": true
+            "judul"     : "Materi Kekerasan Seksual",
+            "deskripsi" : "Penyampaian materi tentang pentingnya pencegahan dan penanganan kekerasan seksual",
+            "slug"      : "",
+            "waktu"     : "11.15–11.25",
+            "inactive"  : true
         },
         {
-            "judul": "Materi Mental Health",
-            "deskripsi": "Kesatria Muda membaca webcomic tentang pentingnya menjaga kesehatan mental selama berkuliah",
-            "slug": "",
-            "waktu": "11.25–11.35",
-            "inactive": true
+            "judul"     : "Materi Mental Health",
+            "deskripsi" : "Kesatria Muda membaca webcomic tentang pentingnya menjaga kesehatan mental selama berkuliah",
+            "slug"      : "",
+            "waktu"     : "11.25–11.35",
+            "inactive"  : true
         },
         {
-            "judul": "Kepemanduan 2",
-            "deskripsi": "Sesi tatap muka bersama pemandu",
-            "slug": "",
-            "waktu": "11.35–12.15",
-            "inactive": true
+            "judul"     : "Kepemanduan 2",
+            "deskripsi" : "Sesi tatap muka bersama pemandu",
+            "slug"      : "",
+            "waktu"     : "11.35–12.15",
+            "inactive"  : true
         },
         {
-            "judul": "Ishoma",
-            "deskripsi": "Sesi istirahat dan ibadah bagi Kesatria Muda",
-            "slug": "",
-            "waktu": "12.15–13.15",
-            "inactive": true
+            "judul"     : "Ishoma",
+            "deskripsi" : "Sesi istirahat dan ibadah bagi Kesatria Muda",
+            "slug"      : "",
+            "waktu"     : "12.15–13.15",
+            "inactive"  : true
         },
         {
-            "judul": "Debat Keteknikan",
-            "deskripsi": "Kesatria Muda mengikuti sesi debat sesuai arahan pemandu",
-            "slug": "",
-            "waktu": "13.15–14.30",
-            "inactive": true
+            "judul"     : "Debat Keteknikan",
+            "deskripsi" : "Kesatria Muda mengikuti sesi debat sesuai arahan pemandu",
+            "slug"      : "",
+            "waktu"     : "13.15–14.30",
+            "inactive"  : true
         },
         {
-            "judul": "Fun Games",
-            "deskripsi": "Kesatria Muda bermain fun games",
-            "slug": "",
-            "waktu": "14.30–15.05",
-            "inactive": true
+            "judul"     : "Fun Games",
+            "deskripsi" : "Kesatria Muda bermain fun games",
+            "slug"      : "",
+            "waktu"     : "14.30–15.05",
+            "inactive"  : true
         },
         {
-            "judul": "Closing Hari Pertama",
-            "deskripsi": "Penutupan hari pertama PPSMB Kesatria",
-            "slug": "",
-            "waktu": "15.05–15.20",
-            "inactive": true
+            "judul"     : "Closing Hari Pertama",
+            "deskripsi" : "Penutupan hari pertama PPSMB Kesatria",
+            "slug"      : "",
+            "waktu"     : "15.05–15.20",
+            "inactive"  : true
         }
     ],
 
     "hari-2": [
         {
-            "judul": "Opening Hari Kedua",
-            "deskripsi": "Pembukaan oleh pemandu masing- masing forum",
-            "slug": "",
-            "waktu": "07.00–07.10",
-            "inactive": true
+            "judul"     : "Opening Hari Kedua",
+            "deskripsi" : "Pembukaan oleh pemandu masing-masing forum",
+            "slug"      : "",
+            "waktu"     : "07.00–07.10",
+            "inactive"  : true
         },
         {
-            "judul": "Kepemanduan 3",
-            "deskripsi": "Penyampaian materi dan games oleh pemandu",
-            "slug": "",
-            "waktu": "07.10–07.30",
-            "inactive": true
-        },
-
-        {
-            "judul": "Talkshow",
-            "deskripsi": "Talkshow bertemakan “Knowing, Expressing, Caring”",
-            "slug": "",
-            "waktu": "07.30–08.55",
-            "inactive": true
-        },
-
-        {
-            "judul": "Pameran Karya",
-            "deskripsi": "Pengenalan tim-tim kebanggaan Fakultas Teknik UGM",
-            "slug": "",
-            "waktu": "08.55–09.45",
-            "inactive": true
-        },
-
-        {
-            "judul": "Karya Aplikatif",
-            "deskripsi": "Kesatria Muda mengikuti sesi presentasi karya aplikatif",
-            "slug": "",
-            "waktu": "09.45–10.45",
-            "inactive": true
-        },
-
-        {
-            "judul": "Peran Program Studi dalam Pembangunan",
-            "deskripsi": "Penyampaian materi tentang peran program studi masing-masing Kesatria Muda",
-            "slug": "",
-            "waktu": "10.45–11.05",
-            "inactive": true
-        },
-
-        {
-            "judul": "Kota Impian",
-            "deskripsi": "Kesatria Muda membangun kota impiannya masing-masing sesuai arahan pemandu",
-            "slug": "",
-            "waktu": "11.05–11.55",
-            "inactive": true
-        },
-
-        {
-            "judul": "Ishoma",
-            "deskripsi": "Sesi istirahat dan ibadah bagi Kesatria Muda",
-            "slug": "",
-            "waktu": "11.55–13.00",
-            "inactive": true
-        },
-
-        {
-            "judul": "Games Angkatan",
-            "deskripsi": "Games Angkatan merupakan lanjutan dari kegiatan Fun Games",
-            "slug": "",
-            "waktu": "13.00–13.30",
-            "inactive": true
-        },
-
-        {
-            "judul": "Langkah Baru",
-            "deskripsi": "Review dan evaluasi kegiatan PPSMB Kesatria 2021 oleh Kesatria Muda",
-            "slug": "",
-            "waktu": "13.30–14.00",
-            "inactive": true
+            "judul"     : "Kepemanduan 3",
+            "deskripsi" : "Penyampaian materi dan games oleh pemandu",
+            "slug"      : "",
+            "waktu"     : "07.10–07.30",
+            "inactive"  : true
         },
         {
-            "judul": "Closing Seremonial PPSMB Kesatria 2021",
-            "deskripsi": "Penutupan PPSMB Kesatria 2021",
-            "slug": "",
-            "waktu": "14.00–15.00",
-            "inactive": true
+            "judul"     : "Talkshow",
+            "deskripsi" : "Talkshow bertemakan “Knowing, Expressing, Caring”",
+            "slug"      : "",
+            "waktu"     : "07.30–08.55",
+            "inactive"  : true
+        },
+        {
+            "judul"     : "Pameran Karya",
+            "deskripsi" : "Pengenalan tim-tim kebanggaan Fakultas Teknik UGM",
+            "slug"      : "pameran-karya",
+            "waktu"     : "08.55–09.45"
+        },
+        {
+            "judul"     : "Karya Aplikatif",
+            "deskripsi" : "Kesatria Muda mengikuti sesi presentasi karya aplikatif",
+            "slug"      : "",
+            "waktu"     : "09.45–10.45",
+            "inactive"  : true
+        },
+        {
+            "judul"     : "Peran Program Studi dalam Pembangunan",
+            "deskripsi" : "Penyampaian materi tentang peran program studi masing-masing Kesatria Muda",
+            "slug"      : "",
+            "waktu"     : "10.45–11.05",
+            "inactive"  : true
+        },
+        {
+            "judul"     : "Kota Impian",
+            "deskripsi" : "Kesatria Muda membangun kota impiannya masing-masing sesuai arahan pemandu",
+            "slug"      : "",
+            "waktu"     : "11.05–11.55",
+            "inactive"  : true
+        },
+        {
+            "judul"     : "Ishoma",
+            "deskripsi" : "Sesi istirahat dan ibadah bagi Kesatria Muda",
+            "slug"      : "",
+            "waktu"     : "11.55–13.00",
+            "inactive"  : true
+        },
+        {
+            "judul"     : "Games Angkatan",
+            "deskripsi" : "Games Angkatan merupakan lanjutan dari kegiatan Fun Games",
+            "slug"      : "",
+            "waktu"     : "13.00–13.30",
+            "inactive"  : true
+        },
+        {
+            "judul"     : "Langkah Baru",
+            "deskripsi" : "Review dan evaluasi kegiatan PPSMB Kesatria 2021 oleh Kesatria Muda",
+            "slug"      : "",
+            "waktu"     : "13.30–14.00",
+            "inactive"  : true
+        },
+        {
+            "judul"     : "Closing Seremonial PPSMB Kesatria 2021",
+            "deskripsi" : "Penutupan PPSMB Kesatria 2021",
+            "slug"      : "",
+            "waktu"     : "14.00–15.00",
+            "inactive"  : true
         }
     ]
 }

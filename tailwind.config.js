@@ -13,6 +13,9 @@ module.exports = {
             zIndex: {
                 '-1': '-1',
             },
+            fontWeight: {
+                semilight: 350,
+            },
         },
         colors: {
             transparent: 'transparent',
@@ -38,8 +41,7 @@ module.exports = {
         },
         fontFamily: {
             display: ['Mont', 'system-ui', 'sans-serif'],
-            'display-sm': ['Mont Book', 'system-ui', 'sans-serif'],
-            body: ['Lato', 'sans-serif'],
+            body: ['Lato', 'system-ui', 'sans-serif'],
         },
     },
     variants: {
