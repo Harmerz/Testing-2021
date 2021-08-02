@@ -15,5 +15,4 @@ export const content = (
             dan <em>Next</em> di YouTube yang tersedia.
         </p>
     </div>
-
 );
