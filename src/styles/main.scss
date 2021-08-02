@@ -71,7 +71,7 @@
 }
 
 @layer components {
-    #content .bordered-card {
+    #page .bordered-card {
         @apply rounded-lg border-2 px-4 py-2;
     }
 

@@ -53,8 +53,5 @@ module.exports = {
         },
     },
     plugins: [forms({ strategy: 'class' })],
-    // corePlugins: {
-    //     preflight: false
-    // },
-    important: '#content',
+    important: '#page',
 };

@@ -1,4 +1,4 @@
-:global(#content) {
+:global(#page) {
     .tabContainer {
         box-shadow: inset 0 0 0 0.15rem theme('colors.gray.lighter');
         @apply rounded-lg flex;
