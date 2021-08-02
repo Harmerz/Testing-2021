@@ -31,7 +31,6 @@ function Main() {
                         <Route exact path='/' component={pages.Home} />
                         <Route path='/agenda' component={pages.Agenda} />
 
-
                         {/* The 404 page */}
                         <Route component={pages.NotFound} />
 

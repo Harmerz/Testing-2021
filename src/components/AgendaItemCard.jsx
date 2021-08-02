@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { Link, useRouteMatch } from 'react-router-dom';
 
 import { ReactComponent as GoIcon } from '../assets/icons/go.svg';
@@ -12,7 +13,10 @@ export function AgendaItemCard({ time, title, excerpt, slug, inactive }) {
             className={`flex bordered-card items-center border-accent-blue-dark shadow-md group-hover:shadow-lg transition px-8 py-4 group-hover:bg-accent-blue group-hover:bg-opacity-10 duration-500 rounded-xl ${
                 inactive ? wrapperClassNames : ''
             }`}
-            {...(inactive ? { title: 'Materi belum ada atau belum dibuka' } : {})}
+            {...(inactive
+                ? { title: 'Materi belum ada atau belum dibuka' }
+                : {})
+            }
         >
             <div className='flex flex-col md:flex-row items-start md:items-center mr-auto'>
                 <p className='px-2 py-0.5 bg-accent-blue-dark text-white font-display font-bold leading-none mb-2 md:mb-0 md:mr-8 text-sm md:text-base flex-shrink-0'>
