@@ -23,24 +23,37 @@ function Main() {
                 <div className='flex-grow'>
                     <Switch>
                         {/* eslint-disable */}
-                        <Route path='/' component={pages.HomePage} />
-                        {/* <Route path= */}
-                        {/* <Route path='/agenda-testing' component={pages.Agenda} />
-                        <Route path='/webcomic'       component={pages.WebcomicIndexPage} />
+                        <Route exact path='/' component={pages.HomePage} />
                         <Route
-                            path='/jalan-teknik'
                             exact
+                            path='/agenda-testing'
+                            component={pages.Agenda}
+                        />
+                        <Route
+                            exact
+                            path='/webcomic'
+                            component={pages.WebcomicIndexPage}
+                        />
+                        <Route
+                            exact
+                            path='/jalan-teknik'
                             component={pages.JalanTeknik}
                         />
                         <Route
-                            path='/jalan-teknik/:path'
                             exact
+                            path='/jalan-teknik/:path'
                             component={pages.ItemJalanTeknik}
                         />
                         <Route
+                            exact
                             path='/jalan-teknik/:path/360'
                             component={pages.ThreeSixty}
-                        /> */}
+                        />
+                        <Route
+                            exact
+                            path='/presensi/:type/:cluster'
+                            component={pages.PresensiIndexPage}
+                        />
                         {/* eslint-enable */}
                     </Switch>
                 </div>

@@ -5,9 +5,9 @@
 @layer base {
     @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
-    #content {
-        @import '~tailwindcss/dist/base.min';
-    }
+    // #content {
+    //     @import '~tailwindcss/dist/base.min';
+    // }
 
     input::-webkit-calendar-picker-indicator {
         display: none !important;
@@ -82,13 +82,17 @@
         -o-user-select: none;
         user-select: none;
     }
-    
+
     .webcomic .object-container * {
         z-index: 20;
     }
-    
+
     .customized-form {
         @apply w-full rounded-md border-black focus:outline-none focus:border-transparent focus:ring-black focus:ring-2 transform duration-150 mt-1 focus:-translate-y-1 focus:shadow-md;
+    }
+
+    .h-screen-no-header {
+        height: calc(100vh - 50px);
     }
 }
 
