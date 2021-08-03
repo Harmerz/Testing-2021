@@ -13,7 +13,7 @@ export function NavigationButton({
     useEffect(() => {
         setIsDisabled(
             (prev && openedPage <= 0) ||
-                (next && openedPage >= N - 1) ||
+                (next && openedPage >= N) ||
                 progress < 100
         );
     }, [openedPage, progress]);
@@ -25,7 +25,7 @@ export function NavigationButton({
     const clickHandler = (e) => {
         e.preventDefault();
         if (prev && openedPage > 0) setOpenedPage(openedPage - 1);
-        if (next && openedPage < N - 1) setOpenedPage(openedPage + 1);
+        if (next && openedPage < N) setOpenedPage(openedPage + 1);
     };
 
     return (
