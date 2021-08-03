@@ -116,6 +116,9 @@
     width: 50%; 
     overflow: hidden;
 }
+.wrapper {
+    margin-bottom: 50px;
+}
 @media (max-width: 800px) {
     .gallery .picture {
         width: calc(100% / 2);
