@@ -3,7 +3,7 @@ export function PresenceNavigationButton({ progress, onClick }) {
 
     return (
         <>
-            {new Date() > new Date(2021, 7, 1, 23, 59, 59) ? (
+            {new Date() > new Date(2021, 7, 5, 23, 59, 59) ? (
                 <div />
             ) : (
                 <button
