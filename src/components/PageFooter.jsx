@@ -18,7 +18,7 @@ function SocialItem({
     return (
         <a
             href={targetBaseUrl + (!noSuffix ? children : '')}
-            className='flex items-center font-display-sm group my-2 max-w-max'
+            className='flex items-center font-display font-semilight group my-2 max-w-max'
         >
             <div className='bg-white text-black w-4 h-4 p-0.5 rounded-full'>
                 <IconComponent className='block w-full h-full fill-current' />
@@ -33,7 +33,7 @@ function SocialItem({
 export function PageFooter({ className }) {
     return (
         <footer
-            className={`${styles.footerContainer} bg-black text-white flex flex-col md:flex-row font-display-sm p-8 ${className}`}
+            className={`${styles.footerContainer} bg-black text-white flex flex-col md:flex-row font-display font-semilight p-8 ${className}`}
         >
             {/* TODO: Group the latter text-containing parts (with <div>s) instead of the current approach, to allow similar/uniform left-aligning in mobile viewports */}
             <div className='flex flex-row items-center w-auto md:w-2/5 mb-8 md:mb-0'>

@@ -1,9 +1,8 @@
+// Forcibly remove the inherited styles from the WP theme
+import './utils/wp-styles-fix';
+
 import { StrictMode } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-
-// This didn't work due to the ordering clash with the supposed tailwind (at rules / layers) ordering
-// import './styles/base.scss';
-// import './styles/main.css';
 
 import './styles/main.scss';
 
@@ -12,20 +11,29 @@ import { PageFooter } from './components/PageFooter';
 
 import * as pages from './pages/_listing';
 
+// function RedirectRoute({ path, exact, target }) {
+//     return (
+//         <Route exact={exact} path={path}>
+//             <Redirect to={target} />
+//         </Route>
+//     );
+// }
+
 function Main() {
     return (
         <BrowserRouter>
-            {/* Act as the <body> element */}
             <div className='flex flex-col min-h-screen'>
                 <PageHeader className='flex-shrink-0' />
 
-                {/* Act as the <main> element */}
-                <div className='flex-grow'>
+                <main className='flex-grow flex flex-col'>
                     <Switch>
-                        {/* eslint-disable */}
-                        <Route exact path='/' component={pages.HomePage} />
+                        <Route exact path='/' component={pages.Home} />
+                        <Route path='/agenda' component={pages.Agenda} />
+
+                        {/* The 404 page */}
+                        <Route component={pages.NotFound} />
+
                         <Route
-                            exact
                             path='/agenda-testing'
                             component={pages.Agenda}
                         />
@@ -54,9 +62,8 @@ function Main() {
                             path='/presensi/:type/:cluster'
                             component={pages.PresensiIndexPage}
                         />
-                        {/* eslint-enable */}
                     </Switch>
-                </div>
+                </main>
                 <PageFooter className='flex-shrink-0' />
             </div>
         </BrowserRouter>

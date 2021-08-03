@@ -1,5 +1,5 @@
+export * from './404';
 export * from './index';
-export * from './coming-soon';
 export * from './agenda';
 export * from './jalan-teknik';
 export * from './item-jalan-teknik';

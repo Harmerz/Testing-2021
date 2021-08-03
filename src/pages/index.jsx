@@ -10,7 +10,7 @@ import stagelightLogo from '../assets/images/homepage/logo-stagelight-fg.gif';
 import { ReactComponent as GoIcon } from '../assets/icons/go.svg';
 import { PenugasanSectionTemp } from '../components/PenugasanPage/PenugasanSectionTemp';
 
-export function HomePage() {
+export function Home() {
     return (
         <>
             <section className='-mt-20'>
@@ -18,6 +18,7 @@ export function HomePage() {
                     src={heroOverlay}
                     alt='Fakultas Teknik UGM'
                     className={`${styles.heroImg} block bg-cover bg-no-repeat min-h-screen min-w-full object-cover bg-center object-center`}
+                    draggable={false}
                 />
             </section>
             <section
@@ -27,7 +28,7 @@ export function HomePage() {
                     <h1 className='font-display text-3xl mb-6 font-bold text-white'>
                         Apa itu PPSMB Kesatria?
                     </h1>
-                    <p className='font-display-sm'>
+                    <p className='font-display font-semilight'>
                         Pelatihan Pembelajar Sukses bagi Mahasiswa Baru (PPSMB)
                         Kesatria merupakan masa orientasi mahasiswa baru di
                         Fakultas Teknik UGM. PPSMB Kesatria bertujuan untuk
