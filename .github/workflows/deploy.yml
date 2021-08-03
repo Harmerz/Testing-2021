@@ -30,9 +30,11 @@ jobs:
       run: npm run build && npm run deploy:wp
       env:
         INLINE_RUNTIME_CHUNK: 'false' # Disable inlined scripts on resulting build
-        PUBLIC_URL: //kesatria-2021-resources.netlify.app
-        NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-        NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        PUBLIC_URL: //kesatria-2021-resources.vercel.app
+        VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+        VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+        VERCEL_SCOPE: ${{ secrets.VERCEL_SCOPE }}
+        VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
         WP_USERNAME: ${{ secrets.WP_DEPLOY_USERNAME }}
         WP_PASSWORD: ${{ secrets.WP_DEPLOY_PASSWORD }}
 

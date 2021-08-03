@@ -4,12 +4,12 @@
 
 @layer base {
     @import './_fonts';
-    
+
     html {
         font-size: 87.5%;
         @apply font-body;
     }
-    
+
     body {
         scroll-behavior: smooth;
     }
@@ -30,14 +30,19 @@
         -webkit-user-select: none;
         -o-user-select: none;
         user-select: none;
+        @apply font-display;
     }
-    
+
     .webcomic .object-container * {
         z-index: 20;
     }
-    
+
     .customized-form {
         @apply w-full rounded-md border-black focus:outline-none focus:border-transparent focus:ring-black focus:ring-2 transform duration-150 mt-1 focus:-translate-y-1 focus:shadow-md;
+    }
+
+    .h-screen-no-header {
+        height: calc(100vh - 50px);
     }
 }
 

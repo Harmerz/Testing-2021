@@ -22,7 +22,7 @@
     "start": "craco start",
     "build": "craco build",
     "deploy:draft": "netlify deploy",
-    "deploy:wp": "netlify deploy --prod && node wp-deploy.mjs",
+    "deploy:wp": "vercel --prod --scope $VERCEL_SCOPE --token $VERCEL_TOKEN && node wp-deploy.mjs",
     "lint": "eslint --ext .js --ext .jsx src/",
     "lint:fix": "eslint --fix --ext .js --ext .jsx src/"
   },
@@ -46,6 +46,7 @@
     "postcss": "^7.0.36",
     "prettier": "^2.3.2",
     "puppeteer": "^10.1.0",
-    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.4"
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.4",
+    "vercel": "^23.0.1"
   }
 }

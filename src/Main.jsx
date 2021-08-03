@@ -33,22 +33,35 @@ function Main() {
                         {/* The 404 page */}
                         <Route component={pages.NotFound} />
 
-                        {/* <Route path='/agenda-testing' component={pages.Agenda} />
-                        <Route path='/webcomic'       component={pages.WebcomicIndexPage} />
                         <Route
-                            path='/jalan-teknik'
+                            path='/agenda-testing'
+                            component={pages.Agenda}
+                        />
+                        <Route
                             exact
+                            path='/webcomic'
+                            component={pages.WebcomicIndexPage}
+                        />
+                        <Route
+                            exact
+                            path='/jalan-teknik'
                             component={pages.JalanTeknik}
                         />
                         <Route
-                            path='/jalan-teknik/:path'
                             exact
+                            path='/jalan-teknik/:path'
                             component={pages.ItemJalanTeknik}
                         />
                         <Route
+                            exact
                             path='/jalan-teknik/:path/360'
                             component={pages.ThreeSixty}
-                        /> */}
+                        />
+                        <Route
+                            exact
+                            path='/presensi/:type/:cluster'
+                            component={pages.PresensiIndexPage}
+                        />
                     </Switch>
                 </main>
                 <PageFooter className='flex-shrink-0' />
