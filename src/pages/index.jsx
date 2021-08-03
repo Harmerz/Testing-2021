@@ -1,14 +1,11 @@
 import styles from '../styles/home.module.css';
 
-// import { ReactComponent as heroBg } from '../assets/images/homepage/hero-bg.svg';
-// import { ReactComponent as HeroOverlay } from '../assets/images/homepage/hero-overlay.svg';
-// import heroBg from '../assets/images/homepage/hero-bg.png';
 import heroOverlay from '../assets/images/homepage/hero-overlay.svg';
 import stagelightBg from '../assets/images/homepage/logo-stagelight-bg.svg';
 import stagelightLogo from '../assets/images/homepage/logo-stagelight-fg.gif';
 
 import { ReactComponent as GoIcon } from '../assets/icons/go.svg';
-import { PenugasanSectionTemp } from '../components/PenugasanPage/PenugasanSectionTemp';
+import { ActivityBlock } from '../components/ActivityBlock';
 
 export function Home() {
     return (
@@ -55,7 +52,6 @@ export function Home() {
                         alt='Logo PPSMB Kesatria 2021'
                         className='max-h-72'
                     />
-                    {/* ALTERNATIVE: Set the gif as the background-image instead and adjust its positionings from there */}
                     <img
                         src={stagelightLogo}
                         alt='Logo PPSMB Kesatria 2021'
@@ -63,7 +59,37 @@ export function Home() {
                     />
                 </div>
             </section>
-            <PenugasanSectionTemp />
+            <div className='flex flex-col sm:flex-row sm:justify-center bg-gray-lighter px-8 py-16 -mt-4'>
+                <ActivityBlock
+                    title='Agenda'
+                    id='agenda'
+                    items={[
+                        {
+                            title: 'Hari Pertama',
+                            description: 'Rabu, 4 Agustus 2021',
+                            url: '/agenda/hari-1'
+                        },
+                        {
+                            title: 'Hari Kedua',
+                            description: 'Kamis, 5 Agustus 2021',
+                            url: '/agenda/hari-2'
+                        }
+                    ]}
+                    className='text-accent-red flex-grow'
+                />
+                <ActivityBlock
+                    title='Penugasan'
+                    id='penugasan'
+                    items={[
+                        {
+                            title: 'Lihat Seluruh Penugasan',
+                            description: 'Dokumen resmi berisi penugasan dan daftar kegiatan',
+                            url: '/penugasan'
+                        }
+                    ]}
+                    className='text-accent-yellow-dark flex-grow mt-16 sm:mt-0 sm:ml-10'
+                />
+            </div>
         </>
     );
 }

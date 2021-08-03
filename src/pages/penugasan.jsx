@@ -1,11 +1,12 @@
-import styles from '../../styles/penugasan-temp.module.css';
+import styles from '../styles/penugasan.module.css';
 
-import { ReactComponent as DownloadIcon } from '../../assets/icons/file-earmark-arrow-down.svg';
+import { ReactComponent as DownloadIcon } from '../assets/icons/file-earmark-arrow-down.svg';
+import { GenericPage, PageTitle } from '../components/GenericPage';
 
-export function PenugasanSectionTemp() {
+export function Penugasan() {
     return (
-        <section className='mt-24 mb-48 px-8 text-center' id='penugasan'>
-            <h1 className='text-4xl font-display font-bold mb-8'>Penugasan</h1>
+        <GenericPage>
+            <PageTitle>Penugasan</PageTitle>
             <iframe
                 src='https://drive.google.com/file/d/1canFad3kwDTDxoo2FdayU39Hww2W5_k0/preview'
                 width='640'
@@ -21,6 +22,6 @@ export function PenugasanSectionTemp() {
                 <DownloadIcon className='block mr-2' />
                 Unduh
             </a>
-        </section>
+        </GenericPage>
     );
 }

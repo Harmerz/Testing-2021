@@ -1,8 +1,9 @@
-import React from 'react';
+import { TabbedNav } from '../../../components/TabbedNav';
 import '../index.css';
 
 export function Filter() {
-    function handleclick(year){
+    function handleclick(ev){
+        const { year } = ev.target.dataset; console.log(year);
         const filterName = year;
         const filterImg = document.querySelectorAll('.picture');
         filterImg.forEach((picture)=>{
@@ -15,18 +16,26 @@ export function Filter() {
                 picture.classList.add('hide')
                 picture.classList.remove('show')
             }
+        });
+
+        // HACK, FIXME
+        const navButtons = document.querySelectorAll('nav > button[type=button][data-year]');
+        navButtons.forEach((element) => {
+            if (element.dataset.year === year) {
+                element.classList.add('active');
+            }
+            else {
+                element.classList.remove('active');
+            }
         })
     }
     return(
         <div className='wrapper'>
-            <nav>
-                <h1 className='flex w-full justify-center text-3xl font-bold'>Kilas Balik</h1>
-                    <div className='items'>
-                        <button type='button' className='btn' onClick={() => handleclick('all')}>All</button>
-                        <button type='button' className='btn' onClick={() => handleclick('2019')}>2019</button>
-                        <button type='button' className='btn' onClick={() => handleclick('2020')}>2020</button>
-                    </div>
-            </nav>
+            <TabbedNav className='mx-auto max-w-max'>
+                <button type='button' onClick={handleclick} data-year='all' className='active'>All</button>
+                <button type='button' onClick={handleclick} data-year='2020'>2020</button>
+                <button type='button' onClick={handleclick} data-year='2019'>2019</button>
+            </TabbedNav>
         </div>
     );
 }
