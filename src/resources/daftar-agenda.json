@@ -17,14 +17,14 @@
         {
             "judul"     : "Jalan-Jalan Teknik",
             "deskripsi" : "Kesatria Muda menjelajahi lingkungan Fakultas Teknik secara virtual",
-            "slug"      : "",
+            "slug"      : "jalan-jalan-teknik",
             "waktu"     : "09.00–09.30",
             "inactive"  : true
         },
         {
             "judul"     : "Profil Teknik",
             "deskripsi" : "Penyampaian materi secara asinkron berkaitan dengan sejarah, fasilitas, visi dan misi, serta deskripsi singkat untuk masing-masing departemen",
-            "slug"      : "",
+            "slug"      : "profil-teknik",
             "waktu"     : "09.30–10.15",
             "inactive"  : true
         },
@@ -37,21 +37,21 @@
         {
             "judul"     : "Materi Etika dan Integritas",
             "deskripsi" : "Penyampaian materi etika dan integritas",
-            "slug"      : "",
+            "slug"      : "etika-dan-integritas",
             "waktu"     : "11.05–11.15",
             "inactive"  : true
         },
         {
             "judul"     : "Materi Kekerasan Seksual",
             "deskripsi" : "Penyampaian materi tentang pentingnya pencegahan dan penanganan kekerasan seksual",
-            "slug"      : "",
+            "slug"      : "ppks",
             "waktu"     : "11.15–11.25",
             "inactive"  : true
         },
         {
             "judul"     : "Materi Mental Health",
             "deskripsi" : "Kesatria Muda membaca webcomic tentang pentingnya menjaga kesehatan mental selama berkuliah",
-            "slug"      : "",
+            "slug"      : "mental-health",
             "waktu"     : "11.25–11.35",
             "inactive"  : true
         },

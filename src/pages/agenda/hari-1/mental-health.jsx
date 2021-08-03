@@ -1,5 +1,5 @@
 import { WebcomicIndexPage } from '../../webcomic';
 
-export const title = 'Mental Health';
+export const title = '[WIP] Mental Health';
 
 export const content = <WebcomicIndexPage />;

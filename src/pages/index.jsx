@@ -18,6 +18,7 @@ export function Home() {
                     src={heroOverlay}
                     alt='Fakultas Teknik UGM'
                     className={`${styles.heroImg} block bg-cover bg-no-repeat min-h-screen min-w-full object-cover bg-center object-center`}
+                    draggable={false}
                 />
             </section>
             <section
