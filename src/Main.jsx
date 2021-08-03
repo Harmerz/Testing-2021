@@ -1,9 +1,8 @@
+// Forcibly remove the inherited styles from the WP theme
+import './utils/wp-styles-fix';
+
 import { StrictMode } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-
-// This didn't work due to the ordering clash with the supposed tailwind (at rules / layers) ordering
-// import './styles/base.scss';
-// import './styles/main.css';
 
 import './styles/main.scss';
 
@@ -12,39 +11,65 @@ import { PageFooter } from './components/PageFooter';
 
 import * as pages from './pages/_listing';
 
+// function RedirectRoute({ path, exact, target }) {
+//     return (
+//         <Route exact={exact} path={path}>
+//             <Redirect to={target} />
+//         </Route>
+//     );
+// }
+
 function Main() {
     return (
         <BrowserRouter>
-            {/* Act as the <body> element */}
             <div className='flex flex-col min-h-screen'>
                 <PageHeader className='flex-shrink-0' />
 
-                {/* Act as the <main> element */}
-                <div className='flex-grow'>
+                <main className='flex-grow flex flex-col'>
                     <Switch>
                         {/* eslint-disable */}
                         {/*<Route path='/' component={pages.HomePage} />*/}
-                        <Route path='/dokumentasi' component={pages.Dokumentasi} />
                         {/* <Route path= */}
                         {/* <Route path='/agenda-testing' component={pages.Agenda} />
                         <Route path='/webcomic'       component={pages.WebcomicIndexPage} />
+                        <Route exact path='/' component={pages.Home} />
+                        <Route path='/agenda' component={pages.Agenda} />
+
+                        {/* The 404 page */}
+                        <Route component={pages.NotFound} />
+
                         <Route
-                            path='/jalan-teknik'
+                            path='/agenda-testing'
+                            component={pages.Agenda}
+                        />
+                        <Route
                             exact
+                            path='/webcomic'
+                            component={pages.WebcomicIndexPage}
+                        />
+                        <Route
+                            exact
+                            path='/jalan-teknik'
                             component={pages.JalanTeknik}
                         />
                         <Route
-                            path='/jalan-teknik/:path'
                             exact
+                            path='/jalan-teknik/:path'
                             component={pages.ItemJalanTeknik}
                         />
                         <Route
+                            exact
                             path='/jalan-teknik/:path/360'
                             component={pages.ThreeSixty}
-                        /> */}
-                        {/* eslint-enable */}
+                        />
+                        <Route
+                            exact
+                            path='/presensi/:type/:cluster'
+                            component={pages.PresensiIndexPage}
+                        />
+                        <Route path='/dokumentasi' component={pages.Dokumentasi} />
                     </Switch>
-                </div>
+                </main>
                 <PageFooter className='flex-shrink-0' />
             </div>
         </BrowserRouter>

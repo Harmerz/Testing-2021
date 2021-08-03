@@ -3,75 +3,24 @@
 @tailwind utilities;
 
 @layer base {
-    @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
-
-    #content {
-        @import '~tailwindcss/dist/base.min';
-    }
-
-    input::-webkit-calendar-picker-indicator {
-        display: none !important;
-    }
-
-    @font-face {
-        font-family: 'Mont Book';
-        font-style: normal;
-        src: url('../assets/fonts/Mont-Book.ttf') format('truetype');
-    }
-    @font-face {
-        font-family: 'Mont Book';
-        font-style: italic;
-        src: url('../assets/fonts/Mont-BookItalic.ttf') format('truetype');
-    }
-
-    @font-face {
-        font-family: 'Mont';
-        font-style: normal;
-        font-weight: 300;
-        src: url('../assets/fonts/Mont-Light.ttf') format('truetype');
-    }
-    @font-face {
-        font-family: 'Mont';
-        font-style: italic;
-        font-weight: 300;
-        src: url('../assets/fonts/Mont-LightItalic.ttf') format('truetype');
-    }
-    @font-face {
-        font-family: 'Mont';
-        font-style: normal;
-        font-weight: 600;
-        src: url('../assets/fonts/Mont-SemiBold.ttf') format('truetype');
-    }
-    @font-face {
-        font-family: 'Mont';
-        font-style: italic;
-        font-weight: 600;
-        src: url('../assets/fonts/Mont-SemiBoldItalic.ttf') format('truetype');
-    }
-    @font-face {
-        font-family: 'Mont';
-        font-style: normal;
-        font-weight: 700;
-        src: url('../assets/fonts/Mont-Bold.ttf') format('truetype');
-    }
-    @font-face {
-        font-family: 'Mont';
-        font-style: italic;
-        font-weight: 700;
-        src: url('../assets/fonts/Mont-BoldItalic.ttf') format('truetype');
-    }
+    @import './_fonts';
 
     html {
         font-size: 87.5%;
+        @apply font-body;
     }
 
     body {
         scroll-behavior: smooth;
     }
+
+    input::-webkit-calendar-picker-indicator {
+        display: none !important;
+    }
 }
 
 @layer components {
-    #content .bordered-card {
+    #page .bordered-card {
         @apply rounded-lg border-2 px-4 py-2;
     }
 
@@ -81,14 +30,19 @@
         -webkit-user-select: none;
         -o-user-select: none;
         user-select: none;
+        @apply font-display;
     }
-    
+
     .webcomic .object-container * {
         z-index: 20;
     }
-    
+
     .customized-form {
         @apply w-full rounded-md border-black focus:outline-none focus:border-transparent focus:ring-black focus:ring-2 transform duration-150 mt-1 focus:-translate-y-1 focus:shadow-md;
+    }
+
+    .h-screen-no-header {
+        height: calc(100vh - 50px);
     }
 }
 
@@ -128,5 +82,14 @@
 
 /* For debugging purposes only */
 * {
-    outline: 1px solid rgba(255 0 0 / 0.25);
+    // outline: 1px solid rgba(255 0 0 / 0.25);
+}
+
+// FOR TESTING ANIMATIONS
+@keyframes test-appear-up-anim {
+    from {
+        // @ apply transform translate-y-4 opacity-0;
+        transform: translateY(theme('translate.4'));
+        opacity: 0;
+    }
 }
