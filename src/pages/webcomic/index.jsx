@@ -5,7 +5,7 @@ import { Timer } from './Timer';
 // import { Presence } from './Presence';
 import { PortraitWarning } from './PortraitWarning';
 import { PresenceNavigationButton } from './PresenceNavigationButton';
-import { Presensi } from '../../components/presensi';
+import { PresensiTugmat } from '../../components/presensi';
 
 export function WebcomicIndexPage() {
     const [imageCount] = useState(10); // 0 to 9
@@ -90,7 +90,7 @@ export function WebcomicIndexPage() {
                 </div>
                 <PortraitWarning /> {/* z-50 */}
                 <div className='px-12 md:px-20 max-w-3xl mx-auto h-screen grid place-items-center object-container z-20'>
-                    <Presensi
+                    <PresensiTugmat
                         title='Presensi Mental Health'
                         collection='presensi-mental-health'
                     />

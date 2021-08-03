@@ -13,6 +13,9 @@ module.exports = {
             zIndex: {
                 '-1': '-1',
             },
+            transitionProperty: {
+                height: 'height',
+            },
         },
         colors: {
             transparent: 'transparent',
