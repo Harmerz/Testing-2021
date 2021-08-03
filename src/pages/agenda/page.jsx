@@ -8,14 +8,12 @@ import agendaList from '../../resources/daftar-agenda.json';
 import { ReactComponent as BulletedListIcon } from '../../assets/icons/list-ul.svg';
 import { cnJoin } from '../../utils/classnames-joiner';
 
-function NavigateButton({ targetItemObj, children, reverseIcon, className }) {
-    const { hari, slug } = targetItemObj;
-
-    const isEnabled = targetItemObj && !targetItemObj.inactive;
-
+function NavigateButton({ targetItem, children, reverseIcon, className }) {
+    const isEnabled = targetItem && !targetItem.inactive;
+    
     return (
         <Link
-            to={isEnabled ? `/agenda/${hari}/${slug}` : undefined}
+            to={isEnabled ? `/agenda/${targetItem.hari}/${targetItem.slug}` : undefined}
             className={`flex ${reverseIcon ? 'flex-row-reverse' : 'flex-row'} ${
                 isEnabled ? 'visible' : 'invisible'
             } bg-accent-yellow-dark text-white rounded-md ring-1 ring-offset-2 ring-accent-yellow-dark ring-opacity-0 hover:ring-opacity-100 transition-shadow duration-100 overflow-hidden ${className}`}
