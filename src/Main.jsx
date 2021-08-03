@@ -1,8 +1,8 @@
 // Forcibly remove the inherited styles from the WP theme
 import './utils/wp-styles-fix';
 
-import { StrictMode, useEffect } from 'react';
-import { BrowserRouter, Switch, Route, Redirect, useLocation } from 'react-router-dom';
+import { StrictMode } from 'react';
+import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 
 import './styles/main.scss';
 
@@ -23,10 +23,17 @@ function Main() {
                 <main className='flex-grow flex flex-col'>
                     <Switch>
                         <Route exact path='/' component={pages.Home} />
-                        <Route exact path='/penugasan' component={pages.Penugasan} />
+                        <Route
+                            exact
+                            path='/penugasan'
+                            component={pages.Penugasan}
+                        />
                         <Redirect from='/#penugasan' to='/penugasan' />
                         <Route path='/agenda' component={pages.Agenda} />
-                        <Route path='/dokumentasi' component={pages.Dokumentasi} />
+                        <Route
+                            path='/dokumentasi'
+                            component={pages.Dokumentasi}
+                        />
 
                         {/* The 404 page */}
                         <Route component={pages.NotFound} />

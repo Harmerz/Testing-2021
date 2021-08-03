@@ -5,7 +5,7 @@ import { Gallery } from './components/gallery';
 import { GenericPage, PageTitle } from '../../components/GenericPage';
 
 export function Dokumentasi() {
-    return(
+    return (
         <GenericPage>
             <PageTitle>Dokumentasi</PageTitle>
             <Filter />

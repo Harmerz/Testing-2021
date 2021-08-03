@@ -67,13 +67,13 @@ export function Home() {
                         {
                             title: 'Hari Pertama',
                             description: 'Rabu, 4 Agustus 2021',
-                            url: '/agenda/hari-1'
+                            url: '/agenda/hari-1',
                         },
                         {
                             title: 'Hari Kedua',
                             description: 'Kamis, 5 Agustus 2021',
-                            url: '/agenda/hari-2'
-                        }
+                            url: '/agenda/hari-2',
+                        },
                     ]}
                     className='text-accent-red flex-grow'
                 />
@@ -83,9 +83,10 @@ export function Home() {
                     items={[
                         {
                             title: 'Lihat Seluruh Penugasan',
-                            description: 'Dokumen resmi berisi penugasan dan daftar kegiatan',
-                            url: '/penugasan'
-                        }
+                            description:
+                                'Dokumen resmi berisi penugasan dan daftar kegiatan',
+                            url: '/penugasan',
+                        },
                     ]}
                     className='text-accent-yellow-dark flex-grow mt-16 sm:mt-0 sm:ml-10'
                 />
