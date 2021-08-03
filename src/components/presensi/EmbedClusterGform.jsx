@@ -26,7 +26,7 @@ export function EmbedClusterGform() {
 
 export function ButtonToGform({
     type = 'asinkron',
-    expireDate = new Date(2021, 8, 5, 23, 59, 59),
+    expireDate = new Date(2021, 7, 5, 23, 59, 59), // 5 Agustus(index 7) 2021 malam
     position = 'middle',
 }) {
     const [hidden, setHidden] = useState(true);
