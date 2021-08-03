@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 
 export function Timer({ openedPage, progresses, setProgresses }) {
     const timeoutTime = 10; // (ms)
-    const timerTime = 15000; // (ms)
+    const timerTime = 500; // (ms)
 
     useEffect(() => {
         const timeout = setTimeout(() => {

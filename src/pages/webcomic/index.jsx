@@ -2,20 +2,20 @@ import { useState } from 'react';
 import { NavigationButton } from './NavigationButton';
 import { Comic } from './Comic';
 import { Timer } from './Timer';
-// import { Presence } from './Presence';
 import { PortraitWarning } from './PortraitWarning';
 import { PresenceNavigationButton } from './PresenceNavigationButton';
 import { PresensiTugmat } from '../../components/presensi';
 
 export function WebcomicIndexPage() {
-    const [imageCount] = useState(10); // 0 to 9
-    const [openedPage, setOpenedPage] = useState(0); // begin from 0
+    const [imageCount] = useState(10); // 1 to 10 // 0 is cover
+    const [openedPage, setOpenedPage] = useState(0); // begin from 0 // cover
     const [progresses, setProgresses] = useState(
         Object.fromEntries(
-            Array.from(Array(imageCount), (_, index) => index).map((i) => [
-                i,
-                0,
-            ])
+            [[0, 100]].concat(
+                Array.from(Array(imageCount), (_, index) => index + 1).map(
+                    (i) => [i, 0]
+                )
+            )
         )
     );
     const [page, setPage] = useState('comic');
@@ -81,10 +81,10 @@ export function WebcomicIndexPage() {
                         </div>
                     </div>
                     <div className='mt-2 text-center text-xl hidden lg:block'>
-                        PAGE {openedPage + 1}/10
+                        PAGE {openedPage}/10
                     </div>
                     <PresenceNavigationButton
-                        progress={progresses[imageCount - 1]}
+                        progress={progresses[imageCount]}
                         onClick={navigateToPresencePage}
                     />
                 </div>

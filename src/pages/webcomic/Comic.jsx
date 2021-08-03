@@ -24,14 +24,14 @@ export function Comic({ imageCount, openedPage }) {
 
     const baseImageUrl = 'https://ik.imagekit.io/lutfiandri/webcomic-kesatria/';
     const wrapperStyles = {
-        width: `${containerSize.width * imageCount}px`,
+        width: `${containerSize.width * (imageCount + 1)}px`,
         height: `${containerSize.height}px`,
         '--tw-translate-x': `-${containerSize.width * openedPage}px`,
     };
 
     const imagesComponent = Array.from(
-        Array(imageCount),
-        (_, index) => index + 1
+        Array(imageCount + 1),
+        (_, index) => index
     ).map((i) => (
         <div className='w-screen' key={i}>
             <img
