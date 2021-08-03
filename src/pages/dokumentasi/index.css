@@ -112,6 +112,9 @@
 }
 .video {
     margin: auto;
+    border-radius: 10px; 
+    width: 50%; 
+    overflow: hidden;
 }
 @media (max-width: 800px) {
     .gallery .picture {
