@@ -49,6 +49,12 @@ module.exports = {
                 display: ['Mont', 'system-ui', 'sans-serif'],
                 body: ['Lato', 'system-ui', 'sans-serif'],
             },
+            boxShadow: {
+                buttonLg: `0 0.6rem 0.65rem rgb(42 42 42 / 0.5)`,
+                buttonSm: `0 0.45rem 0.5rem rgb(42 42 42 / 0.5)`,
+                displayLg: '0 1.25rem 1rem rgb(42 42 42 / 0.4)',
+                displaySm: '0 1rem 0.75rem rgb(42 42 42 / 0.4)',
+            },
             fontWeight: {
                 semilight: 350,
             },

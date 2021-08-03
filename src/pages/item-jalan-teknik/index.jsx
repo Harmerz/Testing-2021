@@ -7,7 +7,7 @@ import con from '../../styles/Container.module.css';
 import { Button } from '../../components/Button';
 
 function toBottom() {
-    window.scrollTo({ top: 9999, behavior: 'smooth' });
+    window.scrollTo({ top: 1080, behavior: 'smooth' });
 }
 
 function toTop() {

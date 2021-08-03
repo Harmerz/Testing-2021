@@ -1,0 +1,41 @@
+<svg id="peta_teknik_copy" data-name="peta teknik copy" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="144" height="144" viewBox="0 0 144 144">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #0d181d;
+      }
+      .cls-2 {
+        fill: #fff;
+        fill-rule: evenodd;
+      }
+      .cls-3 {
+        filter: url(#filter);
+      }
+    </style>
+    <filter id="filter" filterUnits="userSpaceOnUse">
+      <feOffset result="offset" dy="8" in="SourceAlpha"/>
+      <feGaussianBlur result="blur" stdDeviation="2.828"/>
+      <feFlood result="flood" flood-color="#15141d" flood-opacity="0.6"/>
+      <feComposite result="composite" operator="in" in2="blur"/>
+      <feBlend result="blend" in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g>
+    <g>
+      <circle class="cls-1" cx="1496" cy="870" r="72"/>
+      <path id="Polygon_1" data-name="Polygon 1" class="cls-2" d="M1498,907l-36.37-63h72.74Z"/>
+    </g>
+    <g id="Group_8_copy_3" data-name="Group 8 copy 3" class="cls-3">
+      <circle class="cls-1" cx="1310" cy="870" r="72"/>
+      <path id="Polygon_1-2" data-name="Polygon 1" class="cls-2" d="M1312,907l-36.37-63h72.74Z"/>
+    </g>
+    <g id="Group_8_copy" data-name="Group 8 copy">
+      <circle class="cls-1" cx="72" cy="72" r="72"/>
+      <path id="Polygon_1-3" data-name="Polygon 1" class="cls-2" d="M30.5,67.5l63-36.373v72.746Z"/>
+    </g>
+    <g id="Group_8_copy_2" data-name="Group 8 copy 2" class="cls-3">
+      <circle class="cls-1" cx="288" cy="72" r="72"/>
+      <path id="Polygon_1-4" data-name="Polygon 1" class="cls-2" d="M246.5,67.5l63-36.373v72.746Z"/>
+    </g>
+  </g>
+</svg>
