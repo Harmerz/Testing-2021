@@ -27,6 +27,11 @@ function Main() {
 
                 <main className='flex-grow flex flex-col'>
                     <Switch>
+                        {/* eslint-disable */}
+                        {/*<Route path='/' component={pages.HomePage} />*/}
+                        {/* <Route path= */}
+                        {/* <Route path='/agenda-testing' component={pages.Agenda} />
+                        <Route path='/webcomic'       component={pages.WebcomicIndexPage} />
                         <Route exact path='/' component={pages.Home} />
                         <Route path='/agenda' component={pages.Agenda} />
 
@@ -62,6 +67,7 @@ function Main() {
                             path='/presensi/:type/:cluster'
                             component={pages.PresensiIndexPage}
                         />
+                        <Route path='/dokumentasi' component={pages.Dokumentasi} />
                     </Switch>
                 </main>
                 <PageFooter className='flex-shrink-0' />
