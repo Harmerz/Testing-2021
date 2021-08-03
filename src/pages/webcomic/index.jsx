@@ -26,7 +26,7 @@ export function WebcomicIndexPage() {
     };
 
     return (
-        <div className='webcomic relative w-screen h-screen text-black overflow-hidden'>
+        <div className='webcomic relative w-full h-screen-no-header text-black overflow-hidden'>
             <img
                 src='https://ik.imagekit.io/lutfiandri/webcomic-kesatria/background'
                 alt='background'
