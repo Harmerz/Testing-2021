@@ -65,6 +65,9 @@ export function PresensiTugmat({ title, collection }) {
                         type='text'
                         name='nim'
                         id='nim'
+                        pattern='21/[0-9]{6}/TK/[0-9]{5}'
+                        title='Pastikan sesuai dengan format NIM berikut: 21/######/TK/#####'
+                        placeholder='21/######/TK/#####'
                         required
                     />
                 </label>
