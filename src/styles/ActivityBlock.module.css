@@ -1,0 +1,24 @@
+.container {
+    --cut-depth: 1rem;
+}
+
+.cornerCutHeading {
+    clip-path: polygon(
+        0 0,
+        100% 0,
+        100% 100%,
+        var(--cut-depth) 100%,
+        0 calc(100% - var(--cut-depth))
+    );
+}
+
+.itemsContainer {
+    padding-left: var(--cut-depth);
+}
+
+.item {
+    @apply transition-shadow duration-300;
+}
+.item:hover {
+    box-shadow: 0 0 0.75rem currentColor;
+}

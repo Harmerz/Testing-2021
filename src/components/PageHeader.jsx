@@ -54,18 +54,15 @@ export function PageHeader({ className }) {
             <div
                 className={`${styles.navContainer} bg-black flex-grow text-white uppercase font-display font-semilight font-semibold text-sm`}
             >
-                {' '}
-                {/* mb-2 */}
                 <nav
                     className={`fixed w-full left-0 top-0 md:static bg-black md:bg-transparent flex flex-col md:flex-row md:h-full justify-center text-center py-8 pt-24 md:p-0 -z-1 ${
                         !isMobileMenuOpen ? 'transform -translate-y-full' : ''
                     } transition-transform duration-300 md:transform-none md:transition-none`}
                 >
                     <NavLink to='/'>Beranda</NavLink>
-                    <NavLink to='/#penugasan' external>
-                        Penugasan
-                    </NavLink>
                     <NavLink to='/agenda'>Agenda</NavLink>
+                    <NavLink to='/penugasan'>Penugasan</NavLink>
+                    <NavLink to='/dokumentasi'>Dokumentasi</NavLink>
                 </nav>
                 <button
                     type='button'

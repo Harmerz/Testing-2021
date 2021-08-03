@@ -15,9 +15,6 @@ module.exports = {
             },
             transitionProperty: {
                 height: 'height',
-                fontWeight: {
-                    semilight: 350,
-                },
                 scale: {
                     '-1': '-1',
                 },
@@ -47,6 +44,9 @@ module.exports = {
             fontFamily: {
                 display: ['Mont', 'system-ui', 'sans-serif'],
                 body: ['Lato', 'system-ui', 'sans-serif'],
+            },
+            fontWeight: {
+                semilight: 350,
             },
         },
     },
