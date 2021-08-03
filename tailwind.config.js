@@ -16,6 +16,9 @@ module.exports = {
             fontWeight: {
                 semilight: 350,
             },
+            scale: {
+                '-1': '-1',
+            },
         },
         colors: {
             transparent: 'transparent',
@@ -52,6 +55,10 @@ module.exports = {
             brightness: ['hover', 'active'],
             transform: ['group-hover', 'active'],
             translate: ['group-hover', 'active'],
+            ringWidth: ['hover'],
+            ringColor: ['hover'],
+            ringOffsetWidth: ['hover'],
+            ringOpacity: ['hover'],
         },
     },
     plugins: [forms({ strategy: 'class' })],
