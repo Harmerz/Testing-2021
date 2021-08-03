@@ -23,6 +23,10 @@ module.exports = {
                 transparent: 'transparent',
                 current: 'currentColor',
                 black: '#0D181D',
+                blue: {
+                    light: '#0D181A',
+                    dark: '#0D181D',
+                },
                 white: '#FFFFFF',
                 gray: {
                     lighter: '#F1F1F1',
@@ -65,5 +69,5 @@ module.exports = {
         },
     },
     plugins: [forms({ strategy: 'class' })],
-    important: '#page',
+    important: true,
 };

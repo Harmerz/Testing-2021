@@ -34,10 +34,6 @@ function Main() {
                             path='/dokumentasi'
                             component={pages.Dokumentasi}
                         />
-
-                        {/* The 404 page */}
-                        <Route component={pages.NotFound} />
-
                         <Route
                             exact
                             path='/jalan-teknik'
@@ -51,13 +47,16 @@ function Main() {
                         <Route
                             exact
                             path='/jalan-teknik/:path/360'
-                            component={pages.ThreeSixty}
+                            component={pages.ThreeSix}
                         />
                         <Route
                             exact
                             path='/presensi/:type/:cluster'
                             component={pages.PresensiIndexPage}
                         />
+
+                        {/* The 404 page */}
+                        <Route component={pages.NotFound} />
                     </Switch>
                 </main>
                 <PageFooter className='flex-shrink-0' />
