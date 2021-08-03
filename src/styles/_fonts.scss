@@ -31,6 +31,20 @@
 @font-face {
     font-family: 'Mont';
     font-style: normal;
+    font-weight: 400;
+    src: url('../assets/fonts/Mont-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Mont';
+    font-style: italic;
+    font-weight: 400;
+    src: url('../assets/fonts/Mont-RegularItalic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Mont';
+    font-style: normal;
     font-weight: 600;
     src: url('../assets/fonts/Mont-SemiBold.ttf') format('truetype');
 }
