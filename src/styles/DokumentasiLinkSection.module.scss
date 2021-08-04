@@ -1,0 +1,31 @@
+.innerContainer {
+    --diagonals-depth: 1rem;
+    --diagonals-vertical-offset: 5rem;
+    --diagonals-width: var(--diagonals-depth);
+
+    clip-path: polygon(
+        0 0,
+        var(--diagonals-vertical-offset) 0,
+        calc(var(--diagonals-vertical-offset) + var(--diagonals-width)) var(--diagonals-depth),
+        calc(100% - calc(var(--diagonals-vertical-offset) + var(--diagonals-width))) var(--diagonals-depth),
+        calc(100% - var(--diagonals-vertical-offset)) 0,
+        100% 0,
+        100% calc(100% - var(--diagonals-depth)),
+        calc(100% - var(--diagonals-vertical-offset)) calc(100% - var(--diagonals-depth)),
+        calc(100% - calc(var(--diagonals-vertical-offset) + var(--diagonals-width))) 100%,
+        calc(var(--diagonals-vertical-offset) + var(--diagonals-width)) 100%,
+        var(--diagonals-vertical-offset) calc(100% - var(--diagonals-depth)),
+        0 calc(100% - var(--diagonals-depth))
+    );
+
+    padding-top: calc(var(--diagonals-depth) / 2);
+}
+
+.wrapper {
+    filter: drop-shadow(0 0 1rem theme('colors.accent.blue.DEFAULT'));
+}
+
+// .theButton::before {
+//     content: '';
+//     @apply absolute w-full h-full left-0 top-0;
+// }

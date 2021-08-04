@@ -2,7 +2,7 @@
 import './utils/wp-styles-fix';
 
 import { StrictMode } from 'react';
-import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import './styles/main.scss';
 
@@ -28,26 +28,10 @@ function Main() {
                             path='/penugasan'
                             component={pages.Penugasan}
                         />
-                        <Redirect from='/#penugasan' to='/penugasan' />
                         <Route path='/agenda' component={pages.Agenda} />
                         <Route
                             path='/dokumentasi'
                             component={pages.Dokumentasi}
-                        />
-                        <Route
-                            exact
-                            path='/jalan-teknik'
-                            component={pages.JalanTeknik}
-                        />
-                        <Route
-                            exact
-                            path='/jalan-teknik/:path'
-                            component={pages.ItemJalanTeknik}
-                        />
-                        <Route
-                            exact
-                            path='/jalan-teknik/:path/360'
-                            component={pages.ThreeSix}
                         />
                         <Route
                             exact

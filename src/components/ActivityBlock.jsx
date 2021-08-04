@@ -9,7 +9,7 @@ export function ActivityBlock({ title, id, items, className }) {
     return (
         <section
             id={id}
-            className={`${styles.container} flex-1 max-w-lg ${className}`}
+            className={`${styles.container} flex-1 sm:max-w-lg ${className}`}
         >
             <div
                 className={cnJoin([

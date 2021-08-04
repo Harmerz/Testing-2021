@@ -123,7 +123,7 @@
         {
             "judul"     : "Peran Program Studi dalam Pembangunan",
             "deskripsi" : "Penyampaian materi tentang peran program studi masing-masing Kesatria Muda",
-            "slug"      : "",
+            "slug"      : "peran-prodi-dalam-pembangunan",
             "waktu"     : "10.45–11.05",
             "inactive"  : true
         },
@@ -144,9 +144,8 @@
         {
             "judul"     : "Games Angkatan",
             "deskripsi" : "Games Angkatan merupakan lanjutan dari kegiatan Fun Games",
-            "slug"      : "",
-            "waktu"     : "13.00–13.30",
-            "inactive"  : true
+            "slug"      : "games-angkatan",
+            "waktu"     : "13.00–13.30"
         },
         {
             "judul"     : "Langkah Baru",
@@ -158,9 +157,8 @@
         {
             "judul"     : "Closing Seremonial PPSMB Kesatria 2021",
             "deskripsi" : "Penutupan PPSMB Kesatria 2021",
-            "slug"      : "",
-            "waktu"     : "14.00–15.00",
-            "inactive"  : true
+            "slug"      : "closing-seremonial",
+            "waktu"     : "14.00–15.00"
         }
     ]
 }

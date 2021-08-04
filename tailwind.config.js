@@ -4,6 +4,32 @@ module.exports = {
     purge: ['./src/**/*.{js,jsx,ts,tsx}'],
     darkMode: false, // or 'media' or 'class'
     theme: {
+        colors: {
+            transparent: 'transparent',
+            current: 'currentColor',
+            black: '#0D181D',
+            blue: {
+                light: '#0D181A',
+                dark: '#0D181D',
+            },
+            white: '#FFFFFF',
+            gray: {
+                lighter: '#F1F1F1',
+                darker: '#D9D8D3',
+            },
+            accent: {
+                yellow: {
+                    dark: '#F4A606',
+                    DEFAULT: '#FFDE51',
+                    light: '#FFEFA9',
+                },
+                red: '#DC3647',
+                blue: {
+                    dark: '#1B323B',
+                    DEFAULT: '#348AC5',
+                },
+            },
+        },
         extend: {
             screens: {
                 portrait: {
@@ -18,32 +44,6 @@ module.exports = {
             },
             scale: {
                 '-1': '-1',
-            },
-            colors: {
-                transparent: 'transparent',
-                current: 'currentColor',
-                black: '#0D181D',
-                blue: {
-                    light: '#0D181A',
-                    dark: '#0D181D',
-                },
-                white: '#FFFFFF',
-                gray: {
-                    lighter: '#F1F1F1',
-                    darker: '#D9D8D3',
-                },
-                accent: {
-                    yellow: {
-                        dark: '#F4A606',
-                        DEFAULT: '#FFDE51',
-                        light: '#FFEFA9',
-                    },
-                    red: '#DC3647',
-                    blue: {
-                        dark: '#1B323B',
-                        DEFAULT: '#348AC5',
-                    },
-                },
             },
             fontFamily: {
                 display: ['Mont', 'system-ui', 'sans-serif'],
@@ -72,6 +72,8 @@ module.exports = {
             ringColor: ['hover'],
             ringOffsetWidth: ['hover'],
             ringOpacity: ['hover'],
+            margin: ['group-hover'],
+            borderRadius: ['hover'],
         },
     },
     plugins: [forms({ strategy: 'class' })],

@@ -1,15 +1,30 @@
-import styles from '../styles/home.module.css';
+import { ActivityBlock } from '../components/ActivityBlock';
+
+import styles from '../styles/home.module.scss';
 
 import heroOverlay from '../assets/images/homepage/hero-overlay.svg';
 import stagelightBg from '../assets/images/homepage/logo-stagelight-bg.svg';
 import stagelightLogo from '../assets/images/homepage/logo-stagelight-fg.gif';
 
 import { ReactComponent as GoIcon } from '../assets/icons/go.svg';
-import { ActivityBlock } from '../components/ActivityBlock';
+import { DokumentasiLinkSection } from '../components/DokumentasiLinkSection';
+
+function YtSongIFrame({ videoId, className }) {
+    return (
+        <iframe
+            src={`https://www.youtube.com/embed/${videoId}?rel=0&modestbranding=1`}
+            title='YouTube video player'
+            frameBorder='0'
+            allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+            allowFullScreen
+            className={`block flex-grow lg:max-w-xl h-80 ${className}`}
+        />
+    );
+}
 
 export function Home() {
     return (
-        <>
+        <div className='flex flex-col bg-gray-lighter -mb-4'>
             <section className='-mt-20'>
                 <img
                     src={heroOverlay}
@@ -18,8 +33,9 @@ export function Home() {
                     draggable={false}
                 />
             </section>
+
             <section
-                className={`${styles.descriptionSection} bg-black text-white flex flex-col md:flex-row justify-between items-center md:items-start px-16 py-24 -mt-8`}
+                className={`${styles.descriptionSection} bg-black text-white flex flex-col md:flex-row justify-between items-center md:items-start px-16 py-24 -mt-8 z-10`}
             >
                 <div className='max-w-prose mb-16 md:mr-8'>
                     <h1 className='font-display text-3xl mb-6 font-bold text-white'>
@@ -59,7 +75,23 @@ export function Home() {
                     />
                 </div>
             </section>
-            <div className='flex flex-col sm:flex-row sm:justify-center bg-gray-lighter px-8 py-16 -mt-4'>
+
+            <div className='filter drop-shadow-lg'>
+                <section
+                    className={`${styles.songsSection} -mt-4 flex px-16 md:px-36 pt-24 pb-28 justify-center flex-col lg:flex-row`}
+                >
+                    <YtSongIFrame
+                        videoId='WFrqB4fLfWs'
+                        className={`${styles.songVideoItem1} sm:mr-16 lg:mr-4`}
+                    />
+                    <YtSongIFrame
+                        videoId='5WfdYLcN-8o'
+                        className={`${styles.songVideoItem2} sm:ml-16 lg:ml-4 mt-12 lg:mt-32`}
+                    />
+                </section>
+            </div>
+
+            <div className='flex flex-col sm:flex-row sm:justify-center bg-gray-lighter px-8 py-24 -mt-12'>
                 <ActivityBlock
                     title='Agenda'
                     id='agenda'
@@ -91,6 +123,8 @@ export function Home() {
                     className='text-accent-yellow-dark flex-grow mt-16 sm:mt-0 sm:ml-10'
                 />
             </div>
-        </>
+
+            <DokumentasiLinkSection />
+        </div>
     );
 }
