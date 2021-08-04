@@ -4,7 +4,7 @@ import { ItemJalanTeknik } from '../../item-jalan-teknik';
 import { Map } from '../../jalan-teknik/Map';
 import { ThreeSix } from '../../ThreeSix';
 
-export const title = '[WIP] Jalan-Jalan Teknik';
+export const title = 'Jalan-Jalan Teknik';
 
 function Content() {
     const { path } = useRouteMatch();
