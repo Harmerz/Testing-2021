@@ -1,18 +1,25 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { clusters } from './data';
 
 export function EmbedClusterGform() {
     const { type, cluster } = useParams();
-
     const link = clusters[cluster - 1].gform[type];
+
+    useEffect(() => {
+        window.location.href = link;
+    }, []);
+
     return (
-        <iframe
-            title='arsotein'
-            src={link}
-            frameBorder='0'
-            className='h-screen-no-header w-full sticky top-0 overflow-hidden -my-5'
-        />
+        // <iframe
+        //     title={`Presensi Kluster ${cluster}`}
+        //     src={link}
+        //     frameBorder='0'
+        //     className='h-screen-no-header w-full sticky top-0 overflow-hidden -my-5'
+        // >
+        //     Loading...
+        // </iframe>
+        <h1 className='m-4'>Loading...</h1>
     );
 }
 
