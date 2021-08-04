@@ -12,3 +12,5 @@ export const content = (
         />
     </div>
 );
+
+export const attendanceCheckType = 'asinkron';
