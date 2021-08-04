@@ -40,13 +40,7 @@ function NavigateButton({ targetItem, children, reverseIcon, className }) {
     );
 }
 
-function Page({
-    title,
-    children,
-    currentSlug,
-    hariNum,
-    attendanceCheckType,
-}) {
+function Page({ title, children, currentSlug, hariNum, attendanceCheckType }) {
     const slugsCollection = Object.entries(agendaList)
         .map(([hari, items]) => items.map((item) => ({ ...item, hari })))
         .flat();
