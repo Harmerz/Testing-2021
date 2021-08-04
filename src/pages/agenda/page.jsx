@@ -51,11 +51,9 @@ function Page({ title, children, currentSlug, hariNum, attendanceCheckType }) {
     const previousItem = slugsCollection[currentPageIndex - 1];
     const nextItem = slugsCollection[currentPageIndex + 1];
 
-    // console.log(slugsCollection);
-
     const ToPrevious = ({ className }) => (
         <NavigateButton
-            targetItemObj={previousItem}
+            targetItem={previousItem}
             reverseIcon
             className={className}
         >
@@ -63,7 +61,7 @@ function Page({ title, children, currentSlug, hariNum, attendanceCheckType }) {
         </NavigateButton>
     );
     const ToNext = ({ className }) => (
-        <NavigateButton targetItemObj={nextItem} className={className}>
+        <NavigateButton targetItem={nextItem} className={className}>
             Selanjutnya
         </NavigateButton>
     );
@@ -105,7 +103,7 @@ function Page({ title, children, currentSlug, hariNum, attendanceCheckType }) {
                 <ToNext className='order-3 hidden lg:flex' />
             </div>
             <div>{children}</div>
-            <div className='flex justify-between mt-12'>
+            <div className='flex justify-between mt-12 items-center'>
                 <ToPrevious className='mr-auto lg:hidden' />
                 {attendanceCheckType && (
                     <ButtonToGform
