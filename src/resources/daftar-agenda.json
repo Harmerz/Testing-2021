@@ -4,8 +4,7 @@
             "judul"     : "Opening Seremonial",
             "deskripsi" : "Pembukaan kegiatan PPSMB Kesatria 2021",
             "slug"      : "opening-seremonial",
-            "waktu"     : "07.00–08.00",
-            "inactive"  : true
+            "waktu"     : "07.00–08.00"
         },
         {
             "judul"     : "Kepemanduan 1",

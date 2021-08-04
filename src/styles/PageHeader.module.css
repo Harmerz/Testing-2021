@@ -5,6 +5,8 @@
     margin-bottom: var(--drop-shadow-offset);
 
     --diagonal-offset: 4rem;
+
+    z-index: 99999;
 }
 @screen md {
     .headerContainer {
