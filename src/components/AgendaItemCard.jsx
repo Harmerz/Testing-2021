@@ -29,7 +29,7 @@ export function AgendaItemCard({ time, title, excerpt, slug, inactive }) {
                 </div>
             </div>
             {!inactive && (
-                <div className='flex self-stretch items-center justify-center w-16 -mr-7 -my-3 text-black bg-gray-lighter group-hover:bg-accent-blue group-hover:text-white transition-colors duration-100 rounded-r-lg ml-8'>
+                <div className='flex self-stretch items-center justify-center w-16 -mr-7 -my-3 text-black bg-gray-lighter group-hover:bg-accent-blue group-hover:text-white transition-colors duration-100 rounded-r-lg ml-8 flex-shrink-0'>
                     <GoIcon className='block h-6 w-auto fill-current' />
                 </div>
             )}
