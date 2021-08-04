@@ -26,7 +26,7 @@ export function ItemJalanTeknik() {
         <>
             <main className='relative'>
                 <main
-                    className={`${bg.backdrop} relative min-h-screen font-display w-full bg-contain bg-no-repeat bg-bottom xl:bg-cover  flex flex-col items-center justify-center `}
+                    className={`${bg.backdrop} relative font-display w-full bg-contain bg-no-repeat bg-bottom xl:bg-cover  flex flex-col items-center justify-center `}
                 >
                     <div className=' w-5/6 md:w-3/4 flex flex-col items-center justify-center'>
                         <div className='relative flex w-full h-810 items-center justify-start'>
@@ -97,7 +97,7 @@ export function ItemJalanTeknik() {
                     }`}
                 >
                     <main
-                        className={`${bg.backdrop} min-h-screen font-display w-full bg-contain bg-no-repeat bg-bottom xl:bg-cover  flex flex-col items-center justify-center `}
+                        className={`${bg.backdrop} font-display w-full bg-contain bg-no-repeat bg-bottom xl:bg-cover  flex flex-col items-center justify-center `}
                     >
                         <div
                             className={`${con.top} absolute z-100 top-0 w-full bg-blue-dark`}

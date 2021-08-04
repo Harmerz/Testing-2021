@@ -9,7 +9,7 @@ export function JalanTeknik() {
     }, []);
     return (
         <main
-            className={`${bg.backdrop} min-h-screen w-full bg-contain bg-no-repeat bg-bottom xl:bg-cover flex flex-col items-center justify-center font-display`}
+            className={`${bg.backdrop} w-full bg-contain bg-no-repeat bg-bottom xl:bg-cover flex flex-col items-center justify-center font-display`}
         >
             <div className='w-5/6 md:w-3/4 flex flex-col items-center justify-start '>
                 <h1 className='text-2xl md:text-3xl font-bold pb-4'>

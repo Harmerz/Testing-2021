@@ -19,7 +19,7 @@ export function ThreeSix() {
             <DeviceOrientation lockOrientation='landscape'>
                 <Orientation orientation='landscape' alwaysRender={false}>
                     <main
-                        className={`${bg.backdrop} min-h-screen min-w-full bg-cover lg:bg-contain lg:bg-no-repeat lg:bg-bottom xl:bg-cover flex flex-col items-center justify-center font-display`}
+                        className={`${bg.backdrop} min-w-full bg-cover lg:bg-contain lg:bg-no-repeat lg:bg-bottom xl:bg-cover flex flex-col items-center justify-center font-display`}
                     >
                         <div className='flex flex-col items-start justify-center w-5/6 md:w-3/4 bg-none'>
                             <Button
