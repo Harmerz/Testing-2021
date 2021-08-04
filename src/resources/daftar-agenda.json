@@ -23,8 +23,7 @@
             "judul"     : "Profil Teknik",
             "deskripsi" : "Penyampaian materi secara asinkron berkaitan dengan sejarah, fasilitas, visi dan misi, serta deskripsi singkat untuk masing-masing departemen",
             "slug"      : "profil-teknik",
-            "waktu"     : "09.30–10.15",
-            "inactive"  : true
+            "waktu"     : "09.30–10.15"
         },
         {
             "judul"     : "Jelajah Lembaga",
@@ -36,8 +35,7 @@
             "judul"     : "Materi Etika dan Integritas",
             "deskripsi" : "Penyampaian materi etika dan integritas",
             "slug"      : "etika-dan-integritas",
-            "waktu"     : "11.05–11.15",
-            "inactive"  : true
+            "waktu"     : "11.05–11.15"
         },
         {
             "judul"     : "Materi Kekerasan Seksual",
