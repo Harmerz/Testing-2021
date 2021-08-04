@@ -1,6 +1,6 @@
 /* eslint-disable */
 import React, { useEffect } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useRouteMatch } from 'react-router-dom';
 import { buildingData } from '../../components/Buildings';
 import bg from '../../styles/Backdrop.module.css';
 import con from '../../styles/Container.module.css';
@@ -22,6 +22,8 @@ export function ItemJalanTeknik() {
         document.title = `${building.NAME}`;
     }, []);
 
+    const { url } = useRouteMatch();
+
     return (
         <>
             <main className='relative'>
@@ -36,7 +38,7 @@ export function ItemJalanTeknik() {
                                         ? ' '
                                         : 'absolute'
                                 } rounded-full left-3 top-3 sm:left-4 sm:top-4 lg:top-6 lg:left-6`}
-                                to='/jalan-teknik'
+                                to='/agenda/hari-1/jalan-jalan-teknik' // TODO: Use parent params instead of hardcoding the hari value
                             >
                                 <img
                                     className='h-14 w-14 md:h-24 md:w-24 lg:w-28 lg:h-28 rounded-full transition transform duration-200 ease-in-out hover:-translate-y-2 hover:shadow-buttonSm'
@@ -105,7 +107,7 @@ export function ItemJalanTeknik() {
                         <div className='w-3/4 flex flex-col items-center justify-start'>
                             <Button
                                 custom={`${building.SURROUND}`}
-                                PATH={`/jalan-teknik/${building.PATH}/360`}
+                                PATH={`${url}/360`}
                                 size='medium'
                             >
                                 Foto 360
@@ -129,9 +131,6 @@ export function ItemJalanTeknik() {
                             src='/assets/map/up-button.svg'
                             alt='button'
                             onClick={toTop}
-                        />
-                        <div
-                            className={`${con.bot} absolute z-100 bottom-0 w-full bg-blue-dark`}
                         />
                     </main>
                 </div>

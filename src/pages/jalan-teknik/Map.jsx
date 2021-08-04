@@ -5,7 +5,7 @@ import '../../styles/Map.css';
 import 'leaflet/dist/leaflet.css';
 import 'leaflet-fullscreen/dist/leaflet.fullscreen.css';
 import 'leaflet-fullscreen/dist/Leaflet.fullscreen';
-import { Link } from 'react-router-dom';
+import { Link, useRouteMatch } from 'react-router-dom';
 import { buildingData } from '../../components/Buildings';
 import marker from '../../assets/marker/marker.svg';
 
@@ -13,6 +13,8 @@ import marker from '../../assets/marker/marker.svg';
 const position = [-7.765197678255795, 110.37260863121014];
 
 export function Map() {
+    const { url } = useRouteMatch();
+
     // Detecting mobile or not
     const [width, setWidth] = useState(window.innerWidth);
     function handleWindowSizeChange() {
@@ -68,7 +70,7 @@ export function Map() {
                             key={building.ID}
                             riseOnHover
                         >
-                            <Link to={`/jalan-teknik/${building.PATH}`}>
+                            <Link to={`${url}/${building.PATH}`}>
                                 <Popup
                                     minWidth={0}
                                     closeButton={false}
@@ -77,7 +79,7 @@ export function Map() {
                                 >
                                     <Link
                                         className='text-sm md:text-xl font-bold text-blue-dark text-center'
-                                        to={`/jalan-teknik/${building.PATH}`}
+                                        to={`${url}/${building.PATH}`}
                                     >
                                         {building.ALIAS}
                                     </Link>
@@ -86,12 +88,9 @@ export function Map() {
                                     opacity={1}
                                     className='custom-tooltip shadow-dislaySm'
                                 >
-                                    <Link
-                                        className='text-sm md:text-xl font-bold text-blue-dark text-center'
-                                        to={`/jalan-teknik/${building.PATH}`}
-                                    >
+                                    <p className='text-sm md:text-xl font-bold text-blue-dark text-center'>
                                         {building.ALIAS}
-                                    </Link>
+                                    </p>
                                 </Tooltip>
                             </Link>
                         </Marker>

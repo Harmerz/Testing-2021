@@ -52,7 +52,7 @@ export function PageHeader({ className }) {
                 </div>
             </NavLinkStock>
             <div
-                className={`${styles.navContainer} bg-black flex-grow text-white uppercase font-display font-semilight font-semibold text-sm`}
+                className={`${styles.navContainer} bg-black flex-grow text-white uppercase font-display font-semibold text-sm`}
             >
                 <nav
                     className={`fixed w-full left-0 top-0 md:static bg-black md:bg-transparent flex flex-col md:flex-row md:h-full justify-center text-center py-8 pt-24 md:p-0 -z-1 ${
@@ -60,6 +60,9 @@ export function PageHeader({ className }) {
                     } transition-transform duration-300 md:transform-none md:transition-none`}
                 >
                     <NavLink to='/'>Beranda</NavLink>
+                    <NavLink to='/agenda/hari-1/jalan-jalan-teknik'>
+                        Jalan-Jalan Teknik
+                    </NavLink>
                     <NavLink to='/agenda'>Agenda</NavLink>
                     <NavLink to='/penugasan'>Penugasan</NavLink>
                     <NavLink to='/dokumentasi'>Dokumentasi</NavLink>
