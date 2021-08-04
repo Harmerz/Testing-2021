@@ -1,75 +1,104 @@
-/* eslint-disable */
 import React, { useState, useEffect } from 'react';
-import { TileLayer, Marker, Popup, MapContainer } from 'react-leaflet';
+import { TileLayer, Marker, Popup, MapContainer, Tooltip } from 'react-leaflet';
 import L from 'leaflet';
+import '../../styles/Map.css';
 import 'leaflet/dist/leaflet.css';
 import 'leaflet-fullscreen/dist/leaflet.fullscreen.css';
-import 'leaflet-fullscreen/dist/Leaflet.fullscreen.js';
+import 'leaflet-fullscreen/dist/Leaflet.fullscreen';
+import { Link } from 'react-router-dom';
 import { buildingData } from '../../components/Buildings';
-import { MaxText } from '../../components/MaxText';
-import './index.module.css';
-import defaultIcon from '../../assets/marker/default.png';
+import marker from '../../assets/marker/marker.svg';
 
-const position = [-7.76535792264665, 110.37236026800583];
+// Map center
+const position = [-7.765197678255795, 110.37260863121014];
 
 export function Map() {
-    const [mobile, setMobile] = useState(false);
-
-    const isMobile = () => {
-        window.innerWidth <= 960 ? setMobile(!mobile) : setMobile(mobile);
-    };
-
+    // Detecting mobile or not
+    const [width, setWidth] = useState(window.innerWidth);
+    function handleWindowSizeChange() {
+        setWidth(window.innerWidth);
+    }
     useEffect(() => {
-        isMobile();
+        window.addEventListener('resize', handleWindowSizeChange);
+        return () => {
+            window.removeEventListener('resize', handleWindowSizeChange);
+        };
     }, []);
 
-    window.addEventListener('resize', isMobile);
+    const isMobile = width < 768;
+
+    // defining marker style on the map
+    const icon = isMobile
+        ? new L.Icon({
+              iconUrl: marker,
+              iconSize: [20, 20],
+              iconAnchor: [15, 15], // [left/right, top/bottom]
+              popupAnchor: [0, 20],
+              tooltipAnchor: [0, 0],
+          })
+        : new L.Icon({
+              iconUrl: marker,
+              iconSize: [30, 30],
+              iconAnchor: [15, 15],
+              popupAnchor: [0, 34],
+              tooltipAnchor: [0, 0],
+          });
 
     return (
         <>
-            <div className='map-container'>
-                <MapContainer
-                    center={position}
-                    zoom={mobile ? 17 : 18}
-                    scrollWheelZoom
-                    touchZoom
-                    fullscreenControl
-                >
-                    <TileLayer
-                        attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-                        url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
-                    />
-                    {buildingData.map((building) => {
-                        const icon = new L.Icon({
-                            iconUrl: defaultIcon,
-                            iconSize: [25, 35],
-                            iconAnchor: [17, 46], // [left/right, top/bottom]
-                            popupAnchor: [0, -46], // [left/right, top/bottom]
-                        });
-
-                        return (
-                            <Marker
-                                position={building.LOCATION}
-                                icon={icon}
-                                key={building.ID}
-                            >
-                                <Popup>
-                                    <div className='map-popup'>
-                                        <p className='text-lg font-semibold'>
-                                            {building.NAME}
-                                        </p>
-                                        <MaxText
-                                            text={building.DESCRIPTION}
-                                            PATH={`/jalan-teknik/${building.PATH}`}
-                                        />
-                                    </div>
+            <MapContainer
+                className='custom-leaflet-container border-8 border-gray-darker shadow-displayLg font-display '
+                center={position}
+                zoom={isMobile ? 17 : 18}
+                scrollWheelZoom
+                touchZoom
+                fullscreenControl
+                doubleClickZoom
+                tap={false}
+            >
+                <TileLayer
+                    attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+                    url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
+                />
+                {buildingData.map((building) => {
+                    return (
+                        <Marker
+                            position={building.LOCATION}
+                            icon={icon}
+                            key={building.ID}
+                            riseOnHover
+                        >
+                            <Link to={`/jalan-teknik/${building.PATH}`}>
+                                <Popup
+                                    minWidth={0}
+                                    closeButton={false}
+                                    closeOnEscapeKey
+                                    className='custom-popup shadow-dislaySm'
+                                >
+                                    <Link
+                                        className='text-sm md:text-xl font-bold text-blue-dark text-center'
+                                        to={`/jalan-teknik/${building.PATH}`}
+                                    >
+                                        {building.ALIAS}
+                                    </Link>
                                 </Popup>
-                            </Marker>
-                        );
-                    })}
-                    ;
-                </MapContainer>
-            </div>
+                                <Tooltip
+                                    opacity={1}
+                                    className='custom-tooltip shadow-dislaySm'
+                                >
+                                    <Link
+                                        className='text-sm md:text-xl font-bold text-blue-dark text-center'
+                                        to={`/jalan-teknik/${building.PATH}`}
+                                    >
+                                        {building.ALIAS}
+                                    </Link>
+                                </Tooltip>
+                            </Link>
+                        </Marker>
+                    );
+                })}
+                ;
+            </MapContainer>
         </>
     );
 }

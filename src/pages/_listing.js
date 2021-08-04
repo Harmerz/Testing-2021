@@ -4,7 +4,7 @@ export * from './agenda';
 export * from './penugasan';
 export * from './jalan-teknik';
 export * from './item-jalan-teknik';
-export * from './360';
+export * from './ThreeSix';
 export * from './webcomic';
 export * from './dokumentasi';
 export * from './presensi';

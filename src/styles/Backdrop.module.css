@@ -1,0 +1,4 @@
+.backdrop {
+    background-image: url('../assets/background.png');
+    position: relative;
+}

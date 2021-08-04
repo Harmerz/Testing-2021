@@ -1,0 +1,45 @@
+.box {
+    height: 45vh;
+}
+.youtube {
+    height: 20vh;
+    width: 100%;
+}
+
+.bot {
+    height: 12vh;
+}
+
+.top {
+    height: 8vh;
+}
+
+@media (min-width: 768px) {
+    .box {
+        height: 55vh;
+    }
+    .youtube {
+        width: 62vw;
+        height: 25vh;
+    }
+}
+
+@media (min-width: 1024px) and (max-height: 768px) {
+    .box {
+        height: 70vh;
+    }
+    .youtube {
+        width: 45vw;
+        height: 45vh;
+    }
+}
+
+@media (min-width: 1536px) {
+    .box {
+        height: 70vh;
+    }
+    .youtube {
+        width: 45vw;
+        height: 45vh;
+    }
+}
