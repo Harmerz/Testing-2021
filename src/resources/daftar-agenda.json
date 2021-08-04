@@ -80,9 +80,8 @@
         {
             "judul"     : "Closing Hari Pertama",
             "deskripsi" : "Penutupan hari pertama PPSMB Kesatria",
-            "slug"      : "",
-            "waktu"     : "15.05–15.20",
-            "inactive"  : true
+            "slug"      : "closing-hari",
+            "waktu"     : "15.05–15.20"
         }
     ],
 
