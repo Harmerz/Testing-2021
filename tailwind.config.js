@@ -72,6 +72,8 @@ module.exports = {
             ringColor: ['hover'],
             ringOffsetWidth: ['hover'],
             ringOpacity: ['hover'],
+            margin: ['group-hover'],
+            borderRadius: ['hover'],
         },
     },
     plugins: [forms({ strategy: 'class' })],
