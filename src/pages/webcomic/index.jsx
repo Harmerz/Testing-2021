@@ -85,7 +85,6 @@ export function WebcomicIndexPage() {
                     </div>
                     <PresenceNavigationButton
                         progress={progresses[imageCount]}
-                        onClick={navigateToPresencePage}
                     />
                 </div>
                 <PortraitWarning /> {/* z-50 */}
