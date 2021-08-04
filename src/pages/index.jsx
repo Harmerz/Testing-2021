@@ -9,7 +9,7 @@ import stagelightLogo from '../assets/images/homepage/logo-stagelight-fg.gif';
 import { ReactComponent as GoIcon } from '../assets/icons/go.svg';
 import { DokumentasiLinkSection } from '../components/DokumentasiLinkSection';
 
-function YtSongIframe({ videoId, className }) {
+function YtSongIFrame({ videoId, className }) {
     return (
         <iframe
             src={`https://www.youtube.com/embed/${videoId}`}
@@ -77,9 +77,17 @@ export function Home() {
             </section>
 
             <div className='filter drop-shadow-lg'>
-                <section className={`${styles.songsSection} -mt-4 flex px-16 md:px-36 pt-24 pb-28 justify-center flex-col lg:flex-row`}>
-                    <YtSongIframe videoId='5WfdYLcN-8o' className={`${styles.songVideoItem1} sm:mr-16 lg:mr-4`} />
-                    <YtSongIframe videoId='5WfdYLcN-8o' className={`${styles.songVideoItem2} sm:ml-16 lg:ml-4 mt-12 lg:mt-32`} />
+                <section
+                    className={`${styles.songsSection} -mt-4 flex px-16 md:px-36 pt-24 pb-28 justify-center flex-col lg:flex-row`}
+                >
+                    <YtSongIFrame
+                        videoId='5WfdYLcN-8o'
+                        className={`${styles.songVideoItem1} sm:mr-16 lg:mr-4`}
+                    />
+                    <YtSongIFrame
+                        videoId='5WfdYLcN-8o'
+                        className={`${styles.songVideoItem2} sm:ml-16 lg:ml-4 mt-12 lg:mt-32`}
+                    />
                 </section>
             </div>
 

@@ -2,7 +2,7 @@
 import './utils/wp-styles-fix';
 
 import { StrictMode } from 'react';
-import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import './styles/main.scss';
 
