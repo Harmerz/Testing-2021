@@ -65,9 +65,7 @@ export function ButtonToGform({
             key={i}
             type='button'
             onClick={(e) => goToGformHandler(e, i)}
-            className={`px-4 py-2 ${
-                i % 2 === 0 ? 'bg-opacity-20' : ''
-            } bg-gray-lighter hover:bg-gray-darker transition duration-150 text-left`}
+            className='px-4 py-2 bg-gray-lighter hover:bg-gray-darker transition duration-150 text-left'
         >
             Klaster {clusters[i - 1]?.name} &rarr;
         </button>
@@ -78,7 +76,7 @@ export function ButtonToGform({
             {new Date() > expireDate ? (
                 <div />
             ) : (
-                <div className='relative w-max'>
+                <div className='relative w-max mx-auto'>
                     <button
                         type='button'
                         onClick={toggleHandler}

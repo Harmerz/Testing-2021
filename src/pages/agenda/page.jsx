@@ -7,9 +7,11 @@ import agendaList from '../../resources/daftar-agenda.json';
 
 import { ReactComponent as BulletedListIcon } from '../../assets/icons/list-ul.svg';
 import { cnJoin } from '../../utils/classnames-joiner';
+import { ButtonToGform } from '../../components/presensi';
 
 function NavigateButton({ targetItem, children, reverseIcon, className }) {
     const isEnabled = targetItem && !targetItem.inactive;
+    // console.log(targetItem);
 
     return (
         <Link
@@ -38,7 +40,13 @@ function NavigateButton({ targetItem, children, reverseIcon, className }) {
     );
 }
 
-function Page({ title, children, currentSlug, hariNum }) {
+function Page({
+    title,
+    children,
+    currentSlug,
+    hariNum,
+    enableAttendanceCheck,
+}) {
     const slugsCollection = Object.entries(agendaList)
         .map(([hari, items]) => items.map((item) => ({ ...item, hari })))
         .flat();
@@ -48,6 +56,8 @@ function Page({ title, children, currentSlug, hariNum }) {
     );
     const previousItem = slugsCollection[currentPageIndex - 1];
     const nextItem = slugsCollection[currentPageIndex + 1];
+
+    // console.log(slugsCollection);
 
     const ToPrevious = ({ className }) => (
         <NavigateButton
@@ -101,9 +111,14 @@ function Page({ title, children, currentSlug, hariNum }) {
                 <ToNext className='order-3 hidden lg:flex' />
             </div>
             <div>{children}</div>
-            <div className='flex lg:hidden justify-between mt-12'>
-                <ToPrevious className='mr-auto' />
-                <ToNext className='ml-auto' />
+            <div className='flex justify-between mt-12'>
+                <ToPrevious className='mr-auto lg:hidden' />
+                <ButtonToGform
+                    position='bottom'
+                    type={enableAttendanceCheck}
+                    className='mx-auto'
+                />
+                <ToNext className='ml-auto lg:hidden' />
             </div>
         </GenericPage>
     );
@@ -116,7 +131,12 @@ export function AgendaDetails() {
         const page = require(`./hari-${hariNum}/${slug}`);
 
         return (
-            <Page title={page.title} currentSlug={slug} hariNum={hariNum}>
+            <Page
+                title={page.title}
+                currentSlug={slug}
+                hariNum={hariNum}
+                enableAttendanceCheck={page.enableAttendanceCheck}
+            >
                 {page.content}
             </Page>
         );
