@@ -17,6 +17,11 @@
     input::-webkit-calendar-picker-indicator {
         display: none !important;
     }
+
+    // Workaround WP theme's built-in style
+    .hidden {
+        opacity: initial;
+    }
 }
 
 @layer components {
