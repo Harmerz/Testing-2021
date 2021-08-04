@@ -33,7 +33,7 @@ export function PageHeader({ className }) {
         <header
             className={`${
                 styles.headerContainer
-            } sticky top-0 w-full flex items-start z-50${
+            } sticky top-0 w-full flex items-start${
                 className ? ` ${className}` : ''
             }`}
         >
