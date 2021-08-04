@@ -11,7 +11,6 @@ import { ButtonToGform } from '../../components/presensi';
 
 function NavigateButton({ targetItem, children, reverseIcon, className }) {
     const isEnabled = targetItem && !targetItem.inactive;
-    // console.log(targetItem);
 
     return (
         <Link
@@ -24,8 +23,8 @@ function NavigateButton({ targetItem, children, reverseIcon, className }) {
                 isEnabled ? 'visible' : 'invisible'
             } bg-accent-yellow-dark text-white rounded-md ring-1 ring-offset-2 ring-accent-yellow-dark ring-opacity-0 hover:ring-opacity-100 transition-shadow duration-100 overflow-hidden ${className}`}
         >
-            <div className='px-4 py-2 flex items-center'>
-                <span className='block leading-none font-display font-semibold uppercase'>
+            <div className='px-2 sm:px-4 py-2 flex items-center'>
+                <span className='hidden sm:block leading-none font-display font-semibold uppercase'>
                     {children}
                 </span>
             </div>
