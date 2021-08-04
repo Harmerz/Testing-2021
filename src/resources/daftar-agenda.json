@@ -41,15 +41,13 @@
             "judul"     : "Materi Kekerasan Seksual",
             "deskripsi" : "Penyampaian materi tentang pentingnya pencegahan dan penanganan kekerasan seksual",
             "slug"      : "ppks",
-            "waktu"     : "11.15–11.25",
-            "inactive"  : true
+            "waktu"     : "11.15–11.25"
         },
         {
             "judul"     : "Materi Mental Health",
             "deskripsi" : "Kesatria Muda membaca webcomic tentang pentingnya menjaga kesehatan mental selama berkuliah",
             "slug"      : "mental-health",
-            "waktu"     : "11.25–11.35",
-            "inactive"  : true
+            "waktu"     : "11.25–11.35"
         },
         {
             "judul"     : "Kepemanduan 2",
