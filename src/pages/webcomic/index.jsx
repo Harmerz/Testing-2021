@@ -23,7 +23,7 @@ export function WebcomicIndexPage() {
             <img
                 src='https://ik.imagekit.io/lutfiandri/webcomic-kesatria/background'
                 alt='background'
-                className='w-full h-full object-cover object-right-bottom fixed'
+                className='w-full h-full object-cover object-right-bottom fixed -z-1'
             />
             <div className='h-full w-full transform duration-500 ease-in-out'>
                 <div className='px-4 md:px-8 lg:px-12 py-4 lg:py-8 h-full flex flex-col object-container z-20 relative'>
