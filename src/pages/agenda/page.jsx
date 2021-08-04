@@ -45,7 +45,7 @@ function Page({
     children,
     currentSlug,
     hariNum,
-    enableAttendanceCheck,
+    attendanceCheckType,
 }) {
     const slugsCollection = Object.entries(agendaList)
         .map(([hari, items]) => items.map((item) => ({ ...item, hari })))
@@ -113,11 +113,13 @@ function Page({
             <div>{children}</div>
             <div className='flex justify-between mt-12'>
                 <ToPrevious className='mr-auto lg:hidden' />
-                <ButtonToGform
-                    position='bottom'
-                    type={enableAttendanceCheck}
-                    className='mx-auto'
-                />
+                {attendanceCheckType && (
+                    <ButtonToGform
+                        position='bottom'
+                        type={attendanceCheckType}
+                        className='mx-auto'
+                    />
+                )}
                 <ToNext className='ml-auto lg:hidden' />
             </div>
         </GenericPage>
@@ -135,7 +137,7 @@ export function AgendaDetails() {
                 title={page.title}
                 currentSlug={slug}
                 hariNum={hariNum}
-                enableAttendanceCheck={page.enableAttendanceCheck}
+                attendanceCheckType={page.attendanceCheckType}
             >
                 {page.content}
             </Page>
