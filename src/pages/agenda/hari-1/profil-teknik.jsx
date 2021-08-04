@@ -21,4 +21,4 @@ export const content = (
     </div>
 );
 
-export const enableAttendanceCheck = 'asinkron';
+export const attendanceCheckType = 'asinkron';
