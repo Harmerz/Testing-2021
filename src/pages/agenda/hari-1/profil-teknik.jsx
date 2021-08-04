@@ -20,3 +20,5 @@ export const content = (
         />
     </div>
 );
+
+export const enableAttendanceCheck = 'asinkron';
