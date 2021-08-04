@@ -103,9 +103,8 @@
         {
             "judul"     : "Talkshow",
             "deskripsi" : "Talkshow bertemakan “Knowing, Expressing, Caring”",
-            "slug"      : "",
-            "waktu"     : "07.30–08.55",
-            "inactive"  : true
+            "slug"      : "talkshow",
+            "waktu"     : "07.30–08.55"
         },
         {
             "judul"     : "Pameran Karya",
