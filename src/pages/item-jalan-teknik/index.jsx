@@ -42,13 +42,13 @@ export function ItemJalanTeknik() {
                             >
                                 <img
                                     className='h-14 w-14 md:h-24 md:w-24 lg:w-28 lg:h-28 rounded-full transition transform duration-200 ease-in-out hover:-translate-y-2 hover:shadow-buttonSm'
-                                    src='/assets/map/back-button.svg'
+                                    src={`${process.env.PUBLIC_URL}/assets/map/back-button.svg`}
                                     alt='button'
                                 />
                             </Link>
                             <img
                                 className={`${building.ICON} ${con.box} w-full object-cover border-8 border-gray-darker shadow-displayLg`}
-                                src={`/assets/items/${building.PATH}.jpg`}
+                                src={`${process.env.PUBLIC_URL}/assets/items/${building.PATH}.jpg`}
                                 alt={building.ALIAS}
                             />
                         </div>
@@ -85,7 +85,7 @@ export function ItemJalanTeknik() {
                                 ? 'hidden'
                                 : 'absolute cursor-pointer bottom-3 right-3 lg:bottom-6  h-14 w-14 md:h-24 md:w-24 lg:w-28 lg:h-28 rounded-full transition transform duration-200 ease-in-out hover:-translate-y-2 hover:shadow-buttonSm'
                         }`}
-                        src='/assets/map/down-button.svg'
+                        src={`${process.env.PUBLIC_URL}/assets/map/down-button.svg`}
                         alt='button'
                         onClick={toBottom}
                     />
@@ -128,7 +128,7 @@ export function ItemJalanTeknik() {
                         </div>
                         <img
                             className='absolute cursor-pointer bottom-28 right-3 md:bottom-36 lg:bottom-40 h-14 w-14 md:h-24 md:w-24 lg:w-28 lg:h-28  rounded-full transition transform duration-200 ease-in-out hover:-translate-y-2 hover:shadow-buttonSm'
-                            src='/assets/map/up-button.svg'
+                            src={`${process.env.PUBLIC_URL}/assets/map/up-button.svg`}
                             alt='button'
                             onClick={toTop}
                         />
