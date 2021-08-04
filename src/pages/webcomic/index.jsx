@@ -18,12 +18,6 @@ export function WebcomicIndexPage() {
             )
         )
     );
-    const [page, setPage] = useState('comic');
-
-    const navigateToPresencePage = (e) => {
-        e.preventDefault();
-        setPage('presensi');
-    };
 
     return (
         <div className='webcomic relative w-full h-screen-no-header text-black overflow-hidden'>
@@ -32,11 +26,7 @@ export function WebcomicIndexPage() {
                 alt='background'
                 className='w-full h-full object-cover object-right-bottom fixed'
             />
-            <div
-                className={`h-full w-full transform duration-500 ease-in-out ${
-                    page === 'presensi' ? '-translate-y-full' : ''
-                }`}
-            >
+            <div className='h-full w-full transform duration-500 ease-in-out'>
                 <div className='px-4 md:px-8 lg:px-12 py-4 lg:py-8 h-full flex flex-col object-container z-20 relative'>
                     {/* <div className='text-center mb-2 hidden lg:block'>
                         <h1 className='font-medium text-4xl'>
@@ -88,12 +78,6 @@ export function WebcomicIndexPage() {
                     />
                 </div>
                 <PortraitWarning /> {/* z-50 */}
-                <div className='px-12 md:px-20 max-w-3xl mx-auto h-screen grid place-items-center object-container z-20'>
-                    <PresensiTugmat
-                        title='Presensi Mental Health'
-                        collection='presensi-mental-health'
-                    />
-                </div>
             </div>
         </div>
     );
