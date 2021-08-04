@@ -17,8 +17,7 @@
             "judul"     : "Jalan-Jalan Teknik",
             "deskripsi" : "Kesatria Muda menjelajahi lingkungan Fakultas Teknik secara virtual",
             "slug"      : "jalan-jalan-teknik",
-            "waktu"     : "09.00–09.30",
-            "inactive"  : true
+            "waktu"     : "09.00–09.30"
         },
         {
             "judul"     : "Profil Teknik",

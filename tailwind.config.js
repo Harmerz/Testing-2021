@@ -75,5 +75,5 @@ module.exports = {
         },
     },
     plugins: [forms({ strategy: 'class' })],
-    important: true,
+    important: '#page',
 };
