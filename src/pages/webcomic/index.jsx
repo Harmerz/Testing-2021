@@ -4,7 +4,6 @@ import { Comic } from './Comic';
 import { Timer } from './Timer';
 import { PortraitWarning } from './PortraitWarning';
 import { PresenceNavigationButton } from './PresenceNavigationButton';
-import { PresensiTugmat } from '../../components/presensi';
 
 export function WebcomicIndexPage() {
     const [imageCount] = useState(10); // 1 to 10 // 0 is cover
