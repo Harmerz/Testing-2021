@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom';
 
-import styles from '../styles/DokumentasiLinkSection.module.scss';
+import styles from '../../styles/DokumentasiLinkSection.module.scss';
 
-import { ReactComponent as GoIcon } from '../assets/icons/go.svg';
-import img6 from '../assets/dokumentasi/6.jpg';
+import { ReactComponent as GoIcon } from '../../assets/icons/go.svg';
+import img6 from '../../assets/dokumentasi/6.jpg';
 
 export function DokumentasiLinkSection() {
     return (

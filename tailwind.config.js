@@ -38,6 +38,7 @@ module.exports = {
             },
             zIndex: {
                 '-1': '-1',
+                '-2': '-2',
             },
             transitionProperty: {
                 height: 'height',
@@ -68,6 +69,7 @@ module.exports = {
             brightness: ['hover', 'active'],
             transform: ['group-hover', 'active'],
             translate: ['group-hover', 'active'],
+            // scale: ['group-hover'],
             ringWidth: ['hover'],
             ringColor: ['hover'],
             ringOffsetWidth: ['hover'],
