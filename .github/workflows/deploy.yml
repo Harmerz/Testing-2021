@@ -30,7 +30,7 @@ jobs:
         cache: npm
 
     - name: Prepare dependencies
-      run: npm ci
+      run: test -d "node_modules" && echo "Cache found; not reinstalling dependencies." || npm ci
 
     - id: prod-deploy
       name: Build and deploy for production
