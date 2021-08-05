@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom';
-import { cnJoin } from '../utils/classnames-joiner';
+import { cnJoin } from '../../utils/classnames-joiner';
 
-import styles from '../styles/ActivityBlock.module.css';
+import styles from '../../styles/ActivityBlock.module.css';
 
-import { ReactComponent as GoIcon } from '../assets/icons/go.svg';
+import { ReactComponent as GoIcon } from '../../assets/icons/go.svg';
 
 export function ActivityBlock({ title, id, items, className }) {
     return (
