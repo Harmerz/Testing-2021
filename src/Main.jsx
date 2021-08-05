@@ -1,8 +1,14 @@
 // Forcibly remove the inherited styles from the WP theme
 import './utils/wp-styles-fix';
 
-import { StrictMode } from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { StrictMode, useEffect } from 'react';
+import {
+    BrowserRouter,
+    Switch,
+    Route,
+    useLocation,
+    useHistory,
+} from 'react-router-dom';
 
 import './styles/main.scss';
 
@@ -12,9 +18,22 @@ import { PageFooter } from './components/PageFooter';
 import * as pages from './pages/_listing';
 import { ScrollToTop } from './utils/ScrollToTop';
 
+function RemoveTrailingSlash() {
+    const { pathname } = useLocation();
+    const history = useHistory();
+    useEffect(() => {
+        if (pathname.endsWith('/')) {
+            history.replace(pathname.slice(0, -1));
+        }
+    }, []);
+
+    return null;
+}
+
 function Main() {
     return (
         <BrowserRouter>
+            <RemoveTrailingSlash />
             <ScrollToTop />
 
             <div className='flex flex-col min-h-screen'>
