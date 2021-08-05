@@ -7,7 +7,7 @@ import {
     Switch,
     Route,
     useLocation,
-    useHistory
+    useHistory,
 } from 'react-router-dom';
 
 import './styles/main.scss';
@@ -31,7 +31,6 @@ function RemoveTrailingSlash() {
 }
 
 function Main() {
-
     return (
         <BrowserRouter>
             <RemoveTrailingSlash />
