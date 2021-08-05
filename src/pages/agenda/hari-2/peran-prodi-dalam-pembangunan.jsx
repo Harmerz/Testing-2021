@@ -1,4 +1,4 @@
-export const title = 'Etika dan Integritas Akademik';
+export const title = 'Peran Program Studi dalam Pembangunan';
 
 export const content = (
     <div className='max-w-screen-sm mx-auto'>
