@@ -1,8 +1,14 @@
 // Forcibly remove the inherited styles from the WP theme
 import './utils/wp-styles-fix';
 
-import { StrictMode } from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { StrictMode, useEffect } from 'react';
+import {
+    BrowserRouter,
+    Switch,
+    Route,
+    useLocation,
+    useHistory
+} from 'react-router-dom';
 
 import './styles/main.scss';
 
@@ -13,6 +19,14 @@ import * as pages from './pages/_listing';
 import { ScrollToTop } from './utils/ScrollToTop';
 
 function Main() {
+    const { pathname } = useLocation();
+    const history = useHistory();
+    useEffect(() => {
+        if (pathname.endsWith('/')) {
+            history.replace(pathname.slice(0, -1));
+        }
+    }, []);
+
     return (
         <BrowserRouter>
             <ScrollToTop />
