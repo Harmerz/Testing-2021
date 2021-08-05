@@ -123,8 +123,7 @@
             "judul"     : "Peran Program Studi dalam Pembangunan",
             "deskripsi" : "Penyampaian materi tentang peran program studi masing-masing Kesatria Muda",
             "slug"      : "peran-prodi-dalam-pembangunan",
-            "waktu"     : "10.45–11.05",
-            "inactive"  : true
+            "waktu"     : "10.45–11.05"
         },
         {
             "judul"     : "Kota Impian",
