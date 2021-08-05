@@ -31,23 +31,21 @@ export function Filter() {
         });
     }
     return (
-        <div className='wrapper'>
-            <TabbedNav className='mx-auto max-w-max'>
-                <button
-                    type='button'
-                    onClick={handleclick}
-                    data-year='all'
-                    className='active'
-                >
-                    All
-                </button>
-                <button type='button' onClick={handleclick} data-year='2020'>
-                    2020
-                </button>
-                <button type='button' onClick={handleclick} data-year='2019'>
-                    2019
-                </button>
-            </TabbedNav>
-        </div>
+        <TabbedNav className='mx-auto max-w-max mb-8'>
+            <button
+                type='button'
+                onClick={handleclick}
+                data-year='all'
+                className='active'
+            >
+                All
+            </button>
+            <button type='button' onClick={handleclick} data-year='2020'>
+                2020
+            </button>
+            <button type='button' onClick={handleclick} data-year='2019'>
+                2019
+            </button>
+        </TabbedNav>
     );
 }
