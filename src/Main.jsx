@@ -18,7 +18,7 @@ import { PageFooter } from './components/PageFooter';
 import * as pages from './pages/_listing';
 import { ScrollToTop } from './utils/ScrollToTop';
 
-function Main() {
+function RemoveTrailingSlash() {
     const { pathname } = useLocation();
     const history = useHistory();
     useEffect(() => {
@@ -27,8 +27,14 @@ function Main() {
         }
     }, []);
 
+    return null;
+}
+
+function Main() {
+
     return (
         <BrowserRouter>
+            <RemoveTrailingSlash />
             <ScrollToTop />
 
             <div className='flex flex-col min-h-screen'>
