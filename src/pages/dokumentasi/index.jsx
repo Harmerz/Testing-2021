@@ -8,8 +8,8 @@ export function Dokumentasi() {
     return (
         <GenericPage>
             <PageTitle>Dokumentasi</PageTitle>
-            <Filter />
             <Hero />
+            <Filter />
             <Gallery />
         </GenericPage>
     );

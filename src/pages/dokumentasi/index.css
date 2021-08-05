@@ -112,10 +112,30 @@
     padding: 10px;
 }
 .video {
-    margin: auto;
-    border-radius: 10px; 
-    width: 50%; 
-    overflow: hidden;
+    /* height: 56.25vw; */
+    height: 30rem;
+
+    --diagonals-depth: 1rem;
+    --diagonals-vertical-offset: 5rem;
+    --diagonals-width: var(--diagonals-depth);
+
+    clip-path: polygon(
+        0 var(--diagonals-depth),
+        var(--diagonals-vertical-offset) var(--diagonals-depth),
+        calc(var(--diagonals-vertical-offset) + var(--diagonals-width)) 0,
+        calc(100% - calc(var(--diagonals-vertical-offset) + var(--diagonals-width))) 0,
+        calc(100% - var(--diagonals-vertical-offset)) var(--diagonals-depth),
+        100% var(--diagonals-depth),
+        100% calc(100% - var(--diagonals-depth)),
+        calc(100% - var(--diagonals-vertical-offset)) calc(100% - var(--diagonals-depth)),
+        calc(100% - calc(var(--diagonals-vertical-offset) + var(--diagonals-width))) 100%,
+        calc(var(--diagonals-vertical-offset) + var(--diagonals-width)) 100%,
+        var(--diagonals-vertical-offset) calc(100% - var(--diagonals-depth)),
+        0 calc(100% - var(--diagonals-depth))
+    );
+}
+.aftermovie-wrapper {
+    filter: drop-shadow(0 0 1rem theme('colors.accent.blue.DEFAULT'));
 }
 .wrapper {
     margin-bottom: 50px;
