@@ -65,7 +65,7 @@ export function Home() {
 
             <FeaturedVideoSection className='-mt-4' />
 
-            <div className='flex flex-col sm:flex-row sm:justify-center bg-gray-lighter px-8 py-24 -mt-12'>
+            <div className='flex flex-col sm:flex-row sm:justify-center px-8 py-24'>
                 <ActivityBlock
                     title='Agenda'
                     id='agenda'

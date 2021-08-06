@@ -7,21 +7,21 @@ import img6 from '../../assets/dokumentasi/6.jpg';
 
 export function DokumentasiLinkSection() {
     return (
-        <div className={`${styles.wrapper} mb-16`}>
+        <div className={`${styles.wrapper} mb-16 mt-12`}>
             <section
                 className={`${styles.innerContainer} relative h-96 flex items-center justify-center`}
             >
                 <Link
                     to='/dokumentasi'
-                    className='group text-accent-blue rounded-2xl hover:rounded-3xl transition-all duration-300 border-2 border-current'
+                    className='group text-accent-blue rounded-3xl transition-all duration-300 border-2 border-current'
                 >
-                    <div className='m-1 group-hover:m-3 transition-all duration-300 flex bg-white bg-opacity-90 group-hover:bg-opacity-100 rounded-2xl'>
+                    <div className='m-1 group-hover:m-3 transition-all duration-300 flex bg-white bg-opacity-90 group-hover:bg-opacity-100 rounded-2xl overflow-hidden'>
                         <span className='block px-8 py-6 font-display font-bold uppercase text-xl'>
                             Lihat
                             <br />
                             dokumentasi
                         </span>
-                        <div className='rounded-r-xl p-6 flex items-center justify-center group-hover:bg-current transition-colors'>
+                        <div className='p-6 flex items-center justify-center group-hover:bg-current transition-colors'>
                             <GoIcon className='block h-8 w-auto fill-current group-hover:text-white transition-colors' />
                         </div>
                     </div>
