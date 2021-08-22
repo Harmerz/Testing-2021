@@ -8,6 +8,13 @@ import foto6 from '../../../assets/dokumentasi/6.jpg';
 import foto7 from '../../../assets/dokumentasi/7.jpg';
 import foto8 from '../../../assets/dokumentasi/8.jpg';
 import foto9 from '../../../assets/dokumentasi/9.jpg';
+import foto10 from '../../../assets/dokumentasi/10.jpg';
+import foto11 from '../../../assets/dokumentasi/11.jpg';
+import foto12 from '../../../assets/dokumentasi/12.jpg';
+import foto13 from '../../../assets/dokumentasi/13.jpg';
+import foto14 from '../../../assets/dokumentasi/14.jpg';
+import foto15 from '../../../assets/dokumentasi/15.jpg';
+import foto16 from '../../../assets/dokumentasi/16.jpg';
 
 export function Gallery() {
     function preview(source) {
@@ -116,6 +123,76 @@ export function Gallery() {
                     >
                         <span>
                             <img src={foto6} alt='' />
+                        </span>
+                    </div>
+                    <div
+                        className='picture'
+                        data-name='2021'
+                        onClick={() => preview(foto10)}
+                        aria-hidden='true'
+                    >
+                        <span>
+                            <img src={foto10} alt='' />
+                        </span>
+                    </div>
+                    <div
+                        className='picture'
+                        data-name='2021'
+                        onClick={() => preview(foto11)}
+                        aria-hidden='true'
+                    >
+                        <span>
+                            <img src={foto11} alt='' />
+                        </span>
+                    </div>
+                    <div
+                        className='picture'
+                        data-name='2021'
+                        onClick={() => preview(foto12)}
+                        aria-hidden='true'
+                    >
+                        <span>
+                            <img src={foto12} alt='' />
+                        </span>
+                    </div>
+                    <div
+                        className='picture'
+                        data-name='2021'
+                        onClick={() => preview(foto13)}
+                        aria-hidden='true'
+                    >
+                        <span>
+                            <img src={foto13} alt='' />
+                        </span>
+                    </div>
+                    <div
+                        className='picture'
+                        data-name='2021'
+                        onClick={() => preview(foto14)}
+                        aria-hidden='true'
+                    >
+                        <span>
+                            <img src={foto14} alt='' />
+                        </span>
+                    </div>
+                    <div
+                        className='picture'
+                        data-name='2021'
+                        onClick={() => preview(foto15)}
+                        aria-hidden='true'
+                    >
+                        <span>
+                            <img src={foto15} alt='' />
+                        </span>
+                    </div>
+                    <div
+                        className='picture'
+                        data-name='2021'
+                        onClick={() => preview(foto16)}
+                        aria-hidden='true'
+                    >
+                        <span>
+                            <img src={foto16} alt='' />
                         </span>
                     </div>
                 </div>

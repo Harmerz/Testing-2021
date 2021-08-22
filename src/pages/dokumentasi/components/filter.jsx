@@ -40,6 +40,9 @@ export function Filter() {
             >
                 All
             </button>
+            <button type='button' onClick={handleclick} data-year='2021'>
+                2021
+            </button>
             <button type='button' onClick={handleclick} data-year='2020'>
                 2020
             </button>
