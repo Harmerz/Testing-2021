@@ -1,3 +1,4 @@
+const colors = require('tailwindcss/colors');
 const forms = require('@tailwindcss/forms');
 
 module.exports = {
@@ -8,6 +9,7 @@ module.exports = {
             transparent: 'transparent',
             current: 'currentColor',
             black: '#0D181D',
+            pureblack: colors.black,
             blue: {
                 light: '#0D181A',
                 dark: '#0D181D',

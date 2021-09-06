@@ -1,4 +1,4 @@
-import { FeaturedVideoSection } from '../components/home/FeaturedVideoSection';
+import { YTPlayerInner } from '../components/YTPlayerInner';
 import { ActivityBlock } from '../components/home/ActivityBlock';
 import { DokumentasiLinkSection } from '../components/home/DokumentasiLinkSection';
 
@@ -63,7 +63,12 @@ export function Home() {
                 </div>
             </section>
 
-            <FeaturedVideoSection className='-mt-4' />
+            <section className={`${styles.featuredVideoSection} -mt-4`}>
+                <YTPlayerInner
+                    videoId='WFrqB4fLfWs'
+                    className='w-full h-full'
+                />
+            </section>
 
             <div className='flex flex-col sm:flex-row sm:justify-center px-8 py-24'>
                 <ActivityBlock
