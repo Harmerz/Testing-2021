@@ -8,10 +8,13 @@ import heroOverlay from '../assets/images/homepage/hero-overlay.svg';
 import stagelightBg from '../assets/images/homepage/logo-stagelight-bg.svg';
 import stagelightLogo from '../assets/images/homepage/logo-stagelight-fg.gif';
 import { ReactComponent as GoIcon } from '../assets/icons/go.svg';
+import { AftermovieLightbox } from '../components/AftermovieLightbox';
 
 export function Home() {
     return (
         <div className='flex flex-col bg-gray-lighter -mb-4'>
+            <AftermovieLightbox />
+
             <section className='-mt-20'>
                 <img
                     src={heroOverlay}

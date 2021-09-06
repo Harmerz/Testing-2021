@@ -1,0 +1,23 @@
+.overlayBackground {
+    z-index: 999999;
+    animation: overlay-fade-in 0.4s ease-out;
+}
+@keyframes overlay-fade-in {
+    from {
+        opacity: 0;
+    }
+}
+
+.container {
+    animation: container-entrance-animation 0.5s cubic-bezier(0, 1, 1, 1);
+}
+@keyframes container-entrance-animation {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+}
+
+.content {
+    box-shadow: 0 0 1rem theme('colors.accent.blue.DEFAULT');
+}
