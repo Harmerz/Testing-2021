@@ -1,4 +1,4 @@
-import { FeaturedVideoSection } from '../components/home/FeaturedVideoSection';
+import { YTPlayerInner } from '../components/YTPlayerInner';
 import { ActivityBlock } from '../components/home/ActivityBlock';
 import { DokumentasiLinkSection } from '../components/home/DokumentasiLinkSection';
 
@@ -8,10 +8,13 @@ import heroOverlay from '../assets/images/homepage/hero-overlay.svg';
 import stagelightBg from '../assets/images/homepage/logo-stagelight-bg.svg';
 import stagelightLogo from '../assets/images/homepage/logo-stagelight-fg.gif';
 import { ReactComponent as GoIcon } from '../assets/icons/go.svg';
+import { AftermovieLightbox } from '../components/AftermovieLightbox';
 
 export function Home() {
     return (
         <div className='flex flex-col bg-gray-lighter -mb-4'>
+            <AftermovieLightbox />
+
             <section className='-mt-20'>
                 <img
                     src={heroOverlay}
@@ -63,7 +66,12 @@ export function Home() {
                 </div>
             </section>
 
-            <FeaturedVideoSection className='-mt-4' />
+            <section className={`${styles.featuredVideoSection} -mt-4`}>
+                <YTPlayerInner
+                    videoId='WFrqB4fLfWs'
+                    className='w-full h-full'
+                />
+            </section>
 
             <div className='flex flex-col sm:flex-row sm:justify-center px-8 py-24'>
                 <ActivityBlock

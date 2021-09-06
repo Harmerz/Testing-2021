@@ -1,27 +1,7 @@
-.container {
-    --cut-size: 1.5rem;
-    --position-from-end: calc(100% - var(--cut-size));
-
-    clip-path: polygon(
-        0 0,
-        100% 0,
-        100% var(--position-from-end),
-        var(--position-from-end) 100%,
-        var(--cut-size) 100%,
-        0 var(--position-from-end)
-    );
-
-    height: calc(100vw * calc(9 / 16));
-    max-height: 80vh;
-
-    background-color: black;
-}
-
 .placeholder {
     @apply relative overflow-hidden z-0;
 }
 .placeholderBg {
-    background-image: url('../assets/images/anthem-thumbnail.jpg');
     content: '';
     @apply absolute block w-full h-full -z-2 bg-cover bg-center bg-no-repeat transition-transform;
 }
